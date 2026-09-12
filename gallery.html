@@ -1,0 +1,2935 @@
+<!doctype html>
+
+<html lang="en" dir="ltr">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <meta
+        name="description"
+        content="Scientific Gallery — Department of Biotechnology, University of Samarra, College of Applied Sciences."
+    >
+
+    <meta
+        name="keywords"
+        content="Biotechnology, Scientific Gallery, University of Samarra, College of Applied Sciences"
+    >
+
+    <meta
+        name="theme-color"
+        content="#0b6f68"
+    >
+
+    <title>
+        Gallery | Department of Biotechnology
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+
+    <!-- =========================================================
+         GALLERY PAGE STYLES
+         ========================================================= -->
+
+    <style>
+
+        /* =====================================================
+           PAGE BASE
+           ===================================================== */
+
+        .gallery-page {
+            background:
+                #f7fbf9;
+        }
+
+
+        /* =====================================================
+           HERO
+           ===================================================== */
+
+        .gallery-hero {
+            position:
+                relative;
+
+            overflow:
+                hidden;
+
+            padding:
+                150px 0 82px;
+
+            color:
+                #ffffff;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #07383a 0%,
+                    #0b4e4d 58%,
+                    #0f675f 100%
+                );
+        }
+
+
+        .gallery-hero::before {
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                520px;
+
+            height:
+                520px;
+
+            top:
+                -310px;
+
+            right:
+                -170px;
+
+            border:
+                1px solid rgba(255,255,255,.09);
+
+            border-radius:
+                50%;
+        }
+
+
+        .gallery-hero::after {
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                300px;
+
+            height:
+                300px;
+
+            bottom:
+                -210px;
+
+            left:
+                -130px;
+
+            border:
+                1px solid rgba(255,255,255,.07);
+
+            border-radius:
+                50%;
+        }
+
+
+        .gallery-hero-inner {
+            position:
+                relative;
+
+            z-index:
+                2;
+
+            display:
+                grid;
+
+            grid-template-columns:
+                minmax(0,1fr)
+                auto;
+
+            gap:
+                48px;
+
+            align-items:
+                end;
+        }
+
+
+        .gallery-hero-copy {
+            max-width:
+                850px;
+        }
+
+
+        .gallery-hero-copy .section-kicker {
+            color:
+                #b9dfd8;
+        }
+
+
+        .gallery-hero-copy .section-kicker::after {
+            background:
+                #b9dfd8;
+        }
+
+
+        .gallery-hero-title {
+            max-width:
+                820px;
+
+            margin:
+                0 0 17px;
+
+            color:
+                #ffffff;
+
+            font-family:
+                "Playfair Display",
+                Georgia,
+                serif;
+
+            font-size:
+                clamp(43px,5.5vw,72px);
+
+            font-weight:
+                600;
+
+            line-height:
+                1.02;
+
+            letter-spacing:
+                -1.8px;
+        }
+
+
+        .gallery-hero-title span {
+            color:
+                #b9dfd8;
+        }
+
+
+        .gallery-hero-text {
+            max-width:
+                740px;
+
+            margin:
+                0;
+
+            color:
+                rgba(255,255,255,.70);
+
+            font-size:
+                13px;
+
+            line-height:
+                1.9;
+        }
+
+
+        .gallery-hero-stat {
+            min-width:
+                125px;
+
+            padding:
+                20px 22px;
+
+            border:
+                1px solid rgba(255,255,255,.11);
+
+            border-radius:
+                16px;
+
+            background:
+                rgba(255,255,255,.055);
+
+            text-align:
+                center;
+
+            backdrop-filter:
+                blur(8px);
+        }
+
+
+        .gallery-hero-stat strong {
+            display:
+                block;
+
+            color:
+                #ffffff;
+
+            font-family:
+                "Playfair Display",
+                Georgia,
+                serif;
+
+            font-size:
+                42px;
+
+            line-height:
+                1;
+        }
+
+
+        .gallery-hero-stat span {
+            display:
+                block;
+
+            margin-top:
+                8px;
+
+            color:
+                rgba(255,255,255,.55);
+
+            font-size:
+                8px;
+
+            font-weight:
+                900;
+
+            letter-spacing:
+                1.4px;
+
+            text-transform:
+                uppercase;
+        }
+
+
+        /* =====================================================
+           COLLECTION INTRO
+           ===================================================== */
+
+        .gallery-intro {
+            padding:
+                82px 0 45px;
+
+            background:
+                #ffffff;
+        }
+
+
+        .gallery-intro-grid {
+            display:
+                grid;
+
+            grid-template-columns:
+                minmax(0,1fr)
+                minmax(270px,.7fr);
+
+            gap:
+                50px;
+
+            align-items:
+                end;
+        }
+
+
+        .gallery-intro h2 {
+            max-width:
+                760px;
+
+            margin:
+                0 0 14px;
+
+            color:
+                var(--navy);
+
+            font-family:
+                "Playfair Display",
+                Georgia,
+                serif;
+
+            font-size:
+                clamp(30px,4vw,45px);
+
+            font-weight:
+                600;
+
+            line-height:
+                1.08;
+        }
+
+
+        .gallery-intro-copy p {
+            max-width:
+                760px;
+
+            margin:
+                0;
+
+            color:
+                var(--muted);
+
+            font-size:
+                12px;
+
+            line-height:
+                1.85;
+        }
+
+
+        .gallery-note {
+            padding:
+                23px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                17px;
+
+            background:
+                #f3f8f5;
+        }
+
+
+        .gallery-note strong {
+            display:
+                block;
+
+            margin-bottom:
+                7px;
+
+            color:
+                var(--primary);
+
+            font-size:
+                8px;
+
+            font-weight:
+                900;
+
+            letter-spacing:
+                1.4px;
+
+            text-transform:
+                uppercase;
+        }
+
+
+        .gallery-note p {
+            margin:
+                0;
+
+            color:
+                var(--muted);
+
+            font-size:
+                10px;
+
+            line-height:
+                1.75;
+        }
+
+
+        /* =====================================================
+           INDEX SECTION
+           ===================================================== */
+
+        .gallery-index {
+            padding:
+                40px 0 110px;
+
+            background:
+                #f7fbf9;
+        }
+
+
+        .gallery-index-head {
+            display:
+                flex;
+
+            align-items:
+                end;
+
+            justify-content:
+                space-between;
+
+            gap:
+                30px;
+
+            margin-bottom:
+                32px;
+        }
+
+
+        .gallery-index-head h2 {
+            margin:
+                0;
+
+            color:
+                var(--navy);
+
+            font-family:
+                "Playfair Display",
+                Georgia,
+                serif;
+
+            font-size:
+                clamp(28px,3vw,39px);
+
+            font-weight:
+                600;
+
+            line-height:
+                1.08;
+        }
+
+
+        .gallery-index-head > p {
+            max-width:
+                480px;
+
+            margin:
+                0;
+
+            color:
+                var(--muted);
+
+            font-size:
+                10px;
+
+            line-height:
+                1.8;
+
+            text-align:
+                right;
+        }
+
+
+        /* =====================================================
+           22-CARD GRID
+           ===================================================== */
+
+        .gallery-subject-grid {
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(4,minmax(0,1fr));
+
+            gap:
+                14px;
+        }
+
+
+        /* =====================================================
+           SUBJECT TILE
+           ===================================================== */
+
+        .gallery-subject {
+            position:
+                relative;
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            min-width:
+                0;
+
+            min-height:
+                190px;
+
+            padding:
+                21px;
+
+            overflow:
+                hidden;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                16px;
+
+            background:
+                #ffffff;
+
+            box-shadow:
+                0 7px 20px rgba(14,75,78,.035);
+
+            text-decoration:
+                none;
+
+            color:
+                var(--text);
+
+            transition:
+                transform var(--transition),
+                border-color var(--transition),
+                background var(--transition),
+                box-shadow var(--transition);
+        }
+
+
+        .gallery-subject::after {
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                96px;
+
+            height:
+                96px;
+
+            right:
+                -52px;
+
+            bottom:
+                -54px;
+
+            border:
+                1px solid rgba(11,111,104,.07);
+
+            border-radius:
+                50%;
+
+            pointer-events:
+                none;
+        }
+
+
+        .gallery-subject:hover {
+            z-index:
+                2;
+
+            transform:
+                translateY(-4px);
+
+            border-color:
+                rgba(11,111,104,.19);
+
+            background:
+                #fbfefc;
+
+            box-shadow:
+                0 15px 32px rgba(14,75,78,.09);
+        }
+
+
+        .gallery-subject-number {
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+            color:
+                #8aa39e;
+
+            font-size:
+                9px;
+
+            font-weight:
+                900;
+
+            letter-spacing:
+                1.35px;
+
+            text-transform:
+                uppercase;
+        }
+
+
+        .gallery-subject-number::after {
+            content:
+                "SCIENCE";
+
+            color:
+                #b3c4c0;
+
+            font-size:
+                7px;
+
+            letter-spacing:
+                1.2px;
+        }
+
+
+        /* =====================================================
+           SMALL ICON BADGE
+           ===================================================== */
+
+        .gallery-subject-icon {
+            width:
+                48px;
+
+            height:
+                48px;
+
+            display:
+                grid;
+
+            place-items:
+                center;
+
+            margin:
+                18px 0 15px;
+
+            border:
+                1px solid rgba(11,111,104,.12);
+
+            border-radius:
+                14px;
+
+            color:
+                var(--primary);
+
+            background:
+                var(--primary-light);
+
+            transition:
+                transform var(--transition),
+                background var(--transition),
+                color var(--transition);
+        }
+
+
+        .gallery-subject:hover
+        .gallery-subject-icon {
+            transform:
+                translateY(-2px);
+
+            color:
+                var(--primary-dark);
+
+            background:
+                #e6f3ee;
+        }
+
+
+        .gallery-subject-icon svg {
+            width:
+                23px;
+
+            height:
+                23px;
+        }
+
+
+        /* =====================================================
+           SUBJECT TEXT
+           ===================================================== */
+
+        .gallery-subject h3 {
+            margin:
+                0 0 7px;
+
+            color:
+                var(--navy);
+
+            font-family:
+                "Playfair Display",
+                Georgia,
+                serif;
+
+            font-size:
+                17px;
+
+            font-weight:
+                600;
+
+            line-height:
+                1.15;
+        }
+
+
+        .gallery-subject-focus {
+            margin:
+                0;
+
+            color:
+                var(--muted);
+
+            font-size:
+                9px;
+
+            line-height:
+                1.7;
+        }
+
+
+        .gallery-subject-link {
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            gap:
+                7px;
+
+            margin-top:
+                auto;
+
+            padding-top:
+                16px;
+
+            color:
+                var(--primary);
+
+            font-size:
+                8px;
+
+            font-weight:
+                900;
+
+            letter-spacing:
+                .8px;
+
+            text-transform:
+                uppercase;
+        }
+
+
+        .gallery-subject-link span {
+            transition:
+                transform var(--transition);
+        }
+
+
+        .gallery-subject:hover
+        .gallery-subject-link span {
+            transform:
+                translateX(3px);
+        }
+
+
+        /* =====================================================
+           ACCENT SUBJECTS
+           ===================================================== */
+
+        .gallery-subject.visual-card {
+            background:
+                linear-gradient(
+                    180deg,
+                    #ffffff 0%,
+                    #f7fbf9 100%
+                );
+        }
+
+
+        /* =====================================================
+           FINAL CTA
+           ===================================================== */
+
+        .gallery-cta {
+            padding:
+                78px 0 90px;
+
+            background:
+                #ffffff;
+        }
+
+
+        .gallery-cta-box {
+            display:
+                grid;
+
+            grid-template-columns:
+                minmax(0,1fr)
+                auto;
+
+            gap:
+                30px;
+
+            align-items:
+                center;
+
+            padding:
+                34px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                20px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f7fbf9,
+                    #edf6f2
+                );
+        }
+
+
+        .gallery-cta-box h2 {
+            margin:
+                0 0 10px;
+
+            color:
+                var(--navy);
+
+            font-family:
+                "Playfair Display",
+                Georgia,
+                serif;
+
+            font-size:
+                clamp(27px,3vw,38px);
+
+            line-height:
+                1.08;
+        }
+
+
+        .gallery-cta-box p {
+            max-width:
+                700px;
+
+            margin:
+                0;
+
+            color:
+                var(--muted);
+
+            font-size:
+                11px;
+
+            line-height:
+                1.8;
+        }
+
+
+        .gallery-cta-button {
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            gap:
+                9px;
+
+            padding:
+                13px 17px;
+
+            border:
+                1px solid var(--primary);
+
+            border-radius:
+                11px;
+
+            color:
+                #ffffff;
+
+            background:
+                var(--primary);
+
+            font-size:
+                9px;
+
+            font-weight:
+                900;
+
+            text-decoration:
+                none;
+
+            white-space:
+                nowrap;
+
+            transition:
+                transform var(--transition),
+                background var(--transition);
+        }
+
+
+        .gallery-cta-button:hover {
+            transform:
+                translateY(-2px);
+
+            background:
+                var(--primary-dark);
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+           ===================================================== */
+
+        @media (max-width: 1000px) {
+
+            .gallery-subject-grid {
+                grid-template-columns:
+                    repeat(3,minmax(0,1fr));
+            }
+
+            .gallery-hero-inner {
+                grid-template-columns:
+                    1fr;
+            }
+
+            .gallery-hero-stat {
+                width:
+                    fit-content;
+            }
+
+        }
+
+
+        @media (max-width: 780px) {
+
+            .gallery-hero {
+                padding:
+                    125px 0 72px;
+            }
+
+
+            .gallery-intro-grid {
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .gallery-subject-grid {
+                grid-template-columns:
+                    repeat(2,minmax(0,1fr));
+            }
+
+
+            .gallery-index-head {
+                display:
+                    block;
+            }
+
+
+            .gallery-index-head > p {
+                margin-top:
+                    14px;
+
+                text-align:
+                    left;
+            }
+
+
+            .gallery-cta-box {
+                grid-template-columns:
+                    1fr;
+            }
+
+        }
+
+
+        @media (max-width: 520px) {
+
+            .gallery-subject-grid {
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .gallery-hero-stat {
+                width:
+                    100%;
+            }
+
+
+            .gallery-cta-box {
+                padding:
+                    25px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body class="gallery-page">
+
+
+    <!-- =========================================================
+         ACCESSIBILITY
+         ========================================================= -->
+
+    <a
+        class="skip-link"
+        href="#main"
+    >
+        Skip to content
+    </a>
+
+
+
+    <!-- =========================================================
+         HEADER
+         ========================================================= -->
+
+    <header
+        class="site-header"
+        id="siteHeader"
+    >
+
+        <div class="container navbar">
+
+
+            <!-- BRAND -->
+
+            <a
+                class="brand"
+                href="index.html"
+                aria-label="Biotechnology Department home"
+            >
+
+                <span
+                    class="brand-icon"
+                    aria-hidden="true"
+                >
+                    🧬
+                </span>
+
+                <span class="brand-text">
+
+                    <span>
+                        DEPARTMENT OF
+                    </span>
+
+                    <strong>
+                        BIOTECH.
+                    </strong>
+
+                </span>
+
+            </a>
+
+
+            <!-- DESKTOP NAVIGATION -->
+
+            <div class="desktop-navigation">
+
+                <nav
+                    class="nav-links"
+                    aria-label="Primary navigation"
+                >
+
+                    <a
+                        class="nav-link"
+                        href="index.html"
+                    >
+                        Home
+                    </a>
+
+                    <a
+                        class="nav-link"
+                        href="about.html"
+                    >
+                        About
+                    </a>
+
+                    <a
+                        class="nav-link"
+                        href="curriculum.html"
+                    >
+                        Curriculum
+                    </a>
+
+                    <a
+                        class="nav-link"
+                        href="faculty.html"
+                    >
+                        Faculty
+                    </a>
+
+                    <a
+                        class="nav-link"
+                        href="research.html"
+                    >
+                        Research
+                    </a>
+
+                    <a
+                        class="nav-link"
+                        href="laboratories.html"
+                    >
+                        Laboratories
+                    </a>
+
+                    <a
+                        class="nav-link"
+                        href="projects.html"
+                    >
+                        Projects
+                    </a>
+
+                    <a
+                        class="nav-link"
+                        href="news.html"
+                    >
+                        News
+                    </a>
+
+                    <a
+                        class="nav-link active"
+                        href="gallery.html"
+                        aria-current="page"
+                    >
+                        Gallery
+                    </a>
+
+                    <a
+                        class="nav-link"
+                        href="contact.html"
+                    >
+                        Contact
+                    </a>
+
+                </nav>
+
+
+                <!-- LANGUAGE -->
+
+                <div class="language-wrapper">
+
+                    <button
+                        class="language-button"
+                        id="languageButton"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="languageMenu"
+                    >
+
+                        <span>
+                            English
+                        </span>
+
+                        <span aria-hidden="true">
+                            ⌄
+                        </span>
+
+                    </button>
+
+
+                    <div
+                        class="language-menu"
+                        id="languageMenu"
+                    >
+
+                        <button
+                            class="language-option active"
+                            type="button"
+                            data-language="en"
+                        >
+                            English
+                        </button>
+
+                        <button
+                            class="language-option"
+                            type="button"
+                            data-language="ar"
+                        >
+                            العربية
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- MOBILE MENU BUTTON -->
+
+            <button
+                class="mobile-menu-button"
+                id="mobileMenuButton"
+                type="button"
+                aria-expanded="false"
+                aria-controls="mobileNavigation"
+                aria-label="Open menu"
+            >
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+
+        <!-- MOBILE NAVIGATION -->
+
+        <div class="container">
+
+            <nav
+                class="mobile-navigation"
+                id="mobileNavigation"
+                aria-label="Mobile navigation"
+            >
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="curriculum.html">
+                    Curriculum
+                </a>
+
+                <a href="faculty.html">
+                    Faculty
+                </a>
+
+                <a href="research.html">
+                    Research
+                </a>
+
+                <a href="laboratories.html">
+                    Laboratories
+                </a>
+
+                <a href="projects.html">
+                    Projects
+                </a>
+
+                <a href="news.html">
+                    News
+                </a>
+
+                <a
+                    href="gallery.html"
+                    aria-current="page"
+                >
+                    Gallery
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+
+                <button
+                    class="mobile-language-button"
+                    id="mobileLanguageButton"
+                    type="button"
+                >
+                    🌐 English
+                </button>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================================
+         MAIN
+         ========================================================= -->
+
+    <main id="main">
+
+
+        <!-- =====================================================
+             HERO
+             ===================================================== -->
+
+        <section class="gallery-hero">
+
+            <div class="container gallery-hero-inner">
+
+
+                <div class="gallery-hero-copy">
+
+                    <p
+                        class="section-kicker"
+                        data-en="SCIENTIFIC GALLERY"
+                        data-ar="المعرض العلمي"
+                    >
+                        SCIENTIFIC GALLERY
+                    </p>
+
+
+                    <h1
+                        class="gallery-hero-title"
+                        data-en="The visual language of <span>Biotechnology.</span>"
+                        data-ar="اللغة البصرية <span>للتقانات الأحيائية.</span>"
+                    >
+                        The visual language of
+                        <span>Biotechnology.</span>
+                    </h1>
+
+
+                    <p
+                        class="gallery-hero-text"
+                        data-en="A compact scientific index of the disciplines that shape the Department of Biotechnology, organized with the same visual discipline used across the academic curriculum."
+                        data-ar="فهرس علمي بصري مدمج للتخصصات التي تشكل قسم التقانات الأحيائية، ومنظم باللغة البصرية نفسها المستخدمة في المنهج الأكاديمي."
+                    >
+                        A compact scientific index of the disciplines that
+                        shape the Department of Biotechnology, organized
+                        with the same visual discipline used across the
+                        academic curriculum.
+                    </p>
+
+                </div>
+
+
+                <div class="gallery-hero-stat">
+
+                    <strong>
+                        22
+                    </strong>
+
+                    <span
+                        data-en="Scientific Subjects"
+                        data-ar="مادة علمية"
+                    >
+                        Scientific Subjects
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             INTRODUCTION
+             ===================================================== -->
+
+        <section class="gallery-intro">
+
+            <div class="container gallery-intro-grid">
+
+
+                <div class="gallery-intro-copy">
+
+                    <p
+                        class="section-kicker"
+                        data-en="VISUAL CURRICULUM"
+                        data-ar="المنهج البصري"
+                    >
+                        VISUAL CURRICULUM
+                    </p>
+
+
+                    <h2
+                        data-en="One discipline. Twenty-two scientific perspectives."
+                        data-ar="تخصص واحد. اثنان وعشرون منظورًا علميًا."
+                    >
+                        One discipline. Twenty-two scientific perspectives.
+                    </h2>
+
+
+                    <p
+                        data-en="The gallery is designed as a visual companion to the curriculum. Each tile identifies one academic subject through a restrained scientific icon, its position in the curriculum and a concise focus line."
+                        data-ar="صُمم المعرض بوصفه مكمّلًا بصريًا للمنهج. وتعرّف كل بطاقة مادة أكاديمية واحدة من خلال أيقونة علمية هادئة ورقمها في المنهج وسطر موجز يوضح مجال التركيز."
+                    >
+                        The gallery is designed as a visual companion to the
+                        curriculum. Each tile identifies one academic subject
+                        through a restrained scientific icon, its position
+                        in the curriculum and a concise focus line.
+                    </p>
+
+                </div>
+
+
+                <div class="gallery-note">
+
+                    <strong
+                        data-en="Design logic"
+                        data-ar="منطق التصميم"
+                    >
+                        Design logic
+                    </strong>
+
+
+                    <p
+                        data-en="Small iconography, generous whitespace, precise numbering and restrained color keep the gallery readable on a laptop without allowing the visual assets to dominate the page."
+                        data-ar="الأيقونات الصغيرة والمساحات البيضاء والترقيم الدقيق والألوان الهادئة تحافظ على وضوح المعرض على شاشة اللابتوب دون السماح للعناصر البصرية بالسيطرة على الصفحة."
+                    >
+                        Small iconography, generous whitespace, precise numbering
+                        and restrained color keep the gallery readable on a laptop
+                        without allowing the visual assets to dominate the page.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             SUBJECT INDEX
+             ===================================================== -->
+
+        <section class="gallery-index">
+
+            <div class="container">
+
+
+                <div class="gallery-index-head">
+
+                    <div>
+
+                        <p
+                            class="section-kicker"
+                            data-en="THE COLLECTION"
+                            data-ar="المجموعة"
+                        >
+                            THE COLLECTION
+                        </p>
+
+
+                        <h2
+                            data-en="Twenty-two disciplines. One scientific identity."
+                            data-ar="اثنان وعشرون مجالًا. هوية علمية واحدة."
+                        >
+                            Twenty-two disciplines.
+                            One scientific identity.
+                        </h2>
+
+                    </div>
+
+
+                    <p
+                        data-en="Select any discipline to move directly to its full academic content within the curriculum."
+                        data-ar="اختر أي تخصص للانتقال مباشرة إلى محتواه الأكاديمي الكامل داخل المنهج."
+                    >
+                        Select any discipline to move directly to its full
+                        academic content within the curriculum.
+                    </p>
+
+                </div>
+
+
+
+                <div class="gallery-subject-grid">
+
+
+                    <!-- 01 -->
+
+                    <a
+                        class="gallery-subject visual-card"
+                        href="curriculum.html#subject-01"
+                    >
+
+                        <div class="gallery-subject-number">
+                            01
+                        </div>
+
+
+                        <div class="gallery-subject-icon">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.6"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="M12 20V8" />
+                                <path d="M12 11c-3-3-6-2-7-1 1 3 4 5 7 4" />
+                                <path d="M12 14c3-3 6-2 7-1-1 3-4 5-7 4" />
+                                <path d="M12 8c-1.7-2.7-1.2-5.2 0-6 1.2.8 1.7 3.3 0 6Z" />
+                            </svg>
+
+                        </div>
+
+
+                        <h3
+                            data-en="Medical Plants"
+                            data-ar="النباتات الطبية"
+                        >
+                            Medical Plants
+                        </h3>
+
+
+                        <p
+                            class="gallery-subject-focus"
+                            data-en="Plant Biology · Phytochemistry · Natural Products"
+                            data-ar="أحياء النبات · الكيمياء النباتية · المنتجات الطبيعية"
+                        >
+                            Plant Biology · Phytochemistry · Natural Products
+                        </p>
+
+
+                        <div class="gallery-subject-link">
+                            Explore subject
+                            <span>→</span>
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- 02 -->
+
+                    <a
+                        class="gallery-subject"
+                        href="curriculum.html#subject-02"
+                    >
+
+                        <div class="gallery-subject-number">
+                            02
+                        </div>
+
+
+                        <div class="gallery-subject-icon">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.6"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="M9 3h6" />
+                                <path d="M10 3v5l-5 9a3 3 0 0 0 2.6 4.5h8.8A3 3 0 0 0 19 17l-5-9V3" />
+                                <path d="M7 15h10" />
+                            </svg>
+
+                        </div>
+
+
+                        <h3>Analytical Chemistry</h3>
+
+
+                        <p class="gallery-subject-focus">
+                            Measurement · Analysis · Instrumentation
+                        </p>
+
+
+                        <div class="gallery-subject-link">
+                            Explore subject <span>→</span>
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- 03 -->
+
+                    <a
+                        class="gallery-subject"
+                        href="curriculum.html#subject-03"
+                    >
+
+                        <div class="gallery-subject-number">
+                            03
+                        </div>
+
+
+                        <div class="gallery-subject-icon">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.6"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <polygon points="12,3 18,6.5 18,13.5 12,17 6,13.5 6,6.5" />
+                                <path d="M12 3v4" />
+                                <path d="M18 6.5l-3.5 2" />
+                                <path d="M6 6.5l3.5 2" />
+                                <path d="M12 17v4" />
+                            </svg>
+
+                        </div>
+
+
+                        <h3>Organic Chemistry</h3>
+
+
+                        <p class="gallery-subject-focus">
+                            Carbon Frameworks · Functional Groups · Reactions
+                        </p>
+
+
+                        <div class="gallery-subject-link">
+                            Explore subject <span>→</span>
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- 04 -->
+
+                    <a
+                        class="gallery-subject"
+                        href="curriculum.html#subject-04"
+                    >
+
+                        <div class="gallery-subject-number">
+                            04
+                        </div>
+
+
+                        <div class="gallery-subject-icon">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.6"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <circle cx="12" cy="12" r="4" />
+                                <path d="M12 2v3" />
+                                <path d="M12 19v3" />
+                                <path d="M2 12h3" />
+                                <path d="M19 12h3" />
+                                <path d="m4.9 4.9 2.1 2.1" />
+                                <path d="m17 17 2.1 2.1" />
+                                <path d="m19.1 4.9-2.1 2.1" />
+                                <path d="m7 17-2.1 2.1" />
+                            </svg>
+
+                        </div>
+
+
+                        <h3>Biochemistry</h3>
+
+
+                        <p class="gallery-subject-focus">
+                            Biomolecules · Enzymes · Metabolism
+                        </p>
+
+
+                        <div class="gallery-subject-link">
+                            Explore subject <span>→</span>
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- 05 -->
+
+                    <a
+                        class="gallery-subject"
+                        href="curriculum.html#subject-05"
+                    >
+
+                        <div class="gallery-subject-number">
+                            05
+                        </div>
+
+
+                        <div class="gallery-subject-icon">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.6"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <circle cx="12" cy="12" r="2.5" />
+                                <circle cx="5" cy="7" r="1.7" />
+                                <circle cx="19" cy="7" r="1.7" />
+                                <circle cx="6" cy="18" r="1.7" />
+                                <circle cx="18" cy="18" r="1.7" />
+                                <path d="m7 8.5 3.2 2" />
+                                <path d="m17 8.5-3.2 2" />
+                                <path d="m7.5 17 2.5-3" />
+                                <path d="m16.5 17-2.5-3" />
+                            </svg>
+
+                        </div>
+
+
+                        <h3>Nanotechnology</h3>
+
+
+                        <p class="gallery-subject-focus">
+                            Nanoscale Materials · Nano–Bio Interface
+                        </p>
+
+
+                        <div class="gallery-subject-link">
+                            Explore subject <span>→</span>
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- 06 -->
+
+                    <a
+                        class="gallery-subject"
+                        href="curriculum.html#subject-06"
+                    >
+
+                        <div class="gallery-subject-number">
+                            06
+                        </div>
+
+
+                        <div class="gallery-subject-icon">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.6"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <circle
+                                    cx="12"
+                                    cy="12"
+                                    r="8"
+                                />
+
+                                <circle
+                                    cx="12"
+                                    cy="12"
+                                    r="3"
+                                />
+
+                                <circle
+                                    cx="7"
+                                    cy="8"
+                                    r="1"
+                                />
+
+                                <circle
+                                    cx="17"
+                                    cy="8"
+                                    r="1"
+                                />
+
+                                <path d="M5 15c2.5 2 4.5 3 7 3s4.5-1 7-3" />
+                            </svg>
+
+                        </div>
+
+
+                        <h3>Cell Biology</h3>
+
+
+                        <p class="gallery-subject-focus">
+                            Organelles · Membranes · Signaling
+                        </p>
+
+
+                        <div class="gallery-subject-link">
+                            Explore subject <span>→</span>
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- 07 -->
+
+                    <a
+                        class="gallery-subject"
+                        href="curriculum.html#subject-07"
+                    >
+
+                        <div class="gallery-subject-number">
+                            07
+                        </div>
+
+
+                        <div class="gallery-subject-icon">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.6"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <circle
+                                    cx="9"
+                                    cy="9"
+                                    r="5"
+                                />
+
+                                <path d="m13 13 5 5" />
+                                <path d="M15 18h4" />
+                                <path d="M5 18h6" />
+                                <path d="M14 4l4-2" />
+                            </svg>
+
+                        </div>
+
+
+                        <h3>Histological Preparations</h3>
+
+
+                        <p class="gallery-subject-focus">
+                            Tissue Preparation · Staining · Microscopy
+                        </p>
+
+
+                        <div class="gallery-subject-link">
+                            Explore subject <span>→</span>
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- 08 -->
+
+                    <a
+                        class="gallery-subject"
+                        href="curriculum.html#subject-08"
+                    >
+
+                        <div class="gallery-subject-number">
+                            08
+                        </div>
+
+
+                        <div class="gallery-subject-icon">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.6"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="M12 3 19 6v5c0 4.5-2.8 7.6-7 10-4.2-2.4-7-5.5-7-10V6l7-3Z" />
+                                <path d="M9 12h6" />
+                                <path d="M12 9v6" />
+                            </svg>
+
+                        </div>
+
+
+                        <h3>Immunology</h3>
+
+
+                        <p class="gallery-subject-focus">
+                            Antigens · Antibodies · Immune Response
+                        </p>
+
+
+                        <div class="gallery-subject-link">
+                            Explore subject <span>→</span>
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- 09 -->
+
+                    <a
+                        class="gallery-subject"
+                        href="curriculum.html#subject-09"
+                    >
+
+                        <div class="gallery-subject-number">
+                            09
+                        </div>
+
+
+                        <div class="gallery-subject-icon">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.6"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="M7 4c4 2 6 2 10 0" />
+                                <path d="M7 20c4-2 6-2 10 0" />
+                                <path d="M7 4c-4 4-4 12 0 16" />
+                                <path d="M17 4c4 4 4 12 0 16" />
+                                <path d="M8 8h8" />
+                                <path d="M8 12h8" />
+                                <path d="M8 16h8" />
+                            </svg>
+
+                        </div>
+
+
+                        <h3>Genetics</h3>
+
+
+                        <p class="gallery-subject-focus">
+                            Genes · Heredity · Variation
+                        </p>
+
+
+                        <div class="gallery-subject-link">
+                            Explore subject <span>→</span>
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- 10 -->
+
+                    <a
+                        class="gallery-subject"
+                        href="curriculum.html#subject-10"
+                    >
+
+                        <div class="gallery-subject-number">
+                            10
+                        </div>
+
+
+                        <div class="gallery-subject-icon">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.6"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="M6 4v16" />
+                                <path d="M18 4v16" />
+                                <path d="M6 7h12" />
+                                <path d="M6 11h12" />
+                                <path d="M6 15h12" />
+                            </svg>
+
+                        </div>
+
+
+                        <h3>Cellular Genetics</h3>
+
+
+                        <p class="gallery-subject-focus">
+                            Chromosomes · Replication · Expression
+                        </p>
+
+
+                        <div class="gallery-subject-link">
+                            Explore subject <span>→</span>
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- 11 -->
+
+                    <a
+                        class="gallery-subject"
+                        href="curriculum.html#subject-11"
+                    >
+
+                        <div class="gallery-subject-number">
+                            11
+                        </div>
+
+
+                        <div class="gallery-subject-icon">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.6"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="M12 20V8" />
+                                <path d="M12 11c-3-2-6-1-7 1 2 2 4 3 7 2" />
+                                <path d="M12 14c3-2 6-1 7 1-2 2-4 3-7 2" />
+                                <path d="M12 8c-1.5-3-1-5 0-6 1 .9 1.5 3 0 6Z" />
+                            </svg>
+
+                        </div>
+
+
+                        <h3>Plant Biotechnology</h3>
+
+
+                        <p class="gallery-subject-focus">
+                            Tissue Culture · Transformation · Improvement
+                        </p>
+
+
+                        <div class="gallery-subject-link">
+                            Explore subject <span>→</span>
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- 12 -->
+
+                    <a
+                        class="gallery-subject"
+                        href="curriculum.html#subject-12"
+                    >
+
+                        <div class="gallery-subject-number">
+                            12
+                        </div>
+
+
+                        <div class="gallery-subject-icon">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.6"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="M6 12c0-4 3-7 7-7s5 3 5 6c0 4-3 7-7 7H8" />
+                                <path d="M8 18c-2 0-3-1-3-3s1-3 3-3h4" />
+                                <path d="M12 12h7" />
+                                <path d="M16 9l3 3-3 3" />
+                            </svg>
+
+                        </div>
+
+
+                        <h3>Genetic Engineering</h3>
+
+
+                        <p class="gallery-subject-focus">
+                            Recombinant DNA · Vectors · Gene Editing
+                        </p>
+
+
+                        <div class="gallery-subject-link">
+                            Explore subject <span>→</span>
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- 13 -->
+
+                    <a
+                        class="gallery-subject"
+                        href="curriculum.html#subject-13"
+                    >
+
+                        <div class="gallery-subject-number">
+                            13
+                        </div>
+
+
+                        <div class="gallery-subject-icon">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.6"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="M9 3h6" />
+                                <path d="M10 3v6l-5 8a2.7 2.7 0 0 0 2.3 4h9.4a2.7 2.7 0 0 0 2.3-4l-5-8V3" />
+                                <path d="M7 14h10" />
+                                <path d="M7 18h10" />
+                            </svg>
+
+                        </div>
+
+
+                        <h3>Principles of Biotechnology</h3>
+
+
+                        <p class="gallery-subject-focus">
+                            Foundations · Bioprocessing · Applications
+                        </p>
+
+
+                        <div class="gallery-subject-link">
+                            Explore subject <span>→</span>
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- 14 -->
+
+                    <a
+                        class="gallery-subject"
+                        href="curriculum.html#subject-14"
+                    >
+
+                        <div class="gallery-subject-number">
+                            14
+                        </div>
+
+
+                        <div class="gallery-subject-icon">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.6"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="M6 5c3 0 3 3 6 3s3-3 6-3" />
+                                <path d="M6 19c3 0 3-3 6-3s3 3 6 3" />
+                                <path d="M6 5c-2 4 1 5 0 14" />
+                                <path d="M18 5c2 4-1 5 0 14" />
+                                <path d="M8 12h8" />
+                            </svg>
+
+                        </div>
+
+
+                        <h3>Molecular Biology</h3>
+
+
+                        <p class="gallery-subject-focus">
+                            DNA · RNA · Gene Expression
+                        </p>
+
+
+                        <div class="gallery-subject-link">
+                            Explore subject <span>→</span>
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- 15 -->
+
+                    <a
+                        class="gallery-subject"
+                        href="curriculum.html#subject-15"
+                    >
+
+                        <div class="gallery-subject-number">
+                            15
+                        </div>
+
+
+                        <div class="gallery-subject-icon">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.6"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="M6 18c0-6 2-10 7-12" />
+                                <path d="M11 20c0-7 2-11 7-14" />
+                                <circle cx="8" cy="11" r="2" />
+                                <circle cx="14" cy="8" r="2" />
+                                <circle cx="11" cy="17" r="2" />
+                                <circle cx="17" cy="14" r="2" />
+                            </svg>
+
+                        </div>
+
+
+                        <h3>Mycology</h3>
+
+
+                        <p class="gallery-subject-focus">
+                            Fungi · Hyphae · Spores
+                        </p>
+
+
+                        <div class="gallery-subject-link">
+                            Explore subject <span>→</span>
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- 16 -->
+
+                    <a
+                        class="gallery-subject"
+                        href="curriculum.html#subject-16"
+                    >
+
+                        <div class="gallery-subject-number">
+                            16
+                        </div>
+
+
+                        <div class="gallery-subject-icon">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.6"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="M4 17c4-5 7-7 16-8" />
+                                <path d="M5 13c2 1 4 3 5 6" />
+                                <path d="M11 10c2 1 4 3 5 6" />
+                                <circle cx="6" cy="17" r="1.3" />
+                                <circle cx="12" cy="11" r="1.3" />
+                                <circle cx="18" cy="9" r="1.3" />
+                            </svg>
+
+                        </div>
+
+
+                        <h3>Phycology / Algology</h3>
+
+
+                        <p class="gallery-subject-focus">
+                            Algae · Photosynthesis · Ecology
+                        </p>
+
+
+                        <div class="gallery-subject-link">
+                            Explore subject <span>→</span>
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- 17 -->
+
+                    <a
+                        class="gallery-subject"
+                        href="curriculum.html#subject-17"
+                    >
+
+                        <div class="gallery-subject-number">
+                            17
+                        </div>
+
+
+                        <div class="gallery-subject-icon">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.6"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <circle cx="12" cy="12" r="7" />
+                                <circle cx="8" cy="9" r="1.2" />
+                                <circle cx="16" cy="9" r="1.2" />
+                                <circle cx="9" cy="15" r="1.2" />
+                                <circle cx="15" cy="15" r="1.2" />
+                                <path d="M12 5v-2" />
+                                <path d="M19 12h2" />
+                                <path d="M12 19v2" />
+                                <path d="M5 12H3" />
+                            </svg>
+
+                        </div>
+
+
+                        <h3>Microbiology</h3>
+
+
+                        <p class="gallery-subject-focus">
+                            Microorganisms · Growth · Metabolism
+                        </p>
+
+
+                        <div class="gallery-subject-link">
+                            Explore subject <span>→</span>
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- 18 -->
+
+                    <a
+                        class="gallery-subject"
+                        href="curriculum.html#subject-18"
+                    >
+
+                        <div class="gallery-subject-number">
+                            18
+                        </div>
+
+
+                        <div class="gallery-subject-icon">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.6"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <circle cx="8" cy="12" r="5" />
+                                <circle cx="16" cy="12" r="5" />
+                                <path d="M10.5 9.5 13.5 14.5" />
+                            </svg>
+
+                        </div>
+
+
+                        <h3>Antibiotics</h3>
+
+
+                        <p class="gallery-subject-focus">
+                            Targets · Mechanisms · Resistance
+                        </p>
+
+
+                        <div class="gallery-subject-link">
+                            Explore subject <span>→</span>
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- 19 -->
+
+                    <a
+                        class="gallery-subject"
+                        href="curriculum.html#subject-19"
+                    >
+
+                        <div class="gallery-subject-number">
+                            19
+                        </div>
+
+
+                        <div class="gallery-subject-icon">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.6"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <circle cx="8" cy="9" r="3.2" />
+                                <circle cx="16" cy="15" r="3.2" />
+                                <circle cx="16" cy="8" r="2.2" />
+                                <circle cx="7" cy="17" r="2.2" />
+                            </svg>
+
+                        </div>
+
+
+                        <h3>Hematology</h3>
+
+
+                        <p class="gallery-subject-focus">
+                            Blood · Hematopoiesis · Hemostasis
+                        </p>
+
+
+                        <div class="gallery-subject-link">
+                            Explore subject <span>→</span>
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- 20 -->
+
+                    <a
+                        class="gallery-subject"
+                        href="curriculum.html#subject-20"
+                    >
+
+                        <div class="gallery-subject-number">
+                            20
+                        </div>
+
+
+                        <div class="gallery-subject-icon">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.6"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <rect
+                                    x="4"
+                                    y="5"
+                                    width="16"
+                                    height="13"
+                                    rx="2"
+                                />
+
+                                <path d="M8 21h8" />
+                                <path d="M12 18v3" />
+                                <path d="M7 9h10" />
+                                <path d="M7 13h6" />
+                            </svg>
+
+                        </div>
+
+
+                        <h3>Bioinformatics</h3>
+
+
+                        <p class="gallery-subject-focus">
+                            Sequences · Genomics · Biological Data
+                        </p>
+
+
+                        <div class="gallery-subject-link">
+                            Explore subject <span>→</span>
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- 21 -->
+
+                    <a
+                        class="gallery-subject"
+                        href="curriculum.html#subject-21"
+                    >
+
+                        <div class="gallery-subject-number">
+                            21
+                        </div>
+
+
+                        <div class="gallery-subject-icon">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.6"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="M4 14c3 0 3-5 6-5s3 5 6 5 3-5 4-5" />
+                                <path d="M4 18c3 0 3-3 6-3s3 3 6 3 3-3 4-3" />
+                            </svg>
+
+                        </div>
+
+
+                        <h3>Physiology</h3>
+
+
+                        <p class="gallery-subject-focus">
+                            Homeostasis · Organ Systems · Regulation
+                        </p>
+
+
+                        <div class="gallery-subject-link">
+                            Explore subject <span>→</span>
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- 22 -->
+
+                    <a
+                        class="gallery-subject"
+                        href="curriculum.html#subject-22"
+                    >
+
+                        <div class="gallery-subject-number">
+                            22
+                        </div>
+
+
+                        <div class="gallery-subject-icon">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.6"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="M4 19c5-5 11-7 16-7" />
+                                <path d="M7 17c0-5 2-9 7-12" />
+                                <circle cx="7" cy="17" r="2" />
+                                <circle cx="16" cy="10" r="2" />
+                                <path d="M12 19c2-1 4-1 7 0" />
+                            </svg>
+
+                        </div>
+
+
+                        <h3>Biofertilizers</h3>
+
+
+                        <p
+                            class="gallery-subject-focus"
+                            data-en="Beneficial Microorganisms · Nutrient Cycling · Sustainable Agriculture"
+                            data-ar="الكائنات المجهرية النافعة · تدوير المغذيات · الزراعة المستدامة"
+                        >
+                            Beneficial Microorganisms · Nutrient Cycling · Sustainable Agriculture
+                        </p>
+
+
+                        <div class="gallery-subject-link">
+                            Explore subject <span>→</span>
+                        </div>
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             CURRICULUM CTA
+             ===================================================== -->
+
+        <section class="gallery-cta">
+
+            <div class="container">
+
+                <div class="gallery-cta-box">
+
+
+                    <div>
+
+                        <p
+                            class="section-kicker"
+                            data-en="FULL ACADEMIC CONTENT"
+                            data-ar="المحتوى الأكاديمي الكامل"
+                        >
+                            FULL ACADEMIC CONTENT
+                        </p>
+
+
+                        <h2
+                            data-en="The gallery gives you the visual index. The curriculum gives you the science."
+                            data-ar="يعطيك المعرض الفهرس البصري، بينما يمنحك المنهج المحتوى العلمي."
+                        >
+                            The gallery gives you the visual index.
+                            The curriculum gives you the science.
+                        </h2>
+
+
+                        <p
+                            data-en="Explore scientific scope, core areas, biotechnology relevance and detailed academic material for all twenty-two subjects."
+                            data-ar="استكشف النطاق العلمي والمجالات الأساسية وأهمية كل مادة في التقانات الأحيائية والمحتوى الأكاديمي التفصيلي لجميع المواد الاثنتين والعشرين."
+                        >
+                            Explore scientific scope, core areas, biotechnology
+                            relevance and detailed academic material for all
+                            twenty-two subjects.
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        class="gallery-cta-button"
+                        href="curriculum.html"
+                    >
+
+                        <span
+                            data-en="Open Full Curriculum"
+                            data-ar="فتح المنهج الكامل"
+                        >
+                            Open Full Curriculum
+                        </span>
+
+                        <span aria-hidden="true">
+                            →
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+
+    <footer class="site-footer">
+
+        <div class="container footer-grid">
+
+
+            <!-- BRAND -->
+
+            <div class="footer-brand">
+
+                <div class="footer-logo">
+
+                    <span
+                        class="footer-brand-icon"
+                        aria-hidden="true"
+                    >
+                        🧬
+                    </span>
+
+                    <span>
+
+                        <span>
+                            DEPARTMENT OF
+                        </span>
+
+                        <strong>
+                            BIOTECH.
+                        </strong>
+
+                    </span>
+
+                </div>
+
+
+                <p
+                    data-en="University of Samarra · College of Applied Sciences · Department of Biotechnology."
+                    data-ar="جامعة سامراء · كلية العلوم التطبيقية · قسم التقانات الأحيائية."
+                >
+                    University of Samarra · College of Applied Sciences ·
+                    Department of Biotechnology.
+                </p>
+
+            </div>
+
+
+
+            <!-- EXPLORE -->
+
+            <div class="footer-column">
+
+                <h3
+                    data-en="Explore"
+                    data-ar="استكشف"
+                >
+                    Explore
+                </h3>
+
+
+                <a
+                    href="about.html"
+                    data-en="About"
+                    data-ar="عن القسم"
+                >
+                    About
+                </a>
+
+
+                <a
+                    href="curriculum.html"
+                    data-en="Curriculum"
+                    data-ar="المناهج"
+                >
+                    Curriculum
+                </a>
+
+
+                <a
+                    href="research.html"
+                    data-en="Research"
+                    data-ar="البحث العلمي"
+                >
+                    Research
+                </a>
+
+
+                <a
+                    href="gallery.html"
+                    data-en="Gallery"
+                    data-ar="المعرض"
+                >
+                    Gallery
+                </a>
+
+            </div>
+
+
+
+            <!-- ACADEMIC -->
+
+            <div class="footer-column">
+
+                <h3
+                    data-en="Academic"
+                    data-ar="أكاديمي"
+                >
+                    Academic
+                </h3>
+
+
+                <a
+                    href="faculty.html"
+                    data-en="Faculty"
+                    data-ar="الكادر"
+                >
+                    Faculty
+                </a>
+
+
+                <a
+                    href="laboratories.html"
+                    data-en="Laboratories"
+                    data-ar="المختبرات"
+                >
+                    Laboratories
+                </a>
+
+
+                <a
+                    href="projects.html"
+                    data-en="Projects"
+                    data-ar="المشاريع"
+                >
+                    Projects
+                </a>
+
+
+                <a
+                    href="news.html"
+                    data-en="News"
+                    data-ar="الأخبار"
+                >
+                    News
+                </a>
+
+            </div>
+
+
+
+            <!-- INSTITUTION -->
+
+            <div class="footer-column">
+
+                <h3
+                    data-en="Institution"
+                    data-ar="المؤسسة"
+                >
+                    Institution
+                </h3>
+
+
+                <a
+                    href="https://uosamarra.edu.iq/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-en="University of Samarra"
+                    data-ar="جامعة سامراء"
+                >
+                    University of Samarra
+                </a>
+
+
+                <a
+                    href="contact.html"
+                    data-en="Contact"
+                    data-ar="اتصل بنا"
+                >
+                    Contact
+                </a>
+
+
+                <p
+                    data-en="College of Applied Sciences<br>Department of Biotechnology"
+                    data-ar="كلية العلوم التطبيقية<br>قسم التقانات الأحيائية"
+                >
+                    College of Applied Sciences<br>
+                    Department of Biotechnology
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="container footer-bottom">
+
+            <p
+                data-en="© 2026 University of Samarra — Department of Biotechnology."
+                data-ar="© 2026 جامعة سامراء — قسم التقانات الأحيائية."
+            >
+                © 2026 University of Samarra —
+                Department of Biotechnology.
+            </p>
+
+
+            <p
+                data-en="Academic information should be verified against official institutional sources."
+                data-ar="ينبغي التحقق من المعلومات الأكاديمية بالرجوع إلى المصادر المؤسسية الرسمية."
+            >
+                Academic information should be verified against official
+                institutional sources.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================================================
+         GLOBAL JAVASCRIPT
+         ========================================================= -->
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

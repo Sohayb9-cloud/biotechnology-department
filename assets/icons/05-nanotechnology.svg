@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" role="img" aria-labelledby="title desc">
+<title id="title">Nanotechnology</title><desc id="desc">Nanoparticles interacting with a biological molecule.</desc>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0a2b2e"/><stop offset="1" stop-color="#0e4c4e"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#ffffff" stop-opacity=".22"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="900" height="540" rx="34" fill="url(#bg)"/>
+<circle cx="700" cy="125" r="150" fill="url(#glow)"/>
+<g opacity=".13" fill="none" stroke="#fff" stroke-width="2"><circle cx="700" cy="125" r="92"/><circle cx="700" cy="125" r="126"/><path d="M55 430 C220 280 420 510 845 165"/></g>
+<g fill="#72d6c2" opacity=".9"><circle cx="220" cy="210" r="38"/><circle cx="330" cy="165" r="18"/><circle cx="390" cy="270" r="27"/><circle cx="265" cy="320" r="15"/><circle cx="480" cy="205" r="12"/></g><g stroke="#fff" opacity=".75" stroke-width="3"><path d="M220 210L330 165L390 270L265 320L220 210M390 270L480 205"/></g><path d="M585 165 C690 165 740 225 790 320" fill="none" stroke="#e8f7f3" stroke-width="10"/><path d="M600 320h175" stroke="#72d6c2" stroke-width="8"/><text x="52" y="70" fill="#b9df38" font-family="Arial, sans-serif" font-size="17" font-weight="800" letter-spacing="4">NANOTECHNOLOGY</text>
+</svg>

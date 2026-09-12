@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" role="img" aria-labelledby="title desc">
+<title id="title">Molecular Biology</title><desc id="desc">DNA → RNA → protein information flow.</desc>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0a2b2e"/><stop offset="1" stop-color="#0e4c4e"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#ffffff" stop-opacity=".22"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="900" height="540" rx="34" fill="url(#bg)"/>
+<circle cx="700" cy="125" r="150" fill="url(#glow)"/>
+<g opacity=".13" fill="none" stroke="#fff" stroke-width="2"><circle cx="700" cy="125" r="92"/><circle cx="700" cy="125" r="126"/><path d="M55 430 C220 280 420 510 845 165"/></g>
+<g stroke="#e8f7f3" stroke-width="9" fill="none"><path d="M120 150 C250 210 250 330 120 390"/><path d="M250 150 C120 210 120 330 250 390"/><path d="M150 185h75M135 245h100M135 305h100M150 365h75"/></g><path d="M350 270h95" stroke="#8db9ff" stroke-width="9"/><path d="M445 270l-22-17m22 17l-22 17" stroke="#8db9ff" stroke-width="9" fill="none"/><g stroke="#e8f7f3" stroke-width="6"><path d="M520 170h110v55H520z"/><path d="M545 300h65v55h-65z"/></g><text x="525" y="395" fill="#8db9ff" font-family="Arial" font-size="22" font-weight="800">DNA → RNA → PROTEIN</text><text x="52" y="70" fill="#b9df38" font-family="Arial, sans-serif" font-size="17" font-weight="800" letter-spacing="4">MOLECULAR BIOLOGY</text>
+</svg>

@@ -1,0 +1,1678 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta
+        name="description"
+        content="Organic Chemistry — Department of Biotechnology, College of Applied Sciences, University of Samarra."
+    >
+
+    <meta
+        name="keywords"
+        content="Organic Chemistry, Biotechnology, University of Samarra, carbon compounds, biomolecules, functional groups"
+    >
+
+    <meta name="theme-color" content="#0e4b4e">
+
+    <title>Organic Chemistry | Department of Biotechnology</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+    /* =========================================================
+       ORGANIC CHEMISTRY — COURSE PAGE
+       ========================================================= */
+
+    :root {
+        --course-teal: #0e4b4e;
+        --course-teal-dark: #07383a;
+        --course-green: #b9df38;
+        --course-light: #eef7f4;
+        --course-border: #d8e8e3;
+        --course-text: #183536;
+        --course-muted: #607777;
+        --course-white: #ffffff;
+    }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            color: var(--course-text);
+            background: #f8fbfa;
+        }
+
+        /* ---------------------------------------------------------
+           ACCESSIBILITY
+           --------------------------------------------------------- */
+
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 10px;
+            z-index: 9999;
+            padding: 12px 18px;
+            background: var(--course-teal);
+            color: white;
+            border-radius: 8px;
+        }
+
+        .skip-link:focus {
+            left: 15px;
+        }
+
+        /* ---------------------------------------------------------
+           COURSE HERO
+           --------------------------------------------------------- */
+
+        .course-hero {
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(
+                    circle at 85% 20%,
+                    rgba(185, 223, 56, 0.16),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    var(--course-teal-dark),
+                    var(--course-teal)
+                );
+            color: white;
+            padding: 90px 0 80px;
+        }
+
+        .course-hero::before {
+            content: "";
+            position: absolute;
+            width: 380px;
+            height: 380px;
+            border: 1px solid rgba(255,255,255,.12);
+            border-radius: 50%;
+            right: -130px;
+            top: -130px;
+        }
+
+        .course-hero::after {
+            content: "";
+            position: absolute;
+            width: 220px;
+            height: 220px;
+            border: 1px solid rgba(185,223,56,.22);
+            border-radius: 50%;
+            right: 80px;
+            bottom: -120px;
+        }
+
+        .course-hero-grid {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: minmax(0, 1.15fr) minmax(320px, .85fr);
+            gap: 55px;
+            align-items: center;
+        }
+
+        .course-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 8px 13px;
+            border: 1px solid rgba(255,255,255,.18);
+            border-radius: 999px;
+            color: #dcece8;
+            font-size: .76rem;
+            font-weight: 800;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+
+        .course-kicker::before {
+            content: "";
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--course-green);
+            box-shadow: 0 0 0 5px rgba(185,223,56,.12);
+        }
+
+        .course-hero h1 {
+            margin: 0 0 20px;
+            font-size: clamp(2.8rem, 6vw, 5.4rem);
+            line-height: .98;
+            letter-spacing: -.045em;
+        }
+
+        .course-hero .lead {
+            max-width: 760px;
+            margin: 0;
+            color: #d7e9e5;
+            font-size: 1.12rem;
+            line-height: 1.8;
+        }
+
+        .course-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 28px;
+        }
+
+        .course-meta span {
+            display: inline-flex;
+            padding: 8px 13px;
+            border-radius: 999px;
+            border: 1px solid rgba(255,255,255,.18);
+            background: rgba(255,255,255,.06);
+            color: #e7f3f0;
+            font-size: .86rem;
+        }
+
+        /* ---------------------------------------------------------
+           MOLECULAR ILLUSTRATION
+           --------------------------------------------------------- */
+
+        .molecular-art {
+            position: relative;
+            min-height: 390px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .molecule-stage {
+            position: relative;
+            width: min(100%, 430px);
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(255,255,255,.10),
+                    rgba(255,255,255,.02) 55%,
+                    transparent 56%
+                );
+            border: 1px solid rgba(255,255,255,.12);
+        }
+
+        .molecule-ring {
+            position: absolute;
+            inset: 13%;
+            border: 1px dashed rgba(185,223,56,.42);
+            border-radius: 50%;
+            animation: rotateMolecule 24s linear infinite;
+        }
+
+        .molecule-ring.two {
+            inset: 25%;
+            animation-duration: 17s;
+            animation-direction: reverse;
+            border-color: rgba(255,255,255,.25);
+        }
+
+        .atom {
+            position: absolute;
+            width: 64px;
+            height: 64px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            font-weight: 900;
+            box-shadow:
+                0 10px 35px rgba(0,0,0,.22),
+                inset 0 1px 0 rgba(255,255,255,.25);
+        }
+
+        .atom span {
+            font-size: .82rem;
+        }
+
+        .atom-carbon {
+            left: 42%;
+            top: 42%;
+            background: #dce9e6;
+            color: var(--course-teal-dark);
+        }
+
+        .atom-oxygen {
+            left: 11%;
+            top: 31%;
+            background: #e98989;
+            color: #5a1d1d;
+        }
+
+        .atom-nitrogen {
+            right: 10%;
+            top: 31%;
+            background: #8fb8e9;
+            color: #183a65;
+        }
+
+        .atom-hydrogen {
+            left: 22%;
+            bottom: 17%;
+            width: 46px;
+            height: 46px;
+            background: #f0f3f2;
+            color: #35504f;
+        }
+
+        .atom-phosphate {
+            right: 20%;
+            bottom: 13%;
+            width: 56px;
+            height: 56px;
+            background: var(--course-green);
+            color: var(--course-teal-dark);
+        }
+
+        .bond {
+            position: absolute;
+            height: 4px;
+            border-radius: 99px;
+            background: rgba(255,255,255,.48);
+            transform-origin: left center;
+        }
+
+        .bond-1 {
+            width: 145px;
+            left: 23%;
+            top: 43%;
+            transform: rotate(14deg);
+        }
+
+        .bond-2 {
+            width: 145px;
+            left: 50%;
+            top: 43%;
+            transform: rotate(-13deg);
+        }
+
+        .bond-3 {
+            width: 120px;
+            left: 39%;
+            top: 51%;
+            transform: rotate(42deg);
+        }
+
+        .bond-4 {
+            width: 130px;
+            left: 53%;
+            top: 55%;
+            transform: rotate(40deg);
+        }
+
+        .molecule-label {
+            position: absolute;
+            left: 50%;
+            bottom: -4px;
+            transform: translateX(-50%);
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: rgba(0,0,0,.22);
+            border: 1px solid rgba(255,255,255,.15);
+            color: #dcece8;
+            font-size: .75rem;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        @keyframes rotateMolecule {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* ---------------------------------------------------------
+           CONTENT
+           --------------------------------------------------------- */
+
+        .course-content {
+            padding: 90px 0;
+        }
+
+        .course-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 300px;
+            gap: 45px;
+            align-items: start;
+        }
+
+        .course-main {
+            min-width: 0;
+        }
+
+        .course-section {
+            padding: 0 0 60px;
+            margin-bottom: 60px;
+            border-bottom: 1px solid var(--course-border);
+        }
+
+        .course-section:last-child {
+            border-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        .section-label {
+            color: var(--course-teal);
+            font-size: .76rem;
+            font-weight: 900;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .course-section h2 {
+            margin: 0 0 18px;
+            color: var(--course-teal-dark);
+            font-size: clamp(1.8rem, 3vw, 2.65rem);
+            letter-spacing: -.025em;
+        }
+
+        .course-section h3 {
+            color: var(--course-teal);
+            margin-top: 30px;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .course-section p {
+            color: var(--course-muted);
+            font-size: 1.02rem;
+            line-height: 1.85;
+        }
+
+        .course-section strong {
+            color: var(--course-text);
+        }
+
+        /* ---------------------------------------------------------
+           OBJECTIVES
+           --------------------------------------------------------- */
+
+        .objective-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .objective {
+            position: relative;
+            padding: 20px 20px 20px 54px;
+            background: white;
+            border: 1px solid var(--course-border);
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(14,75,78,.04);
+        }
+
+        .objective::before {
+            content: "✓";
+            position: absolute;
+            left: 19px;
+            top: 18px;
+            width: 23px;
+            height: 23px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: var(--course-light);
+            color: var(--course-teal);
+            font-weight: 900;
+        }
+
+        .objective p {
+            margin: 0;
+            font-size: .95rem;
+            line-height: 1.65;
+        }
+
+        /* ---------------------------------------------------------
+           CONCEPT CARDS
+           --------------------------------------------------------- */
+
+        .concept-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+            margin-top: 25px;
+        }
+
+        .concept {
+            background: white;
+            border: 1px solid var(--course-border);
+            border-radius: 18px;
+            padding: 23px;
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+
+        .concept:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 35px rgba(14,75,78,.08);
+        }
+
+        .concept-number {
+            display: inline-flex;
+            width: 35px;
+            height: 35px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            background: var(--course-light);
+            color: var(--course-teal);
+            font-weight: 900;
+            margin-bottom: 15px;
+        }
+
+        .concept h3 {
+            margin: 0 0 9px;
+            font-size: 1.08rem;
+        }
+
+        .concept p {
+            margin: 0;
+            font-size: .91rem;
+            line-height: 1.65;
+        }
+
+        /* ---------------------------------------------------------
+           FUNCTIONAL GROUPS
+           --------------------------------------------------------- */
+
+        .functional-groups {
+            margin-top: 28px;
+            overflow-x: auto;
+            background: white;
+            border: 1px solid var(--course-border);
+            border-radius: 18px;
+        }
+
+        .functional-groups table {
+            width: 100%;
+            min-width: 650px;
+            border-collapse: collapse;
+        }
+
+        .functional-groups th,
+        .functional-groups td {
+            padding: 16px 18px;
+            text-align: left;
+            border-bottom: 1px solid var(--course-border);
+        }
+
+        .functional-groups th {
+            background: var(--course-light);
+            color: var(--course-teal-dark);
+            font-size: .84rem;
+            text-transform: uppercase;
+            letter-spacing: .07em;
+        }
+
+        .functional-groups td {
+            color: var(--course-muted);
+            font-size: .94rem;
+        }
+
+        .functional-groups tr:last-child td {
+            border-bottom: 0;
+        }
+
+        .chem-symbol {
+            display: inline-flex;
+            padding: 5px 9px;
+            border-radius: 7px;
+            background: #edf2f1;
+            color: var(--course-teal-dark);
+            font-family: "Courier New", monospace;
+            font-weight: 700;
+        }
+
+        /* ---------------------------------------------------------
+           BIOTECH CONNECTION
+           --------------------------------------------------------- */
+
+        .connection-box {
+            position: relative;
+            overflow: hidden;
+            padding: 35px;
+            border-radius: 24px;
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--course-teal-dark),
+                    var(--course-teal)
+                );
+            color: white;
+        }
+
+        .connection-box::after {
+            content: "C";
+            position: absolute;
+            right: 25px;
+            bottom: -55px;
+            font-size: 15rem;
+            line-height: 1;
+            font-weight: 900;
+            color: rgba(255,255,255,.04);
+        }
+
+        .connection-box h3 {
+            position: relative;
+            z-index: 2;
+            margin-top: 0;
+            color: white;
+            font-size: 1.45rem;
+        }
+
+        .connection-box p {
+            position: relative;
+            z-index: 2;
+            color: #d9e9e6;
+            margin-bottom: 0;
+        }
+
+        .pathway {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .pathway-item {
+            position: relative;
+            text-align: center;
+            padding: 16px 10px;
+            border: 1px solid rgba(255,255,255,.15);
+            border-radius: 12px;
+            background: rgba(255,255,255,.05);
+            font-size: .85rem;
+        }
+
+        .pathway-item:not(:last-child)::after {
+            content: "→";
+            position: absolute;
+            right: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--course-green);
+            font-weight: 900;
+            z-index: 3;
+        }
+
+        /* ---------------------------------------------------------
+           APPLICATIONS
+           --------------------------------------------------------- */
+
+        .application-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+            margin-top: 25px;
+        }
+
+        .application {
+            padding: 23px;
+            border: 1px solid var(--course-border);
+            border-radius: 18px;
+            background: white;
+        }
+
+        .application h3 {
+            margin-top: 0;
+        }
+
+        .application p {
+            margin-bottom: 0;
+        }
+
+        /* ---------------------------------------------------------
+           SIDEBAR
+           --------------------------------------------------------- */
+
+        .course-sidebar {
+            position: sticky;
+            top: 25px;
+        }
+
+        .sidebar-card {
+            background: white;
+            border: 1px solid var(--course-border);
+            border-radius: 18px;
+            padding: 23px;
+            margin-bottom: 16px;
+            box-shadow: 0 8px 25px rgba(14,75,78,.04);
+        }
+
+        .sidebar-card h3 {
+            margin: 0 0 15px;
+            color: var(--course-teal-dark);
+            font-size: 1rem;
+        }
+
+        .toc {
+            display: grid;
+            gap: 8px;
+        }
+
+        .toc a {
+            display: block;
+            padding: 9px 11px;
+            border-radius: 9px;
+            color: var(--course-muted);
+            text-decoration: none;
+            font-size: .9rem;
+            transition: background .2s ease, color .2s ease;
+        }
+
+        .toc a:hover {
+            background: var(--course-light);
+            color: var(--course-teal);
+        }
+
+        .next-course {
+            display: block;
+            padding: 14px;
+            border-radius: 12px;
+            background: var(--course-light);
+            color: var(--course-teal-dark);
+            text-decoration: none;
+            font-weight: 800;
+            line-height: 1.45;
+        }
+
+        .next-course small {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--course-teal);
+            font-size: .7rem;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+        }
+
+        /* ---------------------------------------------------------
+           SOURCES
+           --------------------------------------------------------- */
+
+        .references {
+            padding: 25px;
+            background: #f0f6f4;
+            border-radius: 16px;
+            border: 1px solid var(--course-border);
+        }
+
+        .references p {
+            margin: 0;
+            font-size: .88rem;
+        }
+
+        .references a {
+            color: var(--course-teal);
+            font-weight: 700;
+        }
+
+        /* ---------------------------------------------------------
+           RESPONSIVE
+           --------------------------------------------------------- */
+
+        @media (max-width: 1000px) {
+
+            .course-hero-grid,
+            .course-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .course-sidebar {
+                position: static;
+            }
+
+            .molecular-art {
+                min-height: 330px;
+            }
+
+            .concept-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            .course-hero {
+                padding: 65px 0 55px;
+            }
+
+            .course-content {
+                padding: 60px 0;
+            }
+
+            .objective-grid,
+            .concept-grid,
+            .application-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pathway {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .pathway-item:not(:last-child)::after {
+                display: none;
+            }
+
+            .molecular-art {
+                min-height: 300px;
+            }
+
+            .atom {
+                width: 52px;
+                height: 52px;
+            }
+
+            .atom-hydrogen {
+                width: 40px;
+                height: 40px;
+            }
+
+            .atom-phosphate {
+                width: 48px;
+                height: 48px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            html {
+                scroll-behavior: auto;
+            }
+
+            .molecule-ring {
+                animation: none;
+            }
+
+            .concept {
+                transition: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+
+<header class="site-header">
+
+    <nav class="nav container" aria-label="Primary navigation">
+
+        <a class="brand" href="../index.html" aria-label="Biotechnology Department home">
+            <span class="brand-mark">🧬</span>
+            <span>
+                BIOTECH<span class="brand-dot">.</span>
+            </span>
+        </a>
+
+        <button
+            class="menu-toggle"
+            aria-expanded="false"
+            aria-controls="site-menu"
+            type="button"
+        >
+            Menu
+        </button>
+
+        <div class="site-menu" id="site-menu">
+
+            <a href="../index.html">Home</a>
+            <a href="../about.html">About</a>
+            <a href="../curriculum.html" aria-current="page">Curriculum</a>
+            <a href="../faculty.html">Faculty</a>
+            <a href="../research.html">Research</a>
+            <a href="../laboratories.html">Laboratories</a>
+            <a href="../projects.html">Projects</a>
+            <a href="../news.html">News</a>
+            <a href="../gallery.html">Gallery</a>
+            <a href="../contact.html">Contact</a>
+
+            <button
+                id="langToggle"
+                class="lang-btn"
+                type="button"
+            >
+                العربية
+            </button>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<main id="main">
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <section class="course-hero">
+
+        <div class="container course-hero-grid">
+
+            <div>
+
+                <div class="course-kicker">
+                    Subject 03 · Biotechnology Curriculum
+                </div>
+
+                <h1
+                    data-en="Organic Chemistry."
+                    data-ar="الكيمياء العضوية."
+                >
+                    Organic Chemistry.
+                </h1>
+
+                <p
+                    class="lead"
+                    data-en="The chemistry of carbon-based molecules — and one of the essential foundations for understanding biomolecules, biochemical reactions and modern biotechnology."
+                    data-ar="كيمياء الجزيئات القائمة على الكربون، وهي إحدى الأسس المهمة لفهم الجزيئات الحيوية والتفاعلات الكيميائية الحيوية والتقانات الأحيائية الحديثة."
+                >
+                    The chemistry of carbon-based molecules — and one of the essential
+                    foundations for understanding biomolecules, biochemical reactions
+                    and modern biotechnology.
+                </p>
+
+                <div class="course-meta">
+
+                    <span>Carbon Chemistry</span>
+                    <span>Functional Groups</span>
+                    <span>Biomolecules</span>
+                    <span>Reactivity</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Scientific CSS illustration -->
+
+            <div class="molecular-art" aria-label="Scientific molecular illustration">
+
+                <div class="molecule-stage">
+
+                    <div class="molecule-ring"></div>
+                    <div class="molecule-ring two"></div>
+
+                    <div class="bond bond-1"></div>
+                    <div class="bond bond-2"></div>
+                    <div class="bond bond-3"></div>
+                    <div class="bond bond-4"></div>
+
+                    <div class="atom atom-carbon">
+                        <span>C</span>
+                    </div>
+
+                    <div class="atom atom-oxygen">
+                        <span>O</span>
+                    </div>
+
+                    <div class="atom atom-nitrogen">
+                        <span>N</span>
+                    </div>
+
+                    <div class="atom atom-hydrogen">
+                        <span>H</span>
+                    </div>
+
+                    <div class="atom atom-phosphate">
+                        <span>P</span>
+                    </div>
+
+                    <div class="molecule-label">
+                        Molecular architecture
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+<main id="main">
+
+    <section class="course-hero">
+        ...
+    </section>
+
+
+    <!-- PUT THE VISUAL IMAGE HERE -->
+
+    <section class="visual-pack">
+        <div class="container">
+
+            <div class="visual-pack-header">
+                <p class="eyebrow">VISUAL LEARNING</p>
+                <h2>Organic Chemistry Visual Guide</h2>
+
+                <p>
+                    A visual overview of molecular structures, functional groups,
+                    chemical bonding and organic chemistry concepts relevant to
+                    biotechnology.
+                </p>
+            </div>
+
+            <div class="visual-pack-image">
+                <img
+                    src="../assets/organic-chemistry/organic-chemistry-visual-pack.png"
+                    alt="Organic Chemistry scientific visual guide showing molecular structures, functional groups and biotechnology concepts"
+                    loading="lazy">
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="section">
+        ...
+    <!-- =====================================================
+         COURSE CONTENT
+         ===================================================== -->
+
+    <section class="course-content">
+
+        <div class="container course-layout">
+
+            <article class="course-main">
+
+
+                <!-- OVERVIEW -->
+
+                <section class="course-section" id="overview">
+
+                    <div class="section-label">
+                        01 · Scientific Overview
+                    </div>
+
+                    <h2>What is Organic Chemistry?</h2>
+
+                    <p
+                        data-en="Organic chemistry is the branch of chemistry concerned primarily with the structure, properties, reactions and synthesis of carbon-containing compounds. Carbon is particularly versatile because it can form stable covalent bonds with itself and with elements such as hydrogen, oxygen and nitrogen, producing an enormous diversity of molecular structures."
+                        data-ar="الكيمياء العضوية هي فرع من فروع الكيمياء يهتم بصورة أساسية بدراسة تركيب المركبات المحتوية على الكربون وخواصها وتفاعلاتها وطرق تحضيرها. ويتميز الكربون بقدرته الكبيرة على تكوين روابط تساهمية مستقرة مع نفسه ومع عناصر مثل الهيدروجين والأكسجين والنيتروجين، مما يسمح بتكوين تنوع هائل من البنى الجزيئية."
+                    >
+                        Organic chemistry is the branch of chemistry concerned primarily
+                        with the structure, properties, reactions and synthesis of
+                        carbon-containing compounds. Carbon is particularly versatile
+                        because it can form stable covalent bonds with itself and with
+                        elements such as hydrogen, oxygen and nitrogen, producing an
+                        enormous diversity of molecular structures.
+                    </p>
+
+                    <p
+                        data-en="This makes organic chemistry especially important in the life sciences. Proteins, carbohydrates, lipids and nucleic acids all contain extensive carbon frameworks, while functional groups help determine the chemical behavior and biological properties of many molecules."
+                        data-ar="وتجعل هذه الخصائص الكيمياء العضوية مهمة بصورة خاصة في علوم الحياة. فالبروتينات والكربوهيدرات والدهون والأحماض النووية تحتوي جميعها على هياكل كربونية واسعة، بينما تسهم المجاميع الوظيفية في تحديد السلوك الكيميائي والخواص الحيوية للعديد من الجزيئات."
+                    >
+                        This makes organic chemistry especially important in the life
+                        sciences. Proteins, carbohydrates, lipids and nucleic acids all
+                        contain extensive carbon frameworks, while functional groups
+                        help determine the chemical behavior and biological properties
+                        of many molecules.
+                    </p>
+
+                </section>
+
+
+                <!-- LEARNING OBJECTIVES -->
+
+                <section class="course-section" id="objectives">
+
+                    <div class="section-label">
+                        02 · Learning Objectives
+                    </div>
+
+                    <h2>What should students understand?</h2>
+
+                    <div class="objective-grid">
+
+                        <div class="objective">
+                            <p>
+                                Explain how carbon bonding contributes to molecular
+                                diversity and structural complexity.
+                            </p>
+                        </div>
+
+                        <div class="objective">
+                            <p>
+                                Recognize major organic functional groups and relate
+                                them to chemical properties.
+                            </p>
+                        </div>
+
+                        <div class="objective">
+                            <p>
+                                Understand the relationship between molecular
+                                structure and chemical reactivity.
+                            </p>
+                        </div>
+
+                        <div class="objective">
+                            <p>
+                                Connect fundamental organic chemistry with biological
+                                molecules and biochemical processes.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- CORE CONCEPTS -->
+
+                <section class="course-section" id="concepts">
+
+                    <div class="section-label">
+                        03 · Core Concepts
+                    </div>
+
+                    <h2>The molecular language of organic chemistry</h2>
+
+                    <div class="concept-grid">
+
+                        <article class="concept">
+
+                            <span class="concept-number">01</span>
+
+                            <h3>Carbon Skeletons</h3>
+
+                            <p>
+                                Carbon atoms can form chains, branches and rings.
+                                These frameworks provide the structural backbone of
+                                many organic molecules.
+                            </p>
+
+                        </article>
+
+
+                        <article class="concept">
+
+                            <span class="concept-number">02</span>
+
+                            <h3>Functional Groups</h3>
+
+                            <p>
+                                Specific groups of atoms give organic molecules
+                                characteristic chemical properties and influence
+                                their reactions.
+                            </p>
+
+                        </article>
+
+
+                        <article class="concept">
+
+                            <span class="concept-number">03</span>
+
+                            <h3>Isomerism</h3>
+
+                            <p>
+                                Molecules can share the same molecular formula while
+                                differing in connectivity or three-dimensional
+                                arrangement.
+                            </p>
+
+                        </article>
+
+
+                        <article class="concept">
+
+                            <span class="concept-number">04</span>
+
+                            <h3>Reaction Mechanisms</h3>
+
+                            <p>
+                                Organic reactions can be understood through changes
+                                in bonds, electron distribution and reactive
+                                intermediates.
+                            </p>
+
+                        </article>
+
+
+                        <article class="concept">
+
+                            <span class="concept-number">05</span>
+
+                            <h3>Polarity</h3>
+
+                            <p>
+                                Differences in electronegativity and molecular
+                                structure influence polarity, intermolecular
+                                interactions and solubility.
+                            </p>
+
+                        </article>
+
+
+                        <article class="concept">
+
+                            <span class="concept-number">06</span>
+
+                            <h3>Stereochemistry</h3>
+
+                            <p>
+                                Three-dimensional molecular arrangement can strongly
+                                influence biological recognition and molecular
+                                function.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+                <!-- FUNCTIONAL GROUPS -->
+
+                <section class="course-section" id="functional-groups">
+
+                    <div class="section-label">
+                        04 · Functional Groups
+                    </div>
+
+                    <h2>Small structural changes, major chemical consequences</h2>
+
+                    <p>
+                        Functional groups are characteristic groups of atoms within
+                        organic molecules. They influence polarity, acidity,
+                        basicity, hydrogen bonding and chemical reactivity.
+                    </p>
+
+                    <div class="functional-groups">
+
+                        <table>
+
+                            <thead>
+
+                                <tr>
+                                    <th>Functional Group</th>
+                                    <th>General Representation</th>
+                                    <th>Biological Relevance</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td>Hydroxyl</td>
+                                    <td>
+                                        <span class="chem-symbol">–OH</span>
+                                    </td>
+                                    <td>
+                                        Common in alcohols and carbohydrates;
+                                        contributes to polarity and hydrogen bonding.
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Carbonyl</td>
+                                    <td>
+                                        <span class="chem-symbol">C=O</span>
+                                    </td>
+                                    <td>
+                                        Found in aldehydes, ketones and many
+                                        biologically important molecules.
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Carboxyl</td>
+                                    <td>
+                                        <span class="chem-symbol">–COOH</span>
+                                    </td>
+                                    <td>
+                                        Important in amino acids, fatty acids and
+                                        many organic acids.
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Amino</td>
+                                    <td>
+                                        <span class="chem-symbol">–NH₂</span>
+                                    </td>
+                                    <td>
+                                        A defining group in amino acids and many
+                                        biologically active compounds.
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Phosphate</td>
+                                    <td>
+                                        <span class="chem-symbol">–PO₄</span>
+                                    </td>
+                                    <td>
+                                        Central to nucleic acids and energy-transfer
+                                        molecules such as ATP.
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Sulfhydryl</td>
+                                    <td>
+                                        <span class="chem-symbol">–SH</span>
+                                    </td>
+                                    <td>
+                                        Important in cysteine and in protein
+                                        structure through disulfide formation.
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </section>
+
+
+                <!-- BIOTECH CONNECTION -->
+
+                <section class="course-section" id="biotechnology">
+
+                    <div class="section-label">
+                        05 · Biotechnology Connection
+                    </div>
+
+                    <h2>Why does Organic Chemistry matter in Biotechnology?</h2>
+
+                    <div class="connection-box">
+
+                        <h3>
+                            From carbon chemistry to biological function
+                        </h3>
+
+                        <p>
+                            Biotechnology investigates biological systems at
+                            multiple levels, and molecular structure is one of the
+                            foundations connecting chemistry with biology.
+                            Understanding organic chemistry helps students
+                            interpret the structures and reactions of biomolecules,
+                            metabolites and other biologically relevant compounds.
+                        </p>
+
+                        <div class="pathway">
+
+                            <div class="pathway-item">
+                                Carbon chemistry
+                            </div>
+
+                            <div class="pathway-item">
+                                Biomolecules
+                            </div>
+
+                            <div class="pathway-item">
+                                Biochemical reactions
+                            </div>
+
+                            <div class="pathway-item">
+                                Biotechnology
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- APPLICATIONS -->
+
+                <section class="course-section" id="applications">
+
+                    <div class="section-label">
+                        06 · Biotechnology Applications
+                    </div>
+
+                    <h2>Where does this knowledge lead?</h2>
+
+                    <div class="application-grid">
+
+                        <article class="application">
+
+                            <h3>Biochemistry</h3>
+
+                            <p>
+                                Organic chemistry provides the molecular framework
+                                for understanding carbohydrates, lipids, proteins,
+                                nucleic acids and metabolic reactions.
+                            </p>
+
+                        </article>
+
+
+                        <article class="application">
+
+                            <h3>Natural Products</h3>
+
+                            <p>
+                                Many biologically active natural products are organic
+                                compounds whose structures and functional groups
+                                influence their chemical and biological properties.
+                            </p>
+
+                        </article>
+
+
+                        <article class="application">
+
+                            <h3>Pharmaceutical Biotechnology</h3>
+
+                            <p>
+                                Molecular structure and reactivity are important for
+                                understanding drugs, bioactive compounds and
+                                interactions between molecules and biological targets.
+                            </p>
+
+                        </article>
+
+
+                        <article class="application">
+
+                            <h3>Metabolic Science</h3>
+
+                            <p>
+                                Cellular metabolism involves networks of chemical
+                                transformations that follow the principles of
+                                molecular structure and organic reactivity.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+                <!-- SUMMARY -->
+
+                <section class="course-section" id="summary">
+
+                    <div class="section-label">
+                        07 · Scientific Perspective
+                    </div>
+
+                    <h2>Organic chemistry as a bridge</h2>
+
+                    <p>
+                        Organic chemistry is more than the memorization of molecular
+                        structures and reactions. It provides a framework for
+                        understanding how molecular architecture influences chemical
+                        behavior — and how chemical behavior ultimately contributes
+                        to biological function.
+                    </p>
+
+                    <p>
+                        For biotechnology students, this perspective creates an
+                        important bridge between chemistry and disciplines such as
+                        biochemistry, molecular biology, pharmacology, plant
+                        biotechnology and natural-product research.
+                    </p>
+
+                </section>
+
+
+                <!-- REFERENCES -->
+
+                <section class="course-section" id="references">
+
+                    <div class="section-label">
+                        08 · Further Reading
+                    </div>
+
+                    <h2>Scientific resources</h2>
+
+                    <div class="references">
+
+                        <p>
+                            <strong>OpenStax — Organic Chemistry</strong><br>
+                            A university-level open educational resource covering
+                            functional groups, organic reactions, stereochemistry,
+                            biomolecules and biological chemistry.
+                            <br><br>
+
+                            <a
+                                href="https://openstax.org/books/organic-chemistry/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Open the Organic Chemistry textbook →
+                            </a>
+                        </p>
+
+                        <br>
+
+                        <p>
+                            <strong>OpenStax — Biology 2e: Biotechnology</strong><br>
+                            Provides an introductory connection between biological
+                            systems and technological applications of biotechnology.
+                            <br><br>
+
+                            <a
+                                href="https://openstax.org/books/biology-2e/pages/17-1-biotechnology"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Read the biotechnology overview →
+                            </a>
+                        </p>
+
+                    </div>
+
+                </section>
+
+            </article>
+
+
+            <!-- =================================================
+                 SIDEBAR
+                 ================================================= -->
+
+            <aside class="course-sidebar">
+
+                <div class="sidebar-card">
+
+                    <h3>
+                        On this page
+                    </h3>
+
+                    <nav class="toc" aria-label="Course contents">
+
+                        <a href="#overview">
+                            Scientific Overview
+                        </a>
+
+                        <a href="#objectives">
+                            Learning Objectives
+                        </a>
+
+                        <a href="#concepts">
+                            Core Concepts
+                        </a>
+
+                        <a href="#functional-groups">
+                            Functional Groups
+                        </a>
+
+                        <a href="#biotechnology">
+                            Biotechnology Connection
+                        </a>
+
+                        <a href="#applications">
+                            Applications
+                        </a>
+
+                        <a href="#summary">
+                            Scientific Perspective
+                        </a>
+
+                        <a href="#references">
+                            Further Reading
+                        </a>
+
+                    </nav>
+
+                </div>
+
+
+                <div class="sidebar-card">
+
+                    <h3>
+                        Curriculum
+                    </h3>
+
+                    <a
+                        class="next-course"
+                        href="../curriculum.html"
+                    >
+                        <small>
+                            Return to
+                        </small>
+
+                        Biotechnology Curriculum →
+                    </a>
+
+                </div>
+
+
+                <div class="sidebar-card">
+
+                    <h3>
+                        Subject
+                    </h3>
+
+                    <p style="margin:0;color:var(--course-muted);line-height:1.7;">
+                        <strong style="color:var(--course-teal-dark);">
+                            03
+                        </strong>
+                        <br>
+                        Organic Chemistry
+                    </p>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+        <div>
+
+            <div class="brand footer-brand">
+                🧬 BIOTECH<span class="brand-dot">.</span>
+            </div>
+
+            <p>
+                University of Samarra · College of Applied Sciences ·
+                Department of Biotechnology.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>Explore</h3>
+
+            <a href="../about.html">About</a>
+            <a href="../curriculum.html">Curriculum</a>
+            <a href="../research.html">Research</a>
+            <a href="../gallery.html">Gallery</a>
+
+        </div>
+
+
+        <div>
+
+            <h3>Institution</h3>
+
+            <a
+                href="https://uosamarra.edu.iq/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                University of Samarra
+            </a>
+
+            <a href="../contact.html">
+                Contact
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="container copy">
+
+        © 2026 University of Samarra — Department of Biotechnology.
+        Academic information should be verified against official
+        departmental sources before publication.
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     MAIN JAVASCRIPT
+     ========================================================= -->
+
+<script src="../js/main.js"></script>
+
+</body>
+</html><section class="visual-pack">
+    <div class="container">
+        <div class="section-heading">
+            <p class="eyebrow">VISUAL LEARNING</p>
+            <h2>Organic Chemistry Visual Guide</h2>
+            <p>
+                A visual overview of carbon frameworks, functional groups,
+                chemical reactions and their relationship to biological systems.
+            </p>
+        </div>
+
+        
+    </div>
+</section>

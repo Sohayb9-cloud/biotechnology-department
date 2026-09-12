@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" role="img" aria-labelledby="title desc">
+<title id="title">Cytogenetics</title><desc id="desc">Karyotype-style chromosome pairs and cell nucleus.</desc>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0a2b2e"/><stop offset="1" stop-color="#0e4c4e"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#ffffff" stop-opacity=".22"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="900" height="540" rx="34" fill="url(#bg)"/>
+<circle cx="700" cy="125" r="150" fill="url(#glow)"/>
+<g opacity=".13" fill="none" stroke="#fff" stroke-width="2"><circle cx="700" cy="125" r="92"/><circle cx="700" cy="125" r="126"/><path d="M55 430 C220 280 420 510 845 165"/></g>
+<circle cx="300" cy="270" r="130" fill="none" stroke="#e8f7f3" stroke-width="6"/><g stroke="#8db9ff" stroke-width="14" stroke-linecap="round"><path d="M515 155l70 90-70 90"/><path d="M610 155l70 90-70 90"/><path d="M710 155l70 90-70 90"/></g><g stroke="#fff" stroke-width="7"><path d="M190 210h65M185 270h70M190 330h65"/><path d="M270 190h55M265 270h60M270 350h55"/></g><text x="520" y="415" fill="#b9df38" font-family="Arial" font-size="18" font-weight="700">KARYOTYPE · CHROMOSOMES</text><text x="52" y="70" fill="#b9df38" font-family="Arial, sans-serif" font-size="17" font-weight="800" letter-spacing="4">CYTOGENETICS</text>
+</svg>

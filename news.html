@@ -1,0 +1,617 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="News and events — Department of Biotechnology, College of Applied Sciences, University of Samarra.">
+    <meta name="theme-color" content="#0b6f68">
+    <title>News & Events | Department of Biotechnology</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/news.css">
+</head>
+
+<body class="news-page">
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header" id="siteHeader">
+    <div class="container navbar">
+
+        <a class="brand" href="index.html" aria-label="Biotechnology Department home">
+            <span class="brand-icon" aria-hidden="true">🧬</span>
+            <span class="brand-text">
+                <span>DEPARTMENT OF</span>
+                <strong>BIOTECH.</strong>
+            </span>
+        </a>
+
+        <div class="desktop-navigation">
+            <nav class="nav-links" aria-label="Primary navigation">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="about.html">About</a>
+                <a class="nav-link" href="curriculum.html">Curriculum</a>
+                <a class="nav-link" href="faculty.html">Faculty</a>
+                <a class="nav-link" href="research.html">Research</a>
+                <a class="nav-link" href="laboratories.html">Laboratories</a>
+                <a class="nav-link" href="projects.html">Projects</a>
+                <a class="nav-link active" href="news.html" aria-current="page">News</a>
+                <a class="nav-link" href="gallery.html">Gallery</a>
+                <a class="nav-link" href="contact.html">Contact</a>
+            </nav>
+
+            <div class="language-wrapper">
+                <button
+                    class="language-button"
+                    id="languageButton"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="languageMenu"
+                >
+                    <span>English</span>
+                    <span aria-hidden="true">⌄</span>
+                </button>
+
+                <div class="language-menu" id="languageMenu">
+                    <button class="language-option active" type="button" data-language="en">English</button>
+                    <button class="language-option" type="button" data-language="ar">العربية</button>
+                </div>
+            </div>
+        </div>
+
+        <button
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobileNavigation"
+            aria-label="Open menu"
+        >
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+
+    <div class="container">
+        <nav class="mobile-navigation" id="mobileNavigation" aria-label="Mobile navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="curriculum.html">Curriculum</a>
+            <a href="faculty.html">Faculty</a>
+            <a href="research.html">Research</a>
+            <a href="laboratories.html">Laboratories</a>
+            <a href="projects.html">Projects</a>
+            <a href="news.html" aria-current="page">News</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+
+            <button class="mobile-language-button" id="mobileLanguageButton" type="button">
+                🌐 English
+            </button>
+        </nav>
+    </div>
+</header>
+
+<main id="main">
+
+    <!-- =========================================================
+         HERO
+         ========================================================= -->
+    <section class="news-hero" id="newsHero">
+        <div class="news-hero-background" aria-hidden="true">
+            <img src="assets/News/news-hero.jpg" alt="" loading="eager" fetchpriority="high">
+        </div>
+
+        <div class="news-hero-overlay" aria-hidden="true"></div>
+        <div class="news-hero-glow" aria-hidden="true"></div>
+
+        <div class="container news-hero-container">
+            <div class="news-hero-content">
+
+                <p
+                    class="news-kicker"
+                    data-news-en="NEWS & EVENTS"
+                    data-news-ar="الأخبار والفعاليات"
+                >
+                    NEWS & EVENTS
+                </p>
+
+                <h1
+                    data-news-en="Science in motion. News that connects the department."
+                    data-news-ar="العلم في حركة مستمرة. أخبار تربط حياة القسم العلمية."
+                >
+                    Science in motion. News that connects the department.
+                </h1>
+
+                <p
+                    class="news-hero-lead"
+                    data-news-en="A considered editorial space for verified departmental announcements, scientific events, student activities and academic milestones."
+                    data-news-ar="مساحة تحريرية مخصصة للأخبار الرسمية الموثقة، والفعاليات العلمية، والأنشطة الطلابية، والمحطات الأكاديمية المهمة."
+                >
+                    A considered editorial space for verified departmental announcements, scientific events, student activities and academic milestones.
+                </p>
+
+                <div class="news-hero-meta" aria-label="News overview">
+                    <div class="news-hero-stat">
+                        <strong>01</strong>
+                        <span data-news-en="EDITORIAL CHANNEL" data-news-ar="قناة تحريرية">EDITORIAL CHANNEL</span>
+                    </div>
+
+                    <span class="news-hero-divider" aria-hidden="true"></span>
+
+                    <div class="news-hero-stat">
+                        <strong>04</strong>
+                        <span data-news-en="NEWS CATEGORIES" data-news-ar="تصنيفات الأخبار">NEWS CATEGORIES</span>
+                    </div>
+
+                    <span class="news-hero-divider" aria-hidden="true"></span>
+
+                    <div class="news-hero-stat">
+                        <strong>2026–27</strong>
+                        <span data-news-en="ACADEMIC YEAR" data-news-ar="العام الدراسي">ACADEMIC YEAR</span>
+                    </div>
+                </div>
+
+                <a class="news-hero-action" href="#newsdesk">
+                    <span data-news-en="Explore the newsroom" data-news-ar="استكشف غرفة الأخبار">Explore the newsroom</span>
+                    <span aria-hidden="true">↓</span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+         INTRO
+         ========================================================= -->
+    <section class="news-intro section" id="overview">
+        <div class="container">
+            <div class="news-intro-grid">
+
+                <div class="news-intro-index" aria-hidden="true">
+                    <strong>01</strong>
+                    <span data-news-en="NEWSROOM" data-news-ar="غرفة الأخبار">NEWSROOM</span>
+                </div>
+
+                <div class="news-intro-title">
+                    <p class="news-section-kicker" data-news-en="A VISIBLE ACADEMIC LIFE" data-news-ar="حياة أكاديمية مرئية">
+                        A VISIBLE ACADEMIC LIFE
+                    </p>
+
+                    <h2
+                        data-news-en="A clear editorial home for the department's scientific life."
+                        data-news-ar="واجهة تحريرية واضحة للحياة العلمية في القسم."
+                    >
+                        A clear editorial home for the department's scientific life.
+                    </h2>
+                </div>
+
+                <div class="news-intro-copy">
+                    <p
+                        data-news-en="The News page is intended to become the department's institutional record of scientific and academic activity."
+                        data-news-ar="صُممت صفحة الأخبار لتكون السجل المؤسسي للنشاط العلمي والأكاديمي في القسم."
+                    >
+                        The News page is intended to become the department's institutional record of scientific and academic activity.
+                    </p>
+
+                    <p
+                        data-news-en="Every published item should lead with the essential facts: what happened, when it happened, where it took place and why it matters."
+                        data-news-ar="يُفترض أن يبدأ كل خبر منشور بالحقائق الأساسية: ماذا حدث، ومتى حدث، وأين جرى، ولماذا يمثل أهمية."
+                    >
+                        Every published item should lead with the essential facts: what happened, when it happened, where it took place and why it matters.
+                    </p>
+
+                    <div class="news-editorial-note">
+                        <span class="note-line" aria-hidden="true"></span>
+                        <p
+                            data-news-en="Only verified departmental information should appear as official news."
+                            data-news-ar="يجب أن تظهر المعلومات الموثقة الخاصة بالقسم فقط بوصفها أخبارًا رسمية."
+                        >
+                            Only verified departmental information should appear as official news.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+         NEWS DESK
+         ========================================================= -->
+    <section class="news-desk" id="newsdesk">
+        <div class="container">
+
+            <div class="news-section-heading">
+                <div>
+                    <p class="news-section-kicker" data-news-en="NEWS DESK" data-news-ar="غرفة الأخبار">
+                        NEWS DESK
+                    </p>
+
+                    <h2
+                        data-news-en="The department's most important scientific moments, presented with clarity."
+                        data-news-ar="أهم المحطات العلمية في القسم، مقدمة بوضوح."
+                    >
+                        The department's most important scientific moments, presented with clarity.
+                    </h2>
+                </div>
+
+                <p
+                    class="news-section-heading-copy"
+                    data-news-en="The layout below is prepared for verified stories. Until official records are supplied, entries remain clearly identified as editorial templates."
+                    data-news-ar="التصميم أدناه مهيأ لاستقبال الأخبار الموثقة. وإلى حين تزويده بالسجلات الرسمية، تبقى الإدخالات مميزة بوضوح بوصفها قوالب تحريرية."
+                >
+                    The layout below is prepared for verified stories. Until official records are supplied, entries remain clearly identified as editorial templates.
+                </p>
+            </div>
+
+            <div class="news-feature-layout">
+
+                <!-- Lead story -->
+                <article class="news-lead-card">
+                    <div class="news-lead-image">
+                        <img
+                            src="assets/News/news-hero.jpg"
+                            alt="University biotechnology laboratory and scientific presentation environment"
+                            loading="lazy"
+                        >
+                        <span class="news-image-caption" data-news-en="Department of Biotechnology" data-news-ar="قسم التقانات الأحيائية">
+                            Department of Biotechnology
+                        </span>
+                    </div>
+
+                    <div class="news-lead-copy">
+                        <div class="news-story-topline">
+                            <span class="news-tag" data-news-en="EDITORIAL TEMPLATE" data-news-ar="قالب تحريري">
+                                EDITORIAL TEMPLATE
+                            </span>
+                            <span class="news-date" data-news-en="OFFICIAL DATE TO BE ADDED" data-news-ar="يُضاف التاريخ الرسمي">
+                                OFFICIAL DATE TO BE ADDED
+                            </span>
+                        </div>
+
+                        <h3
+                            data-news-en="Departmental Scientific Event"
+                            data-news-ar="فعالية علمية للقسم"
+                        >
+                            Departmental Scientific Event
+                        </h3>
+
+                        <p
+                            data-news-en="Reserved for a verified seminar, workshop, conference, scientific lecture or departmental milestone."
+                            data-news-ar="مخصص لندوة أو ورشة أو مؤتمر أو محاضرة علمية أو محطة مهمة موثقة في القسم."
+                        >
+                            Reserved for a verified seminar, workshop, conference, scientific lecture or departmental milestone.
+                        </p>
+
+                        <p
+                            data-news-en="When published, the story should replace this template with the official summary, date, venue and supporting information."
+                            data-news-ar="عند النشر، يُستبدل هذا القالب بالملخص الرسمي والتاريخ والمكان والمعلومات الداعمة."
+                        >
+                            When published, the story should replace this template with the official summary, date, venue and supporting information.
+                        </p>
+
+                        <div class="news-lead-footer">
+                            <span data-news-en="Publication-ready structure" data-news-ar="بنية جاهزة للنشر">
+                                Publication-ready structure
+                            </span>
+                            <span aria-hidden="true">→</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Secondary stories -->
+                <aside class="news-briefs" aria-label="Secondary news templates">
+
+                    <article class="news-brief">
+                        <div class="news-brief-number">02</div>
+
+                        <div class="news-brief-body">
+                            <div class="news-story-topline">
+                                <span class="news-tag" data-news-en="WORKSHOP" data-news-ar="ورشة عمل">WORKSHOP</span>
+                                <span class="news-date" data-news-en="DATE PENDING" data-news-ar="التاريخ لاحقًا">DATE PENDING</span>
+                            </div>
+
+                            <h3
+                                data-news-en="Training & Practical Session"
+                                data-news-ar="جلسة تدريبية وعملية"
+                            >
+                                Training & Practical Session
+                            </h3>
+
+                            <p
+                                data-news-en="A compact story format for laboratory training, technical workshops and practical scientific sessions."
+                                data-news-ar="صيغة مختصرة لأخبار التدريب المختبري وورش العمل التقنية والجلسات العلمية العملية."
+                            >
+                                A compact story format for laboratory training, technical workshops and practical scientific sessions.
+                            </p>
+
+                            <span class="news-brief-status" data-news-en="Awaiting confirmation" data-news-ar="بانتظار التأكيد">
+                                Awaiting confirmation
+                            </span>
+                        </div>
+                    </article>
+
+                    <article class="news-brief">
+                        <div class="news-brief-number">03</div>
+
+                        <div class="news-brief-body">
+                            <div class="news-story-topline">
+                                <span class="news-tag" data-news-en="STUDENT ACTIVITY" data-news-ar="نشاط طلابي">STUDENT ACTIVITY</span>
+                                <span class="news-date" data-news-en="DATE PENDING" data-news-ar="التاريخ لاحقًا">DATE PENDING</span>
+                            </div>
+
+                            <h3
+                                data-news-en="Student Scientific Achievement"
+                                data-news-ar="إنجاز علمي طلابي"
+                            >
+                                Student Scientific Achievement
+                            </h3>
+
+                            <p
+                                data-news-en="Reserved for officially confirmed student participation, awards, presentations or research achievements."
+                                data-news-ar="مخصص لمشاركات الطلبة أو جوائزهم أو عروضهم أو إنجازاتهم البحثية المؤكدة رسميًا."
+                            >
+                                Reserved for officially confirmed student participation, awards, presentations or research achievements.
+                            </p>
+
+                            <span class="news-brief-status" data-news-en="Awaiting confirmation" data-news-ar="بانتظار التأكيد">
+                                Awaiting confirmation
+                            </span>
+                        </div>
+                    </article>
+
+                </aside>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+         CATEGORIES
+         ========================================================= -->
+    <section class="news-categories" id="categories">
+        <div class="container">
+
+            <div class="news-section-heading compact">
+                <div>
+                    <p class="news-section-kicker" data-news-en="EDITORIAL LANES" data-news-ar="مسارات الأخبار">
+                        EDITORIAL LANES
+                    </p>
+
+                    <h2
+                        data-news-en="Four clear routes through the department's public record."
+                        data-news-ar="أربعة مسارات واضحة في السجل العام للقسم."
+                    >
+                        Four clear routes through the department's public record.
+                    </h2>
+                </div>
+
+                <p
+                    class="news-section-heading-copy"
+                    data-news-en="A restrained taxonomy keeps future publishing consistent without making the page feel like a dashboard."
+                    data-news-ar="يحافظ هذا التصنيف الهادئ على اتساق النشر المستقبلي من دون أن تبدو الصفحة كلوحة تحكم."
+                >
+                    A restrained taxonomy keeps future publishing consistent without making the page feel like a dashboard.
+                </p>
+            </div>
+
+            <div class="news-category-list">
+
+                <article class="news-category-row">
+                    <span class="news-category-number">01</span>
+                    <h3 data-news-en="Seminars & Lectures" data-news-ar="الندوات والمحاضرات">Seminars & Lectures</h3>
+                    <p data-news-en="Invited speakers, scientific talks, guest lectures and academic discussions." data-news-ar="المتحدثون الضيوف والمحاضرات العلمية والحوارات الأكاديمية.">Invited speakers, scientific talks, guest lectures and academic discussions.</p>
+                    <span class="news-category-arrow" aria-hidden="true">→</span>
+                </article>
+
+                <article class="news-category-row">
+                    <span class="news-category-number">02</span>
+                    <h3 data-news-en="Workshops & Training" data-news-ar="ورش العمل والتدريب">Workshops & Training</h3>
+                    <p data-news-en="Practical training, specialist workshops and technical laboratory sessions." data-news-ar="التدريب العملي وورش العمل المتخصصة والجلسات المختبرية التقنية.">Practical training, specialist workshops and technical laboratory sessions.</p>
+                    <span class="news-category-arrow" aria-hidden="true">→</span>
+                </article>
+
+                <article class="news-category-row">
+                    <span class="news-category-number">03</span>
+                    <h3 data-news-en="Conferences & Research" data-news-ar="المؤتمرات والبحث العلمي">Conferences & Research</h3>
+                    <p data-news-en="Conference participation, research communication, scientific posters and academic representation." data-news-ar="المشاركة في المؤتمرات والتواصل البحثي والملصقات العلمية والتمثيل الأكاديمي.">Conference participation, research communication, scientific posters and academic representation.</p>
+                    <span class="news-category-arrow" aria-hidden="true">→</span>
+                </article>
+
+                <article class="news-category-row">
+                    <span class="news-category-number">04</span>
+                    <h3 data-news-en="Student & Departmental Life" data-news-ar="الحياة الطلابية والقسمية">Student & Departmental Life</h3>
+                    <p data-news-en="Student achievements, departmental milestones, visits, participation and community-facing activities." data-news-ar="إنجازات الطلبة ومحطات القسم والزيارات والمشاركات والأنشطة الموجهة إلى المجتمع.">Student achievements, departmental milestones, visits, participation and community-facing activities.</p>
+                    <span class="news-category-arrow" aria-hidden="true">→</span>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+         EVENTS
+         ========================================================= -->
+    <section class="news-events" id="events">
+        <div class="container">
+
+            <div class="news-section-heading">
+                <div>
+                    <p class="news-section-kicker" data-news-en="UPCOMING EVENTS" data-news-ar="الفعاليات القادمة">
+                        UPCOMING EVENTS
+                    </p>
+
+                    <h2
+                        data-news-en="A precise timeline for what is next."
+                        data-news-ar="خط زمني دقيق لما هو قادم."
+                    >
+                        A precise timeline for what is next.
+                    </h2>
+                </div>
+
+                <p
+                    class="news-section-heading-copy"
+                    data-news-en="This timeline is intentionally quiet until dates, venues and event details are officially confirmed."
+                    data-news-ar="يبقى هذا الخط الزمني هادئًا إلى حين تأكيد التواريخ والأماكن وتفاصيل الفعاليات رسميًا."
+                >
+                    This timeline is intentionally quiet until dates, venues and event details are officially confirmed.
+                </p>
+            </div>
+
+            <div class="news-event-list">
+
+                <article class="news-event-row">
+                    <div class="news-event-date">
+                        <strong>—</strong>
+                        <span data-news-en="DATE" data-news-ar="التاريخ">DATE</span>
+                    </div>
+
+                    <div class="news-event-type">
+                        <span class="news-tag" data-news-en="SEMINAR" data-news-ar="ندوة">SEMINAR</span>
+                    </div>
+
+                    <div class="news-event-copy">
+                        <h3 data-news-en="Scientific Seminar" data-news-ar="ندوة علمية">Scientific Seminar</h3>
+                        <p data-news-en="Speaker, venue and official date will be added after departmental confirmation." data-news-ar="يُضاف المتحدث والمكان والتاريخ الرسمي بعد اعتمادها من القسم.">Speaker, venue and official date will be added after departmental confirmation.</p>
+                    </div>
+
+                    <div class="news-event-status" data-news-en="Pending" data-news-ar="قيد الإعداد">Pending</div>
+                </article>
+
+                <article class="news-event-row">
+                    <div class="news-event-date">
+                        <strong>—</strong>
+                        <span data-news-en="DATE" data-news-ar="التاريخ">DATE</span>
+                    </div>
+
+                    <div class="news-event-type">
+                        <span class="news-tag" data-news-en="WORKSHOP" data-news-ar="ورشة">WORKSHOP</span>
+                    </div>
+
+                    <div class="news-event-copy">
+                        <h3 data-news-en="Biotechnology Workshop" data-news-ar="ورشة تقانات أحيائية">Biotechnology Workshop</h3>
+                        <p data-news-en="Reserved for a confirmed training session, practical workshop or specialist activity." data-news-ar="مخصص لورشة تدريبية أو عملية أو نشاط تخصصي مؤكد رسميًا.">Reserved for a confirmed training session, practical workshop or specialist activity.</p>
+                    </div>
+
+                    <div class="news-event-status" data-news-en="Pending" data-news-ar="قيد الإعداد">Pending</div>
+                </article>
+
+                <article class="news-event-row">
+                    <div class="news-event-date">
+                        <strong>—</strong>
+                        <span data-news-en="DATE" data-news-ar="التاريخ">DATE</span>
+                    </div>
+
+                    <div class="news-event-type">
+                        <span class="news-tag" data-news-en="STUDENT" data-news-ar="طلاب">STUDENT</span>
+                    </div>
+
+                    <div class="news-event-copy">
+                        <h3 data-news-en="Student Scientific Activity" data-news-ar="نشاط علمي طلابي">Student Scientific Activity</h3>
+                        <p data-news-en="Reserved for an officially announced student presentation, participation or achievement." data-news-ar="مخصص لعرض أو مشاركة أو إنجاز طلابي معلن عنه رسميًا.">Reserved for an officially announced student presentation, participation or achievement.</p>
+                    </div>
+
+                    <div class="news-event-status" data-news-en="Pending" data-news-ar="قيد الإعداد">Pending</div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+         EDITORIAL NOTE
+         ========================================================= -->
+    <section class="news-guideline">
+        <div class="container">
+            <div class="news-guideline-inner">
+
+                <div class="news-guideline-title">
+                    <p class="news-section-kicker" data-news-en="EDITORIAL STANDARD" data-news-ar="المعيار التحريري">
+                        EDITORIAL STANDARD
+                    </p>
+
+                    <h2
+                        data-news-en="Clear facts first. Then context."
+                        data-news-ar="الحقائق أولًا. ثم السياق."
+                    >
+                        Clear facts first. Then context.
+                    </h2>
+                </div>
+
+                <div class="news-guideline-copy">
+                    <p
+                        data-news-en="Each future story should retain a consistent sequence: category, official date, clear title, concise summary, image and supporting details."
+                        data-news-ar="يُفضّل أن يحافظ كل خبر مستقبلي على التسلسل نفسه: التصنيف، والتاريخ الرسمي، والعنوان الواضح، والملخص المختصر، والصورة، والتفاصيل الداعمة."
+                    >
+                        Each future story should retain a consistent sequence: category, official date, clear title, concise summary, image and supporting details.
+                    </p>
+
+                    <p
+                        data-news-en="That structure gives students, researchers and visitors a reliable way to understand the department's scientific activity at a glance."
+                        data-news-ar="يمنح هذا التنظيم الطلبة والباحثين والزوار طريقة موثوقة لفهم النشاط العلمي للقسم بصورة سريعة وواضحة."
+                    >
+                        That structure gives students, researchers and visitors a reliable way to understand the department's scientific activity at a glance.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-grid">
+
+        <div class="footer-brand">
+            <div class="footer-logo">
+                <span class="footer-brand-icon">🧬</span>
+                <span>
+                    <span>DEPARTMENT OF</span>
+                    <strong>BIOTECH.</strong>
+                </span>
+            </div>
+
+            <p>
+                University of Samarra · College of Applied Sciences · Department of Biotechnology.
+            </p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Explore</h3>
+            <a href="about.html">About</a>
+            <a href="curriculum.html">Curriculum</a>
+            <a href="research.html">Research</a>
+            <a href="gallery.html">Gallery</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Academic</h3>
+            <a href="faculty.html">Faculty</a>
+            <a href="laboratories.html">Laboratories</a>
+            <a href="projects.html">Projects</a>
+            <a href="news.html" aria-current="page">News</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Institution</h3>
+            <a href="https://uosamarra.edu.iq/" target="_blank" rel="noopener noreferrer">University of Samarra</a>
+            <a href="contact.html">Contact</a>
+            <p>College of Applied Sciences<br>Department of Biotechnology</p>
+        </div>
+    </div>
+
+    <div class="container footer-bottom">
+        <p>© 2026 University of Samarra — Department of Biotechnology.</p>
+        <p>Academic information should be verified against official institutional sources.</p>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/news.js"></script>
+</body>
+</html>

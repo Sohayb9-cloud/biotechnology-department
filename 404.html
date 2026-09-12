@@ -1,0 +1,738 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The requested page could not be found — Department of Biotechnology, College of Applied Sciences, University of Samarra.">
+    <meta name="theme-color" content="#0b6f68">
+    <title>Page Not Found | Department of Biotechnology</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* =====================================================
+           404 PAGE — SCOPED VISUAL TREATMENT
+           ===================================================== */
+        .error-page {
+            min-height: calc(100vh - 78px);
+            display: grid;
+            place-items: center;
+            position: relative;
+            overflow: hidden;
+            padding: 120px 0 100px;
+            background:
+                radial-gradient(circle at 14% 24%, rgba(11,111,104,.09), transparent 28%),
+                radial-gradient(circle at 86% 72%, rgba(95,146,109,.08), transparent 30%),
+                linear-gradient(180deg, #f8fbfa 0%, #f2f7f5 100%);
+        }
+
+        .error-page::before,
+        .error-page::after {
+            content: "";
+            position: absolute;
+            border: 1px solid rgba(11,111,104,.10);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .error-page::before {
+            width: 430px;
+            height: 430px;
+            inset-inline-end: -190px;
+            top: 12%;
+        }
+
+        .error-page::after {
+            width: 260px;
+            height: 260px;
+            inset-inline-start: -120px;
+            bottom: 8%;
+        }
+
+        .error-inner {
+            width: min(920px, calc(100% - 40px));
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .error-card {
+            position: relative;
+            padding: 62px 60px 56px;
+            border: 1px solid var(--border);
+            border-radius: 28px;
+            background: rgba(255,255,255,.94);
+            box-shadow: 0 24px 70px rgba(7,42,36,.10);
+            backdrop-filter: blur(10px);
+        }
+
+        .error-mark {
+            width: 76px;
+            height: 76px;
+            margin: 0 auto 22px;
+            display: grid;
+            place-items: center;
+            border: 1px solid rgba(11,111,104,.14);
+            border-radius: 22px;
+            color: var(--primary);
+            background: var(--primary-light);
+            font-size: 31px;
+            box-shadow: inset 0 0 0 8px rgba(255,255,255,.55);
+        }
+
+        .error-code {
+            margin: 0 0 6px;
+            color: var(--primary);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 3px;
+        }
+
+        .error-title {
+            margin: 0;
+            color: var(--navy);
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: clamp(42px, 6vw, 76px);
+            font-weight: 600;
+            line-height: 1.02;
+            letter-spacing: -2px;
+        }
+
+        .error-title span {
+            color: var(--primary);
+        }
+
+        .error-lead {
+            max-width: 640px;
+            margin: 22px auto 0;
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        .error-actions {
+            margin-top: 34px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .error-home-link,
+        .error-back-link {
+            min-height: 48px;
+            padding: 0 20px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            border-radius: var(--radius-small);
+            font-size: 12px;
+            font-weight: 800;
+            text-decoration: none;
+            transition: transform var(--transition), background var(--transition), color var(--transition), border-color var(--transition);
+        }
+
+        .error-home-link {
+            color: var(--white);
+            background: var(--primary);
+            box-shadow: 0 10px 28px rgba(11,111,104,.20);
+        }
+
+        .error-home-link:hover {
+            transform: translateY(-2px);
+            background: var(--primary-dark);
+        }
+
+        .error-back-link {
+            color: var(--text);
+            background: var(--white);
+            border: 1px solid var(--border);
+        }
+
+        .error-back-link:hover {
+            transform: translateY(-2px);
+            border-color: #bfd7d2;
+            background: #f7fbf9;
+        }
+
+        .error-note {
+            margin: 28px auto 0;
+            padding-top: 22px;
+            border-top: 1px solid var(--border);
+            color: #78908f;
+            font-size: 10px;
+            line-height: 1.8;
+        }
+
+        html[dir="rtl"] .error-inner {
+            direction: rtl;
+        }
+
+        html[dir="rtl"] .error-title {
+            letter-spacing: 0;
+        }
+
+        @media (max-width: 650px) {
+            .error-page {
+                min-height: calc(100vh - 70px);
+                padding: 95px 0 70px;
+            }
+
+            .error-inner {
+                width: min(100% - 28px, 920px);
+            }
+
+            .error-card {
+                padding: 44px 24px 40px;
+                border-radius: 22px;
+            }
+
+            .error-mark {
+                width: 66px;
+                height: 66px;
+                border-radius: 18px;
+            }
+
+            .error-title {
+                font-size: 48px;
+                letter-spacing: -1.4px;
+            }
+
+            .error-lead {
+                font-size: 13px;
+            }
+
+            .error-actions {
+                flex-direction: column;
+            }
+
+            .error-home-link,
+            .error-back-link {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+<header
+        class="site-header"
+        id="siteHeader"
+    >
+
+        <div class="container navbar">
+
+
+            <!-- BRAND -->
+
+            <a
+                class="brand"
+                href="index.html"
+                aria-label="Biotechnology Department home"
+            >
+
+                <span
+                    class="brand-icon"
+                    aria-hidden="true"
+                >
+                    🧬
+                </span>
+
+                <span class="brand-text">
+
+                    <span>
+                        DEPARTMENT OF
+                    </span>
+
+                    <strong>
+                        BIOTECH.
+                    </strong>
+
+                </span>
+
+            </a>
+
+
+            <!-- DESKTOP NAVIGATION -->
+
+            <div class="desktop-navigation">
+
+                <nav
+                    class="nav-links"
+                    aria-label="Primary navigation"
+                >
+
+                    <a
+                        class="nav-link"
+                        href="index.html"
+                    >
+                        Home
+                    </a>
+
+                    <a
+                        class="nav-link"
+                        href="about.html"
+                    >
+                        About
+                    </a>
+
+                    <a
+                        class="nav-link"
+                        href="curriculum.html"
+                    >
+                        Curriculum
+                    </a>
+
+                    <a
+                        class="nav-link"
+                        href="faculty.html"
+                    >
+                        Faculty
+                    </a>
+
+                    <a
+                        class="nav-link"
+                        href="research.html"
+                    >
+                        Research
+                    </a>
+
+                    <a
+                        class="nav-link"
+                        href="laboratories.html"
+                    >
+                        Laboratories
+                    </a>
+
+                    <a
+                        class="nav-link"
+                        href="projects.html"
+                    >
+                        Projects
+                    </a>
+
+                    <a
+                        class="nav-link"
+                        href="news.html"
+                    >
+                        News
+                    </a>
+
+                    <a
+                        class="nav-link"
+                        href="gallery.html"
+                    >
+                        Gallery
+                    </a>
+
+                    <a
+                        class="nav-link"
+                        href="contact.html"
+                    >
+                        Contact
+                    </a>
+
+                </nav>
+
+
+                <!-- LANGUAGE -->
+
+                <div class="language-wrapper">
+
+                    <button
+                        class="language-button"
+                        id="languageButton"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="languageMenu"
+                    >
+
+                        <span>
+                            English
+                        </span>
+
+                        <span aria-hidden="true">
+                            ⌄
+                        </span>
+
+                    </button>
+
+
+                    <div
+                        class="language-menu"
+                        id="languageMenu"
+                    >
+
+                        <button
+                            class="language-option active"
+                            type="button"
+                            data-language="en"
+                        >
+                            English
+                        </button>
+
+                        <button
+                            class="language-option"
+                            type="button"
+                            data-language="ar"
+                        >
+                            العربية
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- MOBILE MENU BUTTON -->
+
+            <button
+                class="mobile-menu-button"
+                id="mobileMenuButton"
+                type="button"
+                aria-expanded="false"
+                aria-controls="mobileNavigation"
+                aria-label="Open menu"
+            >
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+
+        <!-- MOBILE NAVIGATION -->
+
+        <div class="container">
+
+            <nav
+                class="mobile-navigation"
+                id="mobileNavigation"
+                aria-label="Mobile navigation"
+            >
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="curriculum.html">
+                    Curriculum
+                </a>
+
+                <a href="faculty.html">
+                    Faculty
+                </a>
+
+                <a href="research.html">
+                    Research
+                </a>
+
+                <a href="laboratories.html">
+                    Laboratories
+                </a>
+
+                <a href="projects.html">
+                    Projects
+                </a>
+
+                <a href="news.html">
+                    News
+                </a>
+
+                <a href="gallery.html">
+                    Gallery
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+
+                <button
+                    class="mobile-language-button"
+                    id="mobileLanguageButton"
+                    type="button"
+                >
+                    🌐 English
+                </button>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <main id="main">
+        <section class="error-page" aria-labelledby="errorTitle">
+            <div class="error-inner">
+                <div class="error-card">
+                    <div class="error-mark" aria-hidden="true">🧬</div>
+
+                    <p class="error-code" data-en="ERROR 404" data-ar="خطأ 404">ERROR 404</p>
+
+                    <h1
+                        class="error-title"
+                        id="errorTitle"
+                        data-en="Page Not Found"
+                        data-ar="الصفحة غير موجودة"
+                    >
+                        Page Not Found
+                    </h1>
+
+                    <p
+                        class="error-lead"
+                        data-en="The page you are looking for may have been moved, removed, or is temporarily unavailable. Please return to the department homepage or use the navigation above to continue exploring the site."
+                        data-ar="قد تكون الصفحة التي تبحث عنها قد نُقلت أو أُزيلت أو أصبحت غير متاحة مؤقتًا. يمكنك العودة إلى الصفحة الرئيسية للقسم أو استخدام شريط التنقل لمتابعة تصفح الموقع."
+                    >
+                        The page you are looking for may have been moved, removed, or is temporarily unavailable. Please return to the department homepage or use the navigation above to continue exploring the site.
+                    </p>
+
+                    <div class="error-actions">
+                        <a
+                            class="error-home-link"
+                            href="index.html"
+                            data-en="← Return to Home"
+                            data-ar="← العودة إلى الصفحة الرئيسية"
+                        >
+                            ← Return to Home
+                        </a>
+
+                        <a
+                            class="error-back-link"
+                            href="javascript:history.back()"
+                            data-en="Go Back"
+                            data-ar="العودة"
+                        >
+                            Go Back
+                        </a>
+                    </div>
+
+                    <p
+                        class="error-note"
+                        data-en="Department of Biotechnology · College of Applied Sciences · University of Samarra"
+                        data-ar="قسم التقانات الأحيائية · كلية العلوم التطبيقية · جامعة سامراء"
+                    >
+                        Department of Biotechnology · College of Applied Sciences · University of Samarra
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<footer class="site-footer">
+
+
+        <div class="container footer-grid">
+
+
+            <!-- BRAND -->
+
+            <div class="footer-brand">
+
+                <div class="footer-logo">
+
+                    <span class="footer-brand-icon">
+                        🧬
+                    </span>
+
+                    <span>
+
+                        <span>
+                            DEPARTMENT OF
+                        </span>
+
+                        <strong>
+                            BIOTECH.
+                        </strong>
+
+                    </span>
+
+                </div>
+
+
+                <p
+                    data-en="University of Samarra · College of Applied Sciences · Department of Biotechnology."
+                    data-ar="جامعة سامراء · كلية العلوم التطبيقية · قسم التقانات الأحيائية."
+                >
+                    University of Samarra · College of Applied Sciences ·
+                    Department of Biotechnology.
+                </p>
+
+            </div>
+
+
+            <!-- EXPLORE -->
+
+            <div class="footer-column">
+
+                <h3
+                    data-en="Explore"
+                    data-ar="استكشف"
+                >
+                    Explore
+                </h3>
+
+                <a
+                    href="about.html"
+                    data-en="About"
+                    data-ar="عن القسم"
+                >
+                    About
+                </a>
+
+                <a
+                    href="curriculum.html"
+                    data-en="Curriculum"
+                    data-ar="المناهج"
+                >
+                    Curriculum
+                </a>
+
+                <a
+                    href="research.html"
+                    data-en="Research"
+                    data-ar="البحث العلمي"
+                >
+                    Research
+                </a>
+
+                <a
+                    href="gallery.html"
+                    data-en="Gallery"
+                    data-ar="المعرض"
+                >
+                    Gallery
+                </a>
+
+            </div>
+
+
+            <!-- ACADEMIC -->
+
+            <div class="footer-column">
+
+                <h3
+                    data-en="Academic"
+                    data-ar="أكاديمي"
+                >
+                    Academic
+                </h3>
+
+                <a
+                    href="faculty.html"
+                    data-en="Faculty"
+                    data-ar="الكادر"
+                >
+                    Faculty
+                </a>
+
+                <a
+                    href="laboratories.html"
+                    data-en="Laboratories"
+                    data-ar="المختبرات"
+                >
+                    Laboratories
+                </a>
+
+                <a
+                    href="projects.html"
+                    data-en="Projects"
+                    data-ar="المشاريع"
+                >
+                    Projects
+                </a>
+
+                <a
+                    href="news.html"
+                    data-en="News"
+                    data-ar="الأخبار"
+                >
+                    News
+                </a>
+
+            </div>
+
+
+            <!-- INSTITUTION -->
+
+            <div class="footer-column">
+
+                <h3
+                    data-en="Institution"
+                    data-ar="المؤسسة"
+                >
+                    Institution
+                </h3>
+
+
+                <a
+                    href="https://uosamarra.edu.iq/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-en="University of Samarra"
+                    data-ar="جامعة سامراء"
+                >
+                    University of Samarra
+                </a>
+
+
+                <a
+                    href="contact.html"
+                    data-en="Contact"
+                    data-ar="اتصل بنا"
+                >
+                    Contact
+                </a>
+
+
+                <p
+                    data-en="College of Applied Sciences<br>Department of Biotechnology"
+                    data-ar="كلية العلوم التطبيقية<br>قسم التقانات الأحيائية"
+                >
+                    College of Applied Sciences<br>
+                    Department of Biotechnology
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="container footer-bottom">
+
+            <p
+                data-en="© 2026 University of Samarra — Department of Biotechnology."
+                data-ar="© 2026 جامعة سامراء — قسم التقانات الأحيائية."
+            >
+                © 2026 University of Samarra —
+                Department of Biotechnology.
+            </p>
+
+
+            <p
+                data-en="Academic information should be verified against official institutional sources."
+                data-ar="ينبغي التحقق من المعلومات الأكاديمية بالرجوع إلى المصادر المؤسسية الرسمية."
+            >
+                Academic information should be verified against
+                official institutional sources.
+            </p>
+
+        </div>
+
+
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

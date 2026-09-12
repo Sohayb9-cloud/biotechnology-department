@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" role="img" aria-labelledby="title desc">
+<title id="title">Mycology</title><desc id="desc">Hyphae, mycelium and fungal spores.</desc>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0a2b2e"/><stop offset="1" stop-color="#0e4c4e"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#ffffff" stop-opacity=".22"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="900" height="540" rx="34" fill="url(#bg)"/>
+<circle cx="700" cy="125" r="150" fill="url(#glow)"/>
+<g opacity=".13" fill="none" stroke="#fff" stroke-width="2"><circle cx="700" cy="125" r="92"/><circle cx="700" cy="125" r="126"/><path d="M55 430 C220 280 420 510 845 165"/></g>
+<g stroke="#e8f7f3" stroke-width="7" fill="none"><path d="M180 370 C230 290 205 225 275 160"/><path d="M230 390 C295 315 270 230 350 175"/><path d="M290 405 C360 330 345 250 420 205"/><path d="M200 240 C260 250 310 240 345 220"/></g><g fill="#f1b35a"><circle cx="155" cy="180" r="13"/><circle cx="210" cy="130" r="11"/><circle cx="280" cy="105" r="15"/><circle cx="355" cy="125" r="10"/><circle cx="440" cy="155" r="14"/></g><path d="M530 370h230" stroke="#fff" stroke-width="7"/><path d="M575 330v80M650 330v80M725 330v80" stroke="#f1b35a" stroke-width="7"/><text x="52" y="70" fill="#b9df38" font-family="Arial, sans-serif" font-size="17" font-weight="800" letter-spacing="4">MYCOLOGY</text>
+</svg>

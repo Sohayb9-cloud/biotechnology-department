@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Biochemistry — Department of Biotechnology, College of Applied Sciences, University of Samarra.">
+<meta name="theme-color" content="#0e4b4e">
+<title>Biochemistry | Department of Biotechnology</title>
+<link rel="stylesheet" href="../css/style.css">
+
+<style>
+:root{
+    --course-teal:#0e4b4e;
+    --course-teal-dark:#07383a;
+    --course-green:#b9df38;
+    --course-light:#eef7f4;
+    --course-border:#d8e8e3;
+    --course-text:#183536;
+    --course-muted:#607777;
+    --course-bg:#f8fbfa;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--course-text);background:var(--course-bg)}
+
+.course-hero{
+    position:relative;overflow:hidden;
+    background:
+      radial-gradient(circle at 84% 18%,rgba(185,223,56,.16),transparent 30%),
+      linear-gradient(135deg,var(--course-teal-dark),var(--course-teal));
+    color:#fff;padding:90px 0 80px;
+}
+.course-hero::before,.course-hero::after{
+    content:"";position:absolute;border-radius:50%;pointer-events:none;
+}
+.course-hero::before{
+    width:380px;height:380px;border:1px solid rgba(255,255,255,.12);
+    right:-130px;top:-130px;
+}
+.course-hero::after{
+    width:220px;height:220px;border:1px solid rgba(185,223,56,.22);
+    right:80px;bottom:-120px;
+}
+.course-hero-grid{
+    position:relative;z-index:2;display:grid;
+    grid-template-columns:minmax(0,1fr) minmax(360px,.95fr);
+    gap:48px;align-items:center;
+}
+.course-kicker{
+    display:inline-flex;align-items:center;gap:9px;padding:8px 13px;
+    border:1px solid rgba(255,255,255,.18);border-radius:999px;
+    color:#dcece8;font-size:.76rem;font-weight:800;letter-spacing:.12em;
+    text-transform:uppercase;margin-bottom:22px;
+}
+.course-kicker::before{
+    content:"";width:7px;height:7px;border-radius:50%;
+    background:var(--course-green);box-shadow:0 0 0 5px rgba(185,223,56,.12);
+}
+.course-hero h1{margin:0 0 20px;font-size:clamp(2.8rem,6vw,5.4rem);line-height:.98;letter-spacing:-.045em}
+.course-hero .lead{max-width:780px;margin:0;color:#d7e9e5;font-size:1.12rem;line-height:1.8}
+.course-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.course-meta span{
+    display:inline-flex;padding:8px 13px;border-radius:999px;
+    border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);
+    color:#e7f3f0;font-size:.86rem;
+}
+.hero-visual,.scientific-visual{
+    background:#fff;border:1px solid var(--course-border);border-radius:24px;
+    overflow:hidden;box-shadow:0 22px 60px rgba(0,0,0,.16);
+}
+.hero-visual img,.scientific-visual img{display:block;width:100%;height:auto}
+
+.course-content{padding:85px 0 95px}
+.course-layout{
+    display:grid;grid-template-columns:minmax(0,1fr) 300px;
+    gap:45px;align-items:start;
+}
+.course-main{min-width:0}
+.course-section{
+    padding:0 0 60px;margin-bottom:60px;border-bottom:1px solid var(--course-border);
+}
+.course-section:last-child{border-bottom:0;margin-bottom:0}
+.section-label{
+    color:var(--course-teal);font-size:.76rem;font-weight:900;
+    letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px;
+}
+.course-section h2{
+    margin:0 0 18px;color:var(--course-teal-dark);
+    font-size:clamp(1.8rem,3vw,2.65rem);letter-spacing:-.025em;
+}
+.course-section h3{color:var(--course-teal);margin:0 0 10px;font-size:1.15rem}
+.course-section p{color:var(--course-muted);font-size:1.02rem;line-height:1.85}
+
+.objective-grid,.concept-grid,.application-grid{
+    display:grid;gap:16px;margin-top:25px;
+}
+.objective-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.concept-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.application-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.objective,.concept,.application{
+    background:#fff;border:1px solid var(--course-border);border-radius:18px;
+    padding:22px;box-shadow:0 8px 25px rgba(14,75,78,.04);
+}
+.objective{position:relative;padding-left:54px}
+.objective::before{
+    content:"✓";position:absolute;left:19px;top:18px;width:23px;height:23px;
+    display:grid;place-items:center;border-radius:50%;background:var(--course-light);
+    color:var(--course-teal);font-weight:900;
+}
+.objective p,.concept p,.application p{margin:0;font-size:.94rem;line-height:1.7}
+.concept-number{
+    display:inline-flex;width:35px;height:35px;align-items:center;justify-content:center;
+    border-radius:10px;background:var(--course-light);color:var(--course-teal);
+    font-weight:900;margin-bottom:15px;
+}
+.concept{transition:transform .25s ease,box-shadow .25s ease}
+.concept:hover{transform:translateY(-4px);box-shadow:0 16px 35px rgba(14,75,78,.08)}
+
+.topic-visual{margin-top:28px}
+.topic-note{
+    margin-top:18px;padding:15px 18px;border-left:4px solid var(--course-green);
+    border-radius:10px;background:#f1f7f4;color:var(--course-muted);line-height:1.7;
+}
+.pathway{
+    display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:26px;
+}
+.pathway-item{
+    position:relative;text-align:center;padding:14px 9px;border:1px solid var(--course-border);
+    border-radius:12px;background:#fff;color:var(--course-teal-dark);font-size:.8rem;font-weight:800;
+}
+.pathway-item:not(:last-child)::after{
+    content:"→";position:absolute;right:-15px;top:50%;
+    transform:translateY(-50%);color:var(--course-teal);font-weight:900;z-index:2;
+}
+.connection-box{
+    position:relative;overflow:hidden;padding:35px;border-radius:24px;
+    background:linear-gradient(135deg,var(--course-teal-dark),var(--course-teal));color:#fff;
+}
+.connection-box h3{color:#fff;margin-top:0}
+.connection-box p{color:#d9e9e6;margin-bottom:0}
+
+.course-sidebar{position:sticky;top:25px}
+.sidebar-card{
+    background:#fff;border:1px solid var(--course-border);border-radius:18px;
+    padding:23px;margin-bottom:16px;box-shadow:0 8px 25px rgba(14,75,78,.04);
+}
+.sidebar-card h3{margin:0 0 15px;color:var(--course-teal-dark);font-size:1rem}
+.toc{display:grid;gap:8px}
+.toc a{
+    display:block;padding:9px 11px;border-radius:9px;color:var(--course-muted);
+    text-decoration:none;font-size:.9rem;
+}
+.toc a:hover{background:var(--course-light);color:var(--course-teal)}
+.references{
+    padding:25px;background:#f0f6f4;border-radius:16px;border:1px solid var(--course-border);
+}
+.references p{margin:0;font-size:.88rem;color:var(--course-muted)}
+.references a{color:var(--course-teal);font-weight:700}
+
+@media (max-width:1050px){
+    .course-hero-grid,.course-layout{grid-template-columns:1fr}
+    .course-sidebar{position:static}
+    .concept-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .pathway{grid-template-columns:repeat(3,1fr)}
+    .pathway-item:not(:last-child)::after{display:none}
+}
+@media (max-width:700px){
+    .course-hero{padding:65px 0 55px}
+    .objective-grid,.concept-grid,.application-grid,.pathway{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .concept{transition:none}
+}
+</style>
+</head>
+
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+<nav class="nav container" aria-label="Primary navigation">
+
+<a class="brand" href="../index.html" aria-label="Biotechnology Department home">
+    <span class="brand-mark">🧬</span>
+    <span>BIOTECH<span class="brand-dot">.</span></span>
+</a>
+
+<button class="menu-toggle" aria-expanded="false" aria-controls="site-menu" type="button">Menu</button>
+
+<div class="site-menu" id="site-menu">
+    <a href="../index.html">Home</a>
+    <a href="../about.html">About</a>
+    <a href="../curriculum.html" aria-current="page">Curriculum</a>
+    <a href="../faculty.html">Faculty</a>
+    <a href="../research.html">Research</a>
+    <a href="../laboratories.html">Laboratories</a>
+    <a href="../projects.html">Projects</a>
+    <a href="../news.html">News</a>
+    <a href="../gallery.html">Gallery</a>
+    <a href="../contact.html">Contact</a>
+    <button id="langToggle" class="lang-btn" type="button">العربية</button>
+</div>
+
+</nav>
+</header>
+
+<main id="main">
+
+<section class="course-hero">
+<div class="container course-hero-grid">
+
+<div>
+<div class="course-kicker">Subject 04 · Biotechnology Curriculum</div>
+
+<h1 data-en="Biochemistry." data-ar="الكيمياء الحيوية.">Biochemistry.</h1>
+
+<p
+class="lead"
+data-en="Biochemistry is the study of the chemical processes and molecular interactions that underlie living systems, including the structure, function and metabolism of proteins, carbohydrates, lipids and nucleic acids."
+data-ar="الكيمياء الحيوية هي دراسة العمليات الكيميائية والتفاعلات الجزيئية التي تقوم عليها الأنظمة الحية، بما في ذلك تركيب ووظيفة واستقلاب البروتينات والكربوهيدرات والدهون والأحماض النووية."
+>
+Biochemistry is the study of the chemical processes and molecular interactions that underlie living systems,
+including the structure, function and metabolism of proteins, carbohydrates, lipids and nucleic acids.
+</p>
+
+<div class="course-meta">
+<span>Biomolecules</span>
+<span>Enzymes</span>
+<span>ATP & Energy</span>
+<span>Metabolism</span>
+</div>
+</div>
+
+<div class="hero-visual">
+<img
+src="../assets/biochemistry/01-biochemistry-hero.png"
+alt="Biochemistry scientific overview showing proteins, enzymes, carbohydrates, lipids, nucleic acids, ATP and metabolic pathways"
+>
+</div>
+
+</div>
+</section>
+
+
+<section class="course-content">
+<div class="container course-layout">
+
+<article class="course-main">
+
+<section class="course-section" id="overview">
+<div class="section-label">01 · Scientific Overview</div>
+<h2>What is Biochemistry?</h2>
+
+<p
+data-en="Biochemistry connects chemistry with biology by examining the molecules, reactions and molecular interactions that make cellular life possible. It studies the structures and functions of biological macromolecules and the chemical transformations that occur within living systems."
+data-ar="تربط الكيمياء الحيوية بين الكيمياء والأحياء من خلال دراسة الجزيئات والتفاعلات والتآثرات الجزيئية التي تجعل الحياة الخلوية ممكنة. كما تدرس تراكيب ووظائف الجزيئات الحيوية الكبيرة والتحولات الكيميائية التي تحدث داخل الأنظمة الحية."
+>
+Biochemistry connects chemistry with biology by examining the molecules, reactions and molecular interactions
+that make cellular life possible. It studies the structures and functions of biological macromolecules and the
+chemical transformations that occur within living systems.
+</p>
+
+<p
+data-en="For biotechnology students, biochemistry provides a molecular framework for understanding cellular metabolism, enzyme activity, biomolecular structure, energy transfer and many processes used in biotechnology research and development."
+data-ar="بالنسبة لطلاب التقانات الأحيائية، توفر الكيمياء الحيوية إطارًا جزيئيًا لفهم الأيض الخلوي ونشاط الإنزيمات وبنية الجزيئات الحيوية وانتقال الطاقة والعديد من العمليات المستخدمة في البحث والتطوير في التقانات الأحيائية."
+>
+For biotechnology students, biochemistry provides a molecular framework for understanding cellular metabolism,
+enzyme activity, biomolecular structure, energy transfer and many processes used in biotechnology research and development.
+</p>
+</section>
+
+
+<section class="course-section" id="objectives">
+<div class="section-label">02 · Learning Objectives</div>
+<h2>What should students understand?</h2>
+
+<div class="objective-grid">
+<div class="objective"><p>Identify the major classes of biomolecules and relate their structures to biological functions.</p></div>
+<div class="objective"><p>Explain the structural organization and functional roles of proteins and enzymes.</p></div>
+<div class="objective"><p>Describe major principles of carbohydrate, lipid and nucleic-acid biochemistry.</p></div>
+<div class="objective"><p>Explain how enzymes influence the rates of biochemical reactions.</p></div>
+<div class="objective"><p>Understand how ATP participates in biological energy transfer.</p></div>
+<div class="objective"><p>Connect metabolic pathways with cellular function and biotechnology applications.</p></div>
+</div>
+</section>
+
+
+<section class="course-section" id="concepts">
+<div class="section-label">03 · Core Concepts</div>
+<h2>The molecular language of life</h2>
+
+<div class="concept-grid">
+
+<article class="concept">
+<span class="concept-number">01</span>
+<h3>Proteins</h3>
+<p>Proteins are polymers of amino acids whose three-dimensional structures enable diverse biological functions, including catalysis, transport, structural support and molecular recognition.</p>
+</article>
+
+<article class="concept">
+<span class="concept-number">02</span>
+<h3>Carbohydrates</h3>
+<p>Carbohydrates participate in energy storage, metabolism, structural organization and molecular recognition.</p>
+</article>
+
+<article class="concept">
+<span class="concept-number">03</span>
+<h3>Lipids</h3>
+<p>Lipids contribute to membrane structure, energy storage and signaling, with diverse chemical structures and functions.</p>
+</article>
+
+<article class="concept">
+<span class="concept-number">04</span>
+<h3>Nucleic Acids</h3>
+<p>DNA and RNA store, transmit or participate in the expression and regulation of biological information.</p>
+</article>
+
+</div>
+</section>
+
+
+<section class="course-section" id="proteins">
+<div class="section-label">04 · Proteins & Enzymes</div>
+<h2>Structure, Function and Molecular Catalysis</h2>
+
+<p>
+Protein function depends strongly on molecular structure. Enzymes are biological catalysts that can accelerate
+biochemical reactions by providing pathways with lower activation-energy barriers.
+</p>
+
+<div class="topic-visual scientific-visual">
+<img
+src="../assets/biochemistry/03-proteins-and-enzymes.png"
+alt="Scientific infographic showing amino acids, protein structures, enzyme active sites and enzyme catalysis"
+loading="lazy"
+>
+</div>
+
+<div class="topic-note">
+<strong>Key concept:</strong>
+enzyme catalysis changes reaction rate by lowering the activation-energy barrier; it does not mean
+the enzyme is consumed as a reactant.
+</div>
+</section>
+
+
+<section class="course-section" id="metabolism">
+<div class="section-label">05 · Biochemical Pathways & Metabolism</div>
+<h2>From Nutrients to Cellular Energy</h2>
+
+<p>
+Metabolism consists of interconnected chemical pathways that transform nutrients into energy, cellular building
+blocks and metabolic intermediates. Central pathways include glycolysis, the citric acid cycle and oxidative phosphorylation.
+</p>
+
+<div class="pathway">
+<div class="pathway-item">Carbohydrates</div>
+<div class="pathway-item">Glycolysis</div>
+<div class="pathway-item">Pyruvate</div>
+<div class="pathway-item">Acetyl-CoA</div>
+<div class="pathway-item">ATP & Metabolic Intermediates</div>
+</div>
+
+<div class="topic-visual scientific-visual">
+<img
+src="../assets/biochemistry/02-biochemical-pathways.png"
+alt="Scientific infographic showing glycolysis, pyruvate, acetyl-CoA, citric acid cycle, electron transport and ATP production"
+loading="lazy"
+>
+</div>
+
+<div class="topic-note">
+<strong>Biochemical perspective:</strong>
+metabolic pathways are interconnected networks rather than isolated reactions, and their intermediates can serve both energy-producing and biosynthetic roles.
+</div>
+</section>
+
+
+<section class="course-section" id="biotechnology">
+<div class="section-label">06 · Biotechnology Connection</div>
+<h2>Why does Biochemistry matter in Biotechnology?</h2>
+
+<div class="connection-box">
+<h3>From molecular chemistry to biological technology</h3>
+<p>
+Biotechnology frequently works at the molecular level. Understanding proteins, enzymes, nucleic acids, metabolites
+and energy-transfer processes helps students interpret cellular behavior and understand processes used in molecular
+biology, fermentation, diagnostics, bioprocessing and biomolecule production.
+</p>
+</div>
+</section>
+
+
+<section class="course-section" id="applications">
+<div class="section-label">07 · Applications in Biotechnology</div>
+<h2>Where does this knowledge lead?</h2>
+
+<div class="application-grid">
+
+<article class="application">
+<h3>Enzyme Technology</h3>
+<p>Enzymes are studied and used as biological catalysts in research, industrial biocatalysis and biotechnology processes.</p>
+</article>
+
+<article class="application">
+<h3>Fermentation & Bioprocessing</h3>
+<p>Biochemical principles help explain substrate utilization, metabolite formation, energy metabolism and product generation.</p>
+</article>
+
+<article class="application">
+<h3>Protein Biotechnology</h3>
+<p>Biochemistry supports the study, production, purification and functional analysis of recombinant and native proteins.</p>
+</article>
+
+<article class="application">
+<h3>Metabolic Biotechnology</h3>
+<p>Understanding metabolic pathways supports research into metabolic engineering, biomolecule production and cellular bioprocesses.</p>
+</article>
+
+</div>
+</section>
+
+
+<section class="course-section" id="perspective">
+<div class="section-label">08 · Scientific Perspective</div>
+<h2>Biochemistry Connects Molecules to Life</h2>
+
+<p>
+Biochemistry provides the molecular framework needed to understand how biological structures perform their functions
+and how chemical reactions are coordinated within living cells.
+</p>
+
+<p>
+For biotechnology students, this perspective connects molecular structure, catalytic activity, metabolism and cellular
+regulation with the development and analysis of biological products, processes and technologies.
+</p>
+</section>
+
+
+<section class="course-section" id="references">
+<div class="section-label">09 · Further Reading</div>
+<h2>Scientific Resources</h2>
+
+<div class="references">
+
+<p>
+<strong>OpenStax — Biology 2e</strong><br>
+Open educational material covering biomolecules, metabolism, enzymes and cellular processes.
+<br><br>
+<a href="https://openstax.org/details/books/biology-2e" target="_blank" rel="noopener noreferrer">
+OpenStax Biology 2e →
+</a>
+</p>
+
+<br>
+
+<p>
+<strong>OpenStax — Biochemistry</strong><br>
+Educational material for molecular structure, enzyme function, metabolism and biochemical pathways.
+<br><br>
+<a href="https://openstax.org/" target="_blank" rel="noopener noreferrer">
+Open educational resources →
+</a>
+</p>
+
+</div>
+</section>
+
+</article>
+
+
+<aside class="course-sidebar">
+
+<div class="sidebar-card">
+<h3>On this page</h3>
+<nav class="toc" aria-label="Course contents">
+<a href="#overview">Scientific Overview</a>
+<a href="#objectives">Learning Objectives</a>
+<a href="#concepts">Core Concepts</a>
+<a href="#proteins">Proteins & Enzymes</a>
+<a href="#metabolism">Biochemical Pathways</a>
+<a href="#biotechnology">Biotechnology Connection</a>
+<a href="#applications">Applications</a>
+<a href="#perspective">Scientific Perspective</a>
+<a href="#references">Further Reading</a>
+</nav>
+</div>
+
+<div class="sidebar-card">
+<h3>Curriculum</h3>
+<a href="../curriculum.html"
+style="display:block;padding:14px;border-radius:12px;background:var(--course-light);color:var(--course-teal-dark);text-decoration:none;font-weight:800;line-height:1.45;">
+<small style="display:block;margin-bottom:5px;color:var(--course-teal);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;">Return to</small>
+Biotechnology Curriculum →
+</a>
+</div>
+
+<div class="sidebar-card">
+<h3>Subject</h3>
+<p style="margin:0;color:var(--course-muted);line-height:1.7;">
+<strong style="color:var(--course-teal-dark);">04</strong><br>
+Biochemistry
+</p>
+</div>
+
+</aside>
+
+</div>
+</section>
+
+</main>
+
+<footer class="footer">
+
+<div class="container footer-grid">
+
+<div>
+<div class="brand footer-brand">
+🧬 BIOTECH<span class="brand-dot">.</span>
+</div>
+<p>
+University of Samarra · College of Applied Sciences · Department of Biotechnology.
+</p>
+</div>
+
+<div>
+<h3>Explore</h3>
+<a href="../about.html">About</a>
+<a href="../curriculum.html">Curriculum</a>
+<a href="../research.html">Research</a>
+<a href="../gallery.html">Gallery</a>
+</div>
+
+<div>
+<h3>Institution</h3>
+<a href="https://uosamarra.edu.iq/" target="_blank" rel="noopener noreferrer">University of Samarra</a>
+<a href="../contact.html">Contact</a>
+</div>
+
+</div>
+
+<div class="container copy">
+© 2026 University of Samarra — Department of Biotechnology.
+Academic information should be verified against official departmental sources before publication.
+</div>
+
+</footer>
+
+<script src="../js/main.js"></script>
+
+</body>
+</html><img
+    src="../assets/biochemistry/01-biochemistry-hero.png"
+    alt="Biochemistry scientific overview showing proteins, enzymes, carbohydrates, lipids, nucleic acids, ATP and metabolic pathways">
+    

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" role="img" aria-labelledby="title desc">
+<title id="title">Phycology / Algology</title><desc id="desc">Algal cells, filament and aquatic environment.</desc>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0a2b2e"/><stop offset="1" stop-color="#0e4c4e"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#ffffff" stop-opacity=".22"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="900" height="540" rx="34" fill="url(#bg)"/>
+<circle cx="700" cy="125" r="150" fill="url(#glow)"/>
+<g opacity=".13" fill="none" stroke="#fff" stroke-width="2"><circle cx="700" cy="125" r="92"/><circle cx="700" cy="125" r="126"/><path d="M55 430 C220 280 420 510 845 165"/></g>
+<path d="M200 390 C250 315 225 245 300 180 C345 140 390 140 430 190 C475 245 475 335 545 390" fill="none" stroke="#e8f7f3" stroke-width="9"/><g fill="#b9df38"><ellipse cx="285" cy="260" rx="40" ry="18" transform="rotate(-25 285 260)"/><ellipse cx="370" cy="205" rx="38" ry="17" transform="rotate(25 370 205)"/><ellipse cx="445" cy="300" rx="45" ry="18" transform="rotate(-15 445 300)"/></g><g fill="none" stroke="#fff" stroke-width="5"><ellipse cx="680" cy="270" rx="95" ry="55"/><path d="M610 270h140M650 235h60M650 305h60"/></g><text x="52" y="70" fill="#b9df38" font-family="Arial, sans-serif" font-size="17" font-weight="800" letter-spacing="4">PHYCOLOGY / ALGOLOGY</text>
+</svg>

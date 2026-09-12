@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" role="img" aria-labelledby="title desc">
+<title id="title">Genetics</title><desc id="desc">DNA, genes, chromosomes and inheritance pathway.</desc>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0a2b2e"/><stop offset="1" stop-color="#0e4c4e"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#ffffff" stop-opacity=".22"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="900" height="540" rx="34" fill="url(#bg)"/>
+<circle cx="700" cy="125" r="150" fill="url(#glow)"/>
+<g opacity=".13" fill="none" stroke="#fff" stroke-width="2"><circle cx="700" cy="125" r="92"/><circle cx="700" cy="125" r="126"/><path d="M55 430 C220 280 420 510 845 165"/></g>
+<g stroke="#e8f7f3" stroke-width="9" fill="none"><path d="M190 115 C330 180 330 320 190 390"/><path d="M315 115 C175 180 175 320 315 390"/><path d="M210 145h85M200 205h105M200 270h105M210 340h85"/></g><g fill="#72d6c2"><circle cx="545" cy="190" r="34"/><circle cx="650" cy="190" r="34"/><circle cx="545" cy="300" r="34"/><circle cx="650" cy="300" r="34"/></g><path d="M579 190h37M579 300h37M545 224v42M650 224v42" stroke="#fff" stroke-width="6"/><text x="52" y="70" fill="#b9df38" font-family="Arial, sans-serif" font-size="17" font-weight="800" letter-spacing="4">GENETICS</text>
+</svg>

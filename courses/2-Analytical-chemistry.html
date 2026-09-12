@@ -1,0 +1,1353 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta
+        name="description"
+        content="Analytical Chemistry — Department of Biotechnology, College of Applied Sciences, University of Samarra."
+    >
+    <meta
+        name="keywords"
+        content="Analytical Chemistry, titration, chromatography, spectroscopy, quantitative analysis, biotechnology, University of Samarra"
+    >
+    <meta name="theme-color" content="#0e4b4e">
+
+    <title>Analytical Chemistry | Department of Biotechnology</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        :root {
+            --course-teal: #0e4b4e;
+            --course-teal-dark: #07383a;
+            --course-green: #b9df38;
+            --course-light: #eef7f4;
+            --course-border: #d8e8e3;
+            --course-text: #183536;
+            --course-muted: #607777;
+            --course-bg: #f8fbfa;
+        }
+
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            margin: 0;
+            color: var(--course-text);
+            background: var(--course-bg);
+        }
+
+        /* HERO */
+        .course-hero {
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 84% 18%, rgba(185,223,56,.16), transparent 30%),
+                linear-gradient(135deg, var(--course-teal-dark), var(--course-teal));
+            color: #fff;
+            padding: 90px 0 80px;
+        }
+
+        .course-hero::before,
+        .course-hero::after {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .course-hero::before {
+            width: 380px;
+            height: 380px;
+            border: 1px solid rgba(255,255,255,.12);
+            right: -130px;
+            top: -130px;
+        }
+
+        .course-hero::after {
+            width: 220px;
+            height: 220px;
+            border: 1px solid rgba(185,223,56,.22);
+            right: 80px;
+            bottom: -120px;
+        }
+
+        .course-hero-grid {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(360px, .95fr);
+            gap: 48px;
+            align-items: center;
+        }
+
+        .course-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 8px 13px;
+            border: 1px solid rgba(255,255,255,.18);
+            border-radius: 999px;
+            color: #dcece8;
+            font-size: .76rem;
+            font-weight: 800;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+
+        .course-kicker::before {
+            content: "";
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--course-green);
+            box-shadow: 0 0 0 5px rgba(185,223,56,.12);
+        }
+
+        .course-hero h1 {
+            margin: 0 0 20px;
+            font-size: clamp(2.8rem, 6vw, 5.4rem);
+            line-height: .98;
+            letter-spacing: -.045em;
+        }
+
+        .course-hero .lead {
+            max-width: 780px;
+            margin: 0;
+            color: #d7e9e5;
+            font-size: 1.12rem;
+            line-height: 1.8;
+        }
+
+        .course-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 28px;
+        }
+
+        .course-meta span {
+            display: inline-flex;
+            padding: 8px 13px;
+            border-radius: 999px;
+            border: 1px solid rgba(255,255,255,.18);
+            background: rgba(255,255,255,.06);
+            color: #e7f3f0;
+            font-size: .86rem;
+        }
+
+        .hero-visual,
+        .scientific-visual {
+            background: #fff;
+            border: 1px solid var(--course-border);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 22px 60px rgba(0,0,0,.16);
+        }
+
+        .hero-visual img,
+        .scientific-visual img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        /* CONTENT */
+        .course-content {
+            padding: 85px 0 95px;
+        }
+
+        .course-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 300px;
+            gap: 45px;
+            align-items: start;
+        }
+
+        .course-main { min-width: 0; }
+
+        .course-section {
+            padding: 0 0 60px;
+            margin-bottom: 60px;
+            border-bottom: 1px solid var(--course-border);
+        }
+
+        .course-section:last-child {
+            border-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        .section-label {
+            color: var(--course-teal);
+            font-size: .76rem;
+            font-weight: 900;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .course-section h2 {
+            margin: 0 0 18px;
+            color: var(--course-teal-dark);
+            font-size: clamp(1.8rem, 3vw, 2.65rem);
+            letter-spacing: -.025em;
+        }
+
+        .course-section h3 {
+            color: var(--course-teal);
+            margin: 0 0 10px;
+            font-size: 1.15rem;
+        }
+
+        .course-section p {
+            color: var(--course-muted);
+            font-size: 1.02rem;
+            line-height: 1.85;
+        }
+
+        /* OBJECTIVES / CONCEPTS / APPLICATIONS */
+        .objective-grid,
+        .concept-grid,
+        .application-grid {
+            display: grid;
+            gap: 16px;
+            margin-top: 25px;
+        }
+
+        .objective-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+        .concept-grid { grid-template-columns: repeat(4, minmax(0,1fr)); }
+        .application-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+
+        .objective,
+        .concept,
+        .application {
+            background: #fff;
+            border: 1px solid var(--course-border);
+            border-radius: 18px;
+            padding: 22px;
+            box-shadow: 0 8px 25px rgba(14,75,78,.04);
+        }
+
+        .objective {
+            position: relative;
+            padding-left: 54px;
+        }
+
+        .objective::before {
+            content: "✓";
+            position: absolute;
+            left: 19px;
+            top: 18px;
+            width: 23px;
+            height: 23px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: var(--course-light);
+            color: var(--course-teal);
+            font-weight: 900;
+        }
+
+        .objective p,
+        .concept p,
+        .application p {
+            margin: 0;
+            font-size: .94rem;
+            line-height: 1.7;
+        }
+
+        .concept-number {
+            display: inline-flex;
+            width: 35px;
+            height: 35px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            background: var(--course-light);
+            color: var(--course-teal);
+            font-weight: 900;
+            margin-bottom: 15px;
+        }
+
+        .concept {
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+
+        .concept:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 35px rgba(14,75,78,.08);
+        }
+
+        /* TECHNIQUE SECTIONS */
+        .flow {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin: 25px 0 28px;
+        }
+
+        .flow-item {
+            position: relative;
+            text-align: center;
+            padding: 14px 9px;
+            border: 1px solid var(--course-border);
+            border-radius: 12px;
+            background: #fff;
+            color: var(--course-teal-dark);
+            font-size: .82rem;
+            font-weight: 800;
+        }
+
+        .flow-item:not(:last-child)::after {
+            content: "→";
+            position: absolute;
+            right: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--course-teal);
+            font-weight: 900;
+            z-index: 2;
+        }
+
+        .topic-note {
+            margin-top: 18px;
+            padding: 15px 18px;
+            border-left: 4px solid var(--course-green);
+            border-radius: 10px;
+            background: #f1f7f4;
+            color: var(--course-muted);
+            line-height: 1.7;
+        }
+
+        /* BIOTECH CONNECTION */
+        .connection-box {
+            position: relative;
+            overflow: hidden;
+            padding: 35px;
+            border-radius: 24px;
+            background: linear-gradient(135deg, var(--course-teal-dark), var(--course-teal));
+            color: #fff;
+        }
+
+        .connection-box h3 {
+            color: #fff;
+            margin-top: 0;
+        }
+
+        .connection-box p {
+            color: #d9e9e6;
+            margin-bottom: 0;
+        }
+
+        .pathway {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin-top: 26px;
+        }
+
+        .pathway-item {
+            position: relative;
+            text-align: center;
+            padding: 14px 9px;
+            border: 1px solid rgba(255,255,255,.15);
+            border-radius: 12px;
+            background: rgba(255,255,255,.05);
+            font-size: .8rem;
+        }
+
+        .pathway-item:not(:last-child)::after {
+            content: "→";
+            position: absolute;
+            right: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--course-green);
+            font-weight: 900;
+            z-index: 3;
+        }
+
+        /* SIDEBAR */
+        .course-sidebar {
+            position: sticky;
+            top: 25px;
+        }
+
+        .sidebar-card {
+            background: #fff;
+            border: 1px solid var(--course-border);
+            border-radius: 18px;
+            padding: 23px;
+            margin-bottom: 16px;
+            box-shadow: 0 8px 25px rgba(14,75,78,.04);
+        }
+
+        .sidebar-card h3 {
+            margin: 0 0 15px;
+            color: var(--course-teal-dark);
+            font-size: 1rem;
+        }
+
+        .toc {
+            display: grid;
+            gap: 8px;
+        }
+
+        .toc a {
+            display: block;
+            padding: 9px 11px;
+            border-radius: 9px;
+            color: var(--course-muted);
+            text-decoration: none;
+            font-size: .9rem;
+        }
+
+        .toc a:hover {
+            background: var(--course-light);
+            color: var(--course-teal);
+        }
+
+        .references {
+            padding: 25px;
+            background: #f0f6f4;
+            border-radius: 16px;
+            border: 1px solid var(--course-border);
+        }
+
+        .references p {
+            margin: 0;
+            font-size: .88rem;
+            color: var(--course-muted);
+        }
+
+        .references a {
+            color: var(--course-teal);
+            font-weight: 700;
+        }
+
+        @media (max-width: 1050px) {
+            .course-hero-grid,
+            .course-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .course-sidebar { position: static; }
+
+            .concept-grid {
+                grid-template-columns: repeat(2, minmax(0,1fr));
+            }
+
+            .flow,
+            .pathway {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .flow-item:not(:last-child)::after,
+            .pathway-item:not(:last-child)::after {
+                display: none;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .course-hero { padding: 65px 0 55px; }
+
+            .objective-grid,
+            .concept-grid,
+            .application-grid,
+            .flow,
+            .pathway {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            .concept { transition: none; }
+        }
+    </style>
+</head>
+
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+    <nav class="nav container" aria-label="Primary navigation">
+
+        <a class="brand" href="../index.html" aria-label="Biotechnology Department home">
+            <span class="brand-mark">🧬</span>
+            <span>BIOTECH<span class="brand-dot">.</span></span>
+        </a>
+
+        <button
+            class="menu-toggle"
+            aria-expanded="false"
+            aria-controls="site-menu"
+            type="button"
+        >
+            Menu
+        </button>
+
+        <div class="site-menu" id="site-menu">
+            <a href="../index.html">Home</a>
+            <a href="../about.html">About</a>
+            <a href="../curriculum.html" aria-current="page">Curriculum</a>
+            <a href="../faculty.html">Faculty</a>
+            <a href="../research.html">Research</a>
+            <a href="../laboratories.html">Laboratories</a>
+            <a href="../projects.html">Projects</a>
+            <a href="../news.html">News</a>
+            <a href="../gallery.html">Gallery</a>
+            <a href="../contact.html">Contact</a>
+            <button id="langToggle" class="lang-btn" type="button">العربية</button>
+        </div>
+
+    </nav>
+</header>
+
+<main id="main">
+
+    <!-- =========================================================
+         HERO
+         ========================================================= -->
+
+    <section class="course-hero">
+
+        <div class="container course-hero-grid">
+
+            <div>
+
+                <div class="course-kicker">
+                    Subject 02 · Biotechnology Curriculum
+                </div>
+
+                <h1
+                    data-en="Analytical Chemistry."
+                    data-ar="الكيمياء التحليلية."
+                >
+                    Analytical Chemistry.
+                </h1>
+
+                <p
+                    class="lead"
+                    data-en="Analytical chemistry is the science of measurement, separation and identification used to obtain accurate and reliable information about chemical and biological samples."
+                    data-ar="الكيمياء التحليلية هي علم القياس والفصل والتعريف الكيميائي، وتُستخدم للحصول على معلومات دقيقة وموثوقة عن العينات الكيميائية والحيوية."
+                >
+                    Analytical chemistry is the science of measurement, separation
+                    and identification used to obtain accurate and reliable
+                    information about chemical and biological samples.
+                </p>
+
+                <div class="course-meta">
+                    <span>Measurement</span>
+                    <span>Separation</span>
+                    <span>Identification</span>
+                    <span>Quantitative Analysis</span>
+                </div>
+
+            </div>
+
+            <div class="hero-visual">
+
+                <img
+                    src="../assets/analytical-chemistry/01-analytical-chemistry-hero.png"
+                    alt="Analytical Chemistry scientific overview showing sample preparation, separation, detection, data analysis and biotechnology applications"
+                >
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         SCIENTIFIC OVERVIEW
+         ========================================================= -->
+
+    <section class="course-content">
+
+        <div class="container course-layout">
+
+            <article class="course-main">
+
+                <section class="course-section" id="overview">
+
+                    <div class="section-label">
+                        01 · Scientific Overview
+                    </div>
+
+                    <h2>
+                        What is Analytical Chemistry?
+                    </h2>
+
+                    <p
+                        data-en="Analytical chemistry focuses on obtaining chemical information from samples. It includes qualitative analysis, which addresses what substances are present, and quantitative analysis, which determines how much of a substance is present."
+                        data-ar="تركز الكيمياء التحليلية على الحصول على معلومات كيميائية من العينات. وتشمل التحليل النوعي الذي يحدد ماهية المواد الموجودة، والتحليل الكمي الذي يحدد كمية المادة الموجودة."
+                    >
+                        Analytical chemistry focuses on obtaining chemical information from samples.
+                        It includes qualitative analysis, which addresses what substances are present,
+                        and quantitative analysis, which determines how much of a substance is present.
+                    </p>
+
+                    <p
+                        data-en="Modern analytical workflows often combine sampling, sample preparation, separation, detection, calibration and data interpretation. In biotechnology, these approaches are used to investigate biological materials, metabolites, natural products, proteins, nucleic acids and other measurable components."
+                        data-ar="غالبًا ما تجمع مسارات التحليل الحديثة بين أخذ العينات وتحضيرها والفصل والكشف والمعايرة وتفسير البيانات. وفي التقانات الأحيائية تُستخدم هذه الأساليب لدراسة المواد الحيوية والمستقلبات والمنتجات الطبيعية والبروتينات والأحماض النووية وغيرها من المكونات القابلة للقياس."
+                    >
+                        Modern analytical workflows often combine sampling, sample preparation,
+                        separation, detection, calibration and data interpretation. In biotechnology,
+                        these approaches are used to investigate biological materials, metabolites,
+                        natural products, proteins, nucleic acids and other measurable components.
+                    </p>
+
+                </section>
+
+
+                <!-- =====================================================
+                     LEARNING OBJECTIVES
+                     ===================================================== -->
+
+                <section class="course-section" id="objectives">
+
+                    <div class="section-label">
+                        02 · Learning Objectives
+                    </div>
+
+                    <h2>
+                        What should students understand?
+                    </h2>
+
+                    <div class="objective-grid">
+
+                        <div class="objective">
+                            <p>
+                                Distinguish qualitative and quantitative analytical approaches.
+                            </p>
+                        </div>
+
+                        <div class="objective">
+                            <p>
+                                Understand the role of sampling and sample preparation in reliable analysis.
+                            </p>
+                        </div>
+
+                        <div class="objective">
+                            <p>
+                                Explain the principles of titration and volumetric analysis.
+                            </p>
+                        </div>
+
+                        <div class="objective">
+                            <p>
+                                Explain how chromatographic methods separate components of complex mixtures.
+                            </p>
+                        </div>
+
+                        <div class="objective">
+                            <p>
+                                Understand the analytical role of spectroscopy and calibration.
+                            </p>
+                        </div>
+
+                        <div class="objective">
+                            <p>
+                                Interpret analytical signals and connect measurements with quantitative results.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =====================================================
+                     CORE CONCEPTS
+                     ===================================================== -->
+
+                <section class="course-section" id="concepts">
+
+                    <div class="section-label">
+                        03 · Core Concepts
+                    </div>
+
+                    <h2>
+                        The analytical workflow
+                    </h2>
+
+                    <div class="concept-grid">
+
+                        <article class="concept">
+
+                            <span class="concept-number">
+                                01
+                            </span>
+
+                            <h3>
+                                Sampling
+                            </h3>
+
+                            <p>
+                                Obtaining a representative sample is essential because
+                                poor sampling can compromise the validity of the final analytical result.
+                            </p>
+
+                        </article>
+
+
+                        <article class="concept">
+
+                            <span class="concept-number">
+                                02
+                            </span>
+
+                            <h3>
+                                Sample Preparation
+                            </h3>
+
+                            <p>
+                                Filtration, dilution, extraction, digestion and related procedures
+                                can prepare a sample for reliable measurement.
+                            </p>
+
+                        </article>
+
+
+                        <article class="concept">
+
+                            <span class="concept-number">
+                                03
+                            </span>
+
+                            <h3>
+                                Separation
+                            </h3>
+
+                            <p>
+                                Separation methods reduce matrix complexity and help distinguish
+                                components before detection or quantification.
+                            </p>
+
+                        </article>
+
+
+                        <article class="concept">
+
+                            <span class="concept-number">
+                                04
+                            </span>
+
+                            <h3>
+                                Detection & Quantification
+                            </h3>
+
+                            <p>
+                                Analytical signals can be interpreted through calibration,
+                                reference standards and appropriate quantitative procedures.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =====================================================
+                     TITRATION
+                     ===================================================== -->
+
+                <section class="course-section" id="titration">
+
+                    <div class="section-label">
+                        04 · Titration & Volumetric Analysis
+                    </div>
+
+                    <h2>
+                        Quantitative analysis by titration
+                    </h2>
+
+                    <p>
+                        Titration is a quantitative analytical technique used to determine
+                        the concentration of an analyte by reacting it with a solution of known
+                        concentration, called the titrant. The volume required to reach a defined
+                        endpoint is used, together with reaction stoichiometry, to calculate
+                        the analyte concentration.
+                    </p>
+
+                    <div class="flow">
+
+                        <div class="flow-item">
+                            Standard Solution
+                        </div>
+
+                        <div class="flow-item">
+                            Burette
+                        </div>
+
+                        <div class="flow-item">
+                            Controlled Addition
+                        </div>
+
+                        <div class="flow-item">
+                            Endpoint
+                        </div>
+
+                        <div class="flow-item">
+                            Concentration
+                        </div>
+
+                    </div>
+
+                    <div class="topic-visual scientific-visual">
+
+                        <img
+                            src="../assets/analytical-chemistry/02-titration-volumetric-analysis.png"
+                            alt="Scientific infographic showing titration and volumetric analysis"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <div class="topic-note">
+
+                        <strong>Core idea:</strong>
+                        the analytical result depends on accurate volume measurement,
+                        appropriate reaction stoichiometry and a clearly defined endpoint
+                        or equivalence point.
+
+                    </div>
+
+                    <h3>
+                        Common titration approaches
+                    </h3>
+
+                    <p>
+                        Important categories include acid–base titration, redox titration,
+                        precipitation titration and complexometric titration. The appropriate
+                        method depends on the analyte and the chemical reaction used for measurement.
+                    </p>
+
+                </section>
+
+
+                <!-- =====================================================
+                     CHROMATOGRAPHY
+                     ===================================================== -->
+
+                <section class="course-section" id="chromatography">
+
+                    <div class="section-label">
+                        05 · Separation & Chromatography
+                    </div>
+
+                    <h2>
+                        Separating complex mixtures before identification
+                    </h2>
+
+                    <p>
+                        Chromatography separates components of a mixture according to differences
+                        in their interactions with a stationary phase and a mobile phase. Separation
+                        can simplify complex biological and chemical samples and provide information
+                        such as retention time and peak area.
+                    </p>
+
+                    <div class="topic-visual scientific-visual">
+
+                        <img
+                            src="../assets/analytical-chemistry/03-separation-chromatography.png"
+                            alt="Scientific infographic showing sample preparation, chromatographic separation, detection and chromatogram interpretation"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <div class="topic-note">
+
+                        <strong>Biotechnology relevance:</strong>
+                        chromatography is relevant to the analysis of metabolites, proteins,
+                        natural products and other components of complex biological samples.
+
+                    </div>
+
+                </section>
+
+
+                <!-- =====================================================
+                     SPECTROSCOPY
+                     ===================================================== -->
+
+                <section class="course-section" id="spectroscopy">
+
+                    <div class="section-label">
+                        06 · Spectroscopy & Quantitative Analysis
+                    </div>
+
+                    <h2>
+                        From molecular interaction to analytical data
+                    </h2>
+
+                    <p>
+                        Spectroscopic methods obtain analytical information from interactions
+                        between electromagnetic radiation and matter. In quantitative analysis,
+                        measured signals can be related to concentration through suitable
+                        calibration procedures.
+                    </p>
+
+                    <div class="topic-visual scientific-visual">
+
+                        <img
+                            src="../assets/analytical-chemistry/04-spectroscopy-quantitative-analysis.png"
+                            alt="Scientific infographic showing spectroscopic measurement, spectrum analysis, calibration and quantitative determination"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <div class="topic-note">
+
+                        <strong>Quantitative principle:</strong>
+                        a measured analytical response can be compared with standards or a
+                        calibration model to estimate the concentration of an unknown sample.
+
+                    </div>
+
+                </section>
+
+
+                <!-- =====================================================
+                     BIOTECHNOLOGY CONNECTION
+                     ===================================================== -->
+
+                <section class="course-section" id="biotechnology">
+
+                    <div class="section-label">
+                        07 · Biotechnology Connection
+                    </div>
+
+                    <h2>
+                        Why does Analytical Chemistry matter in Biotechnology?
+                    </h2>
+
+                    <div class="connection-box">
+
+                        <h3>
+                            From sample to reliable scientific evidence
+                        </h3>
+
+                        <p>
+                            Biotechnology depends on measurements that are accurate, reproducible
+                            and interpretable. Analytical chemistry provides a methodological bridge
+                            between a biological sample and the quantitative or qualitative information
+                            needed to understand it.
+                        </p>
+
+                        <div class="pathway">
+
+                            <div class="pathway-item">
+                                Biological Sample
+                            </div>
+
+                            <div class="pathway-item">
+                                Preparation
+                            </div>
+
+                            <div class="pathway-item">
+                                Separation
+                            </div>
+
+                            <div class="pathway-item">
+                                Detection
+                            </div>
+
+                            <div class="pathway-item">
+                                Quantification
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =====================================================
+                     APPLICATIONS
+                     ===================================================== -->
+
+                <section class="course-section" id="applications">
+
+                    <div class="section-label">
+                        08 · Applications in Biotechnology
+                    </div>
+
+                    <h2>
+                        Where does this knowledge lead?
+                    </h2>
+
+                    <div class="application-grid">
+
+                        <article class="application">
+
+                            <h3>
+                                Biological Sample Analysis
+                            </h3>
+
+                            <p>
+                                Analytical methods can be used to characterize components
+                                of biological, food, environmental and research samples.
+                            </p>
+
+                        </article>
+
+
+                        <article class="application">
+
+                            <h3>
+                                Natural Products
+                            </h3>
+
+                            <p>
+                                Separation and detection approaches support the characterization
+                                of plant-derived compounds and complex natural-product mixtures.
+                            </p>
+
+                        </article>
+
+
+                        <article class="application">
+
+                            <h3>
+                                Bioprocess Monitoring
+                            </h3>
+
+                            <p>
+                                Analytical measurements can help monitor substrates, products
+                                and other chemical changes during biological processes.
+                            </p>
+
+                        </article>
+
+
+                        <article class="application">
+
+                            <h3>
+                                Quality & Validation
+                            </h3>
+
+                            <p>
+                                Reliable analytical procedures support quality assessment,
+                                method validation and scientific confidence in measured results.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =====================================================
+                     SCIENTIFIC PERSPECTIVE
+                     ===================================================== -->
+
+                <section class="course-section" id="perspective">
+
+                    <div class="section-label">
+                        09 · Scientific Perspective
+                    </div>
+
+                    <h2>
+                        Measurement turns observation into evidence
+                    </h2>
+
+                    <p>
+                        Analytical chemistry is not simply a collection of laboratory techniques.
+                        It provides a framework for turning a sample into reliable chemical information
+                        through controlled measurement, appropriate separation, validated procedures
+                        and careful interpretation of data.
+                    </p>
+
+                    <p>
+                        For biotechnology students, this perspective is essential because biological
+                        research increasingly depends on quantitative evidence — from metabolite
+                        profiling and natural-product analysis to quality assessment and experimental validation.
+                    </p>
+
+                </section>
+
+
+                <!-- =====================================================
+                     REFERENCES
+                     ===================================================== -->
+
+                <section class="course-section" id="references">
+
+                    <div class="section-label">
+                        10 · Further Reading
+                    </div>
+
+                    <h2>
+                        Scientific resources
+                    </h2>
+
+                    <div class="references">
+
+                        <p>
+
+                            <strong>
+                                OpenStax — Chemistry 2e
+                            </strong>
+
+                            <br>
+
+                            Open educational material covering chemical analysis,
+                            solution chemistry, equilibrium and related foundations
+                            relevant to analytical chemistry.
+
+                            <br><br>
+
+                            <a
+                                href="https://openstax.org/details/books/chemistry-2e"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                OpenStax Chemistry →
+                            </a>
+
+                        </p>
+
+                        <br>
+
+                        <p>
+
+                            <strong>
+                                PubMed
+                            </strong>
+
+                            <br>
+
+                            Search biomedical and life-science literature for
+                            analytical methods and applications.
+
+                            <br><br>
+
+                            <a
+                                href="https://pubmed.ncbi.nlm.nih.gov/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Search PubMed →
+                            </a>
+
+                        </p>
+
+                    </div>
+
+                </section>
+
+            </article>
+
+
+            <!-- =========================================================
+                 SIDEBAR
+                 ========================================================= -->
+
+            <aside class="course-sidebar">
+
+                <div class="sidebar-card">
+
+                    <h3>
+                        On this page
+                    </h3>
+
+                    <nav class="toc" aria-label="Course contents">
+
+                        <a href="#overview">
+                            Scientific Overview
+                        </a>
+
+                        <a href="#objectives">
+                            Learning Objectives
+                        </a>
+
+                        <a href="#concepts">
+                            Core Concepts
+                        </a>
+
+                        <a href="#titration">
+                            Titration
+                        </a>
+
+                        <a href="#chromatography">
+                            Chromatography
+                        </a>
+
+                        <a href="#spectroscopy">
+                            Spectroscopy
+                        </a>
+
+                        <a href="#biotechnology">
+                            Biotechnology Connection
+                        </a>
+
+                        <a href="#applications">
+                            Applications
+                        </a>
+
+                        <a href="#perspective">
+                            Scientific Perspective
+                        </a>
+
+                        <a href="#references">
+                            Further Reading
+                        </a>
+
+                    </nav>
+
+                </div>
+
+
+                <div class="sidebar-card">
+
+                    <h3>
+                        Curriculum
+                    </h3>
+
+                    <a
+                        href="../curriculum.html"
+                        style="display:block;padding:14px;border-radius:12px;background:var(--course-light);color:var(--course-teal-dark);text-decoration:none;font-weight:800;line-height:1.45;"
+                    >
+
+                        <small
+                            style="display:block;margin-bottom:5px;color:var(--course-teal);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;"
+                        >
+                            Return to
+                        </small>
+
+                        Biotechnology Curriculum →
+
+                    </a>
+
+                </div>
+
+
+                <div class="sidebar-card">
+
+                    <h3>
+                        Subject
+                    </h3>
+
+                    <p
+                        style="margin:0;color:var(--course-muted);line-height:1.7;"
+                    >
+
+                        <strong
+                            style="color:var(--course-teal-dark);"
+                        >
+                            02
+                        </strong>
+
+                        <br>
+
+                        Analytical Chemistry
+
+                    </p>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+        <div>
+
+            <div class="brand footer-brand">
+                🧬 BIOTECH<span class="brand-dot">.</span>
+            </div>
+
+            <p>
+                University of Samarra · College of Applied Sciences ·
+                Department of Biotechnology.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Explore
+            </h3>
+
+            <a href="../about.html">
+                About
+            </a>
+
+            <a href="../curriculum.html">
+                Curriculum
+            </a>
+
+            <a href="../research.html">
+                Research
+            </a>
+
+            <a href="../gallery.html">
+                Gallery
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Institution
+            </h3>
+
+            <a
+                href="https://uosamarra.edu.iq/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                University of Samarra
+            </a>
+
+            <a href="../contact.html">
+                Contact
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="container copy">
+
+        © 2026 University of Samarra — Department of Biotechnology.
+        Academic information should be verified against official departmental sources before publication.
+
+    </div>
+
+</footer>
+
+
+<script src="../js/main.js"></script>
+
+</body>
+</html>

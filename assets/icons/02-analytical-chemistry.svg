@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" role="img" aria-labelledby="title desc">
+<title id="title">Analytical Chemistry</title><desc id="desc">Chromatography, spectra, sample vials and analytical measurement.</desc>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0a2b2e"/><stop offset="1" stop-color="#0e4c4e"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#ffffff" stop-opacity=".22"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="900" height="540" rx="34" fill="url(#bg)"/>
+<circle cx="700" cy="125" r="150" fill="url(#glow)"/>
+<g opacity=".13" fill="none" stroke="#fff" stroke-width="2"><circle cx="700" cy="125" r="92"/><circle cx="700" cy="125" r="126"/><path d="M55 430 C220 280 420 510 845 165"/></g>
+<rect x="110" y="155" width="210" height="225" rx="18" fill="#e9f5f1"/><path d="M170 190h90M170 230h120M170 270h80M170 310h105" stroke="#16474b" stroke-width="10" stroke-linecap="round"/>
+        <path d="M430 380 C470 260 500 340 545 240 C585 155 622 272 670 190 C715 117 760 205 810 130" fill="none" stroke="#8db9ff" stroke-width="8"/><g fill="#8db9ff"><circle cx="545" cy="240" r="8"/><circle cx="670" cy="190" r="8"/><circle cx="810" cy="130" r="8"/></g>
+        <g fill="#fff" stroke="#8aa7a7" stroke-width="3"><rect x="380" y="380" width="70" height="80" rx="15"/><rect x="475" y="380" width="70" height="80" rx="15"/><rect x="570" y="380" width="70" height="80" rx="15"/></g><text x="52" y="70" fill="#b9df38" font-family="Arial, sans-serif" font-size="17" font-weight="800" letter-spacing="4">ANALYTICAL CHEMISTRY</text>
+</svg>

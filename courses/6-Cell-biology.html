@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Cell Biology — Department of Biotechnology, College of Applied Sciences, University of Samarra.">
+<meta name="theme-color" content="#0e4b4e">
+<title>Cell Biology | Department of Biotechnology</title>
+<link rel="stylesheet" href="../css/style.css">
+
+<style>
+:root{--teal:#0e4b4e;--dark:#07383a;--green:#b9df38;--light:#eef7f4;--border:#d8e8e3;--text:#183536;--muted:#607777;--bg:#f8fbfa}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--text);background:var(--bg)}
+.course-hero{position:relative;overflow:hidden;background:radial-gradient(circle at 84% 18%,rgba(185,223,56,.16),transparent 30%),linear-gradient(135deg,var(--dark),var(--teal));color:#fff;padding:90px 0 80px}
+.course-hero:before,.course-hero:after{content:"";position:absolute;border-radius:50%;pointer-events:none}
+.course-hero:before{width:380px;height:380px;border:1px solid rgba(255,255,255,.12);right:-130px;top:-130px}
+.course-hero:after{width:220px;height:220px;border:1px solid rgba(185,223,56,.22);right:80px;bottom:-120px}
+.course-hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1fr) minmax(360px,.95fr);gap:48px;align-items:center}
+.course-kicker{display:inline-flex;align-items:center;gap:9px;padding:8px 13px;border:1px solid rgba(255,255,255,.18);border-radius:999px;color:#dcece8;font-size:.76rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:22px}
+.course-kicker:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 5px rgba(185,223,56,.12)}
+.course-hero h1{margin:0 0 20px;font-size:clamp(2.8rem,6vw,5.4rem);line-height:.98;letter-spacing:-.045em}
+.course-hero .lead{max-width:790px;margin:0;color:#d7e9e5;font-size:1.12rem;line-height:1.8}
+.course-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.course-meta span{display:inline-flex;padding:8px 13px;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:#e7f3f0;font-size:.86rem}
+.hero-visual,.scientific-visual{background:#fff;border:1px solid var(--border);border-radius:24px;overflow:hidden;box-shadow:0 22px 60px rgba(0,0,0,.16)}
+.hero-visual img,.scientific-visual img{display:block;width:100%;height:auto}
+
+.course-content{padding:85px 0 95px}.course-layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:45px;align-items:start}.course-main{min-width:0}
+.course-section{padding:0 0 60px;margin-bottom:60px;border-bottom:1px solid var(--border)}.course-section:last-child{border-bottom:0;margin-bottom:0}
+.section-label{color:var(--teal);font-size:.76rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px}
+.course-section h2{margin:0 0 18px;color:var(--dark);font-size:clamp(1.8rem,3vw,2.65rem);letter-spacing:-.025em}
+.course-section h3{color:var(--teal);margin:0 0 10px;font-size:1.15rem}.course-section p{color:var(--muted);font-size:1.02rem;line-height:1.85}
+
+.objective-grid,.concept-grid,.application-grid{display:grid;gap:16px;margin-top:25px}
+.objective-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.concept-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.application-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.objective,.concept,.application{background:#fff;border:1px solid var(--border);border-radius:18px;padding:22px;box-shadow:0 8px 25px rgba(14,75,78,.04)}
+.objective{position:relative;padding-left:54px}.objective:before{content:"✓";position:absolute;left:19px;top:18px;width:23px;height:23px;display:grid;place-items:center;border-radius:50%;background:var(--light);color:var(--teal);font-weight:900}
+.objective p,.concept p,.application p{margin:0;font-size:.94rem;line-height:1.7}
+.concept-number{display:inline-flex;width:35px;height:35px;align-items:center;justify-content:center;border-radius:10px;background:var(--light);color:var(--teal);font-weight:900;margin-bottom:15px}
+.concept{transition:transform .25s ease,box-shadow .25s ease}.concept:hover{transform:translateY(-4px);box-shadow:0 16px 35px rgba(14,75,78,.08)}
+.topic-visual{margin-top:28px}.topic-note{margin-top:18px;padding:15px 18px;border-left:4px solid var(--green);border-radius:10px;background:#f1f7f4;color:var(--muted);line-height:1.7}
+.process-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:25px 0 28px}
+.process-item{position:relative;text-align:center;padding:15px 10px;border:1px solid var(--border);border-radius:13px;background:#fff;color:var(--dark);font-size:.82rem;font-weight:800}
+.process-item:not(:last-child):after{content:"→";position:absolute;right:-15px;top:50%;transform:translateY(-50%);color:var(--teal);font-weight:900;z-index:2}
+.cycle-box{padding:28px;background:#fff;border:1px solid var(--border);border-radius:22px;box-shadow:0 8px 25px rgba(14,75,78,.04)}
+.cycle-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}.cycle-stage{padding:16px;text-align:center;border-radius:12px;background:var(--light);color:var(--dark);font-weight:800}
+.connection-box{position:relative;overflow:hidden;padding:35px;border-radius:24px;background:linear-gradient(135deg,var(--dark),var(--teal));color:#fff}
+.connection-box h3{color:#fff;margin-top:0}.connection-box p{color:#d9e9e6;margin-bottom:0}
+.course-sidebar{position:sticky;top:25px}.sidebar-card{background:#fff;border:1px solid var(--border);border-radius:18px;padding:23px;margin-bottom:16px;box-shadow:0 8px 25px rgba(14,75,78,.04)}
+.sidebar-card h3{margin:0 0 15px;color:var(--dark);font-size:1rem}.toc{display:grid;gap:8px}.toc a{display:block;padding:9px 11px;border-radius:9px;color:var(--muted);text-decoration:none;font-size:.9rem}.toc a:hover{background:var(--light);color:var(--teal)}
+.references{padding:25px;background:#f0f6f4;border-radius:16px;border:1px solid var(--border)}.references p{margin:0;font-size:.88rem;color:var(--muted)}.references a{color:var(--teal);font-weight:700}
+
+@media(max-width:1050px){.course-hero-grid,.course-layout{grid-template-columns:1fr}.course-sidebar{position:static}.concept-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.process-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.process-item:not(:last-child):after{display:none}}
+@media(max-width:700px){.course-hero{padding:65px 0 55px}.objective-grid,.concept-grid,.application-grid,.process-grid,.cycle-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.concept{transition:none}}
+</style>
+</head>
+
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+<nav class="nav container" aria-label="Primary navigation">
+<a class="brand" href="../index.html" aria-label="Biotechnology Department home"><span class="brand-mark">🧬</span><span>BIOTECH<span class="brand-dot">.</span></span></a>
+<button class="menu-toggle" aria-expanded="false" aria-controls="site-menu" type="button">Menu</button>
+<div class="site-menu" id="site-menu">
+<a href="../index.html">Home</a><a href="../about.html">About</a><a href="../curriculum.html" aria-current="page">Curriculum</a><a href="../faculty.html">Faculty</a><a href="../research.html">Research</a><a href="../laboratories.html">Laboratories</a><a href="../projects.html">Projects</a><a href="../news.html">News</a><a href="../gallery.html">Gallery</a><a href="../contact.html">Contact</a>
+<button id="langToggle" class="lang-btn" type="button">العربية</button>
+</div>
+</nav>
+</header>
+
+<main id="main">
+
+<section class="course-hero">
+<div class="container course-hero-grid">
+<div>
+<div class="course-kicker">Subject 06 · Biotechnology Curriculum</div>
+<h1 data-en="Cell Biology." data-ar="علم الأحياء الخلوي.">Cell Biology.</h1>
+<p class="lead"
+data-en="Cell biology is the study of the structure, organization, function and interactions of cells, the fundamental units of living systems. It examines how cellular components operate individually and collectively to maintain life, regulate biological processes, communicate with their environment and respond to internal and external signals."
+data-ar="علم الأحياء الخلوي هو دراسة تركيب الخلايا وتنظيمها ووظائفها وتفاعلاتها، بوصفها الوحدات الأساسية للأنظمة الحية. ويدرس كيفية عمل مكونات الخلية بصورة منفردة ومتكاملة للحفاظ على الحياة وتنظيم العمليات الحيوية والتواصل مع البيئة والاستجابة للإشارات الداخلية والخارجية.">
+Cell biology is the study of the structure, organization, function and interactions of cells, the fundamental units of living systems. It examines how cellular components operate individually and collectively to maintain life, regulate biological processes, communicate with their environment and respond to internal and external signals.
+</p>
+<div class="course-meta"><span>Cell Structure</span><span>Organelles</span><span>Cell Signaling</span><span>Cell Cycle</span></div>
+</div>
+
+<div class="hero-visual">
+<img src="../assets/cell-biology/01-cell-biology-hero.png" alt="Conceptual scientific illustration showing molecular organization, organelles, cells, tissue and biotechnology">
+</div>
+</div>
+</section>
+
+<section class="course-content">
+<div class="container course-layout">
+<article class="course-main">
+
+<section class="course-section" id="overview">
+<div class="section-label">01 · Scientific Overview</div>
+<h2>What is Cell Biology?</h2>
+<p>Cell biology examines cells as organized biological systems. It considers the relationship between cellular structure and function, the movement of materials across membranes, intracellular organization, communication, growth and reproduction.</p>
+<p>For biotechnology students, cell biology provides a foundation for understanding cell culture, tissue engineering, genetic manipulation, molecular biology, immunological methods and many other biological technologies.</p>
+</section>
+
+<section class="course-section" id="objectives">
+<div class="section-label">02 · Learning Objectives</div>
+<h2>What should students understand?</h2>
+<div class="objective-grid">
+<div class="objective"><p>Describe the structural organization of prokaryotic and eukaryotic cells at an appropriate level.</p></div>
+<div class="objective"><p>Relate major organelles and cellular structures to their functions.</p></div>
+<div class="objective"><p>Explain the role of the plasma membrane in transport, signaling and cellular homeostasis.</p></div>
+<div class="objective"><p>Explain major mechanisms of intracellular communication and signal transduction.</p></div>
+<div class="objective"><p>Describe the main stages of the cell cycle and the principles of mitosis.</p></div>
+<div class="objective"><p>Connect cell biology concepts with biotechnology research and applications.</p></div>
+</div>
+</section>
+
+<section class="course-section" id="concepts">
+<div class="section-label">03 · Core Concepts</div>
+<h2>The organization of the cell</h2>
+<div class="concept-grid">
+<article class="concept"><span class="concept-number">01</span><h3>Plasma Membrane</h3><p>The plasma membrane forms a selective boundary between the cell and its environment and contributes to transport, signaling and homeostasis.</p></article>
+<article class="concept"><span class="concept-number">02</span><h3>Nucleus</h3><p>In eukaryotic cells, the nucleus contains most genomic DNA and provides an important site for genetic regulation and RNA production.</p></article>
+<article class="concept"><span class="concept-number">03</span><h3>Mitochondria</h3><p>Mitochondria are central to aerobic energy metabolism and contribute to ATP production and other cellular processes.</p></article>
+<article class="concept"><span class="concept-number">04</span><h3>Cytoskeleton</h3><p>The cytoskeleton supports cellular shape, organization, intracellular transport and movement.</p></article>
+</div>
+</section>
+
+<section class="course-section" id="organelles">
+<div class="section-label">04 · Cell Structure & Organelles</div>
+<h2>The functional architecture of a eukaryotic cell</h2>
+<p>Eukaryotic cells contain specialized compartments and structures that coordinate different cellular functions. Their organization allows processes such as protein synthesis, modification, energy production, intracellular trafficking and waste processing to occur in coordinated ways.</p>
+<div class="topic-visual scientific-visual">
+<img src="../assets/cell-biology/02-cell-structure-organelles.png" alt="Scientific cell biology infographic showing major eukaryotic cell organelles and their functions" loading="lazy">
+</div>
+<div class="topic-note"><strong>Key concept:</strong> cellular function emerges from interactions among organelles, membranes, molecular complexes and biochemical processes rather than from isolated structures acting independently.</div>
+</section>
+
+<section class="course-section" id="processes">
+<div class="section-label">05 · Cellular Processes</div>
+<h2>Transport, signaling and the cell cycle</h2>
+<p>Cells continuously exchange materials with their environment, receive and process signals, replicate their DNA and coordinate division. These processes are tightly regulated and depend on the integration of molecular and cellular systems.</p>
+<div class="process-grid">
+<div class="process-item">Membrane Transport</div>
+<div class="process-item">Cell Signaling</div>
+<div class="process-item">DNA Replication</div>
+<div class="process-item">Mitosis</div>
+</div>
+<div class="topic-visual scientific-visual">
+<img src="../assets/cell-biology/03-cellular-processes.png" alt="Scientific infographic showing membrane transport, cell signaling, cell cycle, DNA replication and mitosis" loading="lazy">
+</div>
+<div class="cycle-box">
+<h3>Cell Cycle Overview</h3>
+<div class="cycle-grid">
+<div class="cycle-stage">G1<br><small>Growth</small></div>
+<div class="cycle-stage">S<br><small>DNA Replication</small></div>
+<div class="cycle-stage">G2<br><small>Preparation</small></div>
+<div class="cycle-stage">M<br><small>Mitosis</small></div>
+</div>
+</div>
+</section>
+
+<section class="course-section" id="biotechnology">
+<div class="section-label">06 · Biotechnology Connection</div>
+<h2>Why does Cell Biology matter in Biotechnology?</h2>
+<div class="connection-box">
+<h3>From cellular systems to biotechnology</h3>
+<p>Many biotechnology approaches depend on the ability to culture, analyze, modify or engineer cells. Understanding cellular organization and regulation provides the scientific foundation for cell culture, recombinant systems, tissue engineering, diagnostic methods and molecular biotechnology.</p>
+</div>
+</section>
+
+<section class="course-section" id="applications">
+<div class="section-label">07 · Applications in Biotechnology</div>
+<h2>Where does this knowledge lead?</h2>
+<div class="application-grid">
+<article class="application"><h3>Cell Culture</h3><p>Cell biology provides the basis for maintaining, observing and experimentally manipulating cells under controlled culture conditions.</p></article>
+<article class="application"><h3>Tissue Engineering</h3><p>Cellular behavior, adhesion, proliferation and differentiation are central concepts in the design of engineered biological tissues.</p></article>
+<article class="application"><h3>Molecular Biotechnology</h3><p>Understanding intracellular processes supports the study and manipulation of genetic information and cellular expression systems.</p></article>
+<article class="application"><h3>Diagnostic Biotechnology</h3><p>Cellular markers, receptors, signaling pathways and molecular changes can provide targets for diagnostic research and analytical methods.</p></article>
+</div>
+</section>
+
+<section class="course-section" id="perspective">
+<div class="section-label">08 · Scientific Perspective</div>
+<h2>The cell is an integrated biological system</h2>
+<p>Cell biology is not simply the study of organelles. It is the study of how molecular structures and cellular compartments interact to produce an organized, responsive and dynamic living system.</p>
+<p>For biotechnology students, this systems-level perspective helps connect molecular events with cellular behavior and provides a foundation for technologies that use cells as experimental, therapeutic, industrial or research platforms.</p>
+</section>
+
+<section class="course-section" id="references">
+<div class="section-label">09 · Further Reading</div>
+<h2>Scientific Resources</h2>
+<div class="references">
+<p><strong>OpenStax — Biology 2e</strong><br>Open educational material covering cell structure, cellular processes, membranes and cell division.<br><br><a href="https://openstax.org/details/books/biology-2e" target="_blank" rel="noopener noreferrer">OpenStax Biology 2e →</a></p>
+<br>
+<p><strong>PubMed</strong><br>Search biomedical and life-science literature for current cell-biology and biotechnology research.<br><br><a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener noreferrer">Search PubMed →</a></p>
+</div>
+</section>
+
+</article>
+
+<aside class="course-sidebar">
+<div class="sidebar-card">
+<h3>On this page</h3>
+<nav class="toc" aria-label="Course contents">
+<a href="#overview">Scientific Overview</a>
+<a href="#objectives">Learning Objectives</a>
+<a href="#concepts">Core Concepts</a>
+<a href="#organelles">Cell Structure & Organelles</a>
+<a href="#processes">Cellular Processes</a>
+<a href="#biotechnology">Biotechnology Connection</a>
+<a href="#applications">Applications</a>
+<a href="#perspective">Scientific Perspective</a>
+<a href="#references">Further Reading</a>
+</nav>
+</div>
+
+<div class="sidebar-card">
+<h3>Curriculum</h3>
+<a href="../curriculum.html" style="display:block;padding:14px;border-radius:12px;background:var(--light);color:var(--dark);text-decoration:none;font-weight:800;line-height:1.45;">
+<small style="display:block;margin-bottom:5px;color:var(--teal);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;">Return to</small>
+Biotechnology Curriculum →
+</a>
+</div>
+
+<div class="sidebar-card">
+<h3>Subject</h3>
+<p style="margin:0;color:var(--muted);line-height:1.7;"><strong style="color:var(--dark);">06</strong><br>Cell Biology</p>
+</div>
+</aside>
+
+</div>
+</section>
+</main>
+
+<footer class="footer">
+<div class="container footer-grid">
+<div><div class="brand footer-brand">🧬 BIOTECH<span class="brand-dot">.</span></div><p>University of Samarra · College of Applied Sciences · Department of Biotechnology.</p></div>
+<div><h3>Explore</h3><a href="../about.html">About</a><a href="../curriculum.html">Curriculum</a><a href="../research.html">Research</a><a href="../gallery.html">Gallery</a></div>
+<div><h3>Institution</h3><a href="https://uosamarra.edu.iq/" target="_blank" rel="noopener noreferrer">University of Samarra</a><a href="../contact.html">Contact</a></div>
+</div>
+<div class="container copy">© 2026 University of Samarra — Department of Biotechnology. Academic information should be verified against official departmental sources before publication.</div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
