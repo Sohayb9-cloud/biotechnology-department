@@ -13028,8 +13028,9 @@ main.projects-page a{color:inherit;}
 main.projects-page [hidden]{display:none!important;}
 
 /* ---------------------------------------------------------
-   HERO
+   PROJECTS HERO
    --------------------------------------------------------- */
+
 main.projects-page .projects-page-hero{
     position:relative;
     min-height:700px;
@@ -13040,6 +13041,11 @@ main.projects-page .projects-page-hero{
     color:var(--white);
     background:var(--forest-dark);
 }
+
+/* ---------------------------------------------------------
+   HERO MEDIA
+   --------------------------------------------------------- */
+
 main.projects-page .projects-page-hero-media,
 main.projects-page .projects-page-hero-overlay,
 main.projects-page .projects-page-hero-grid{
@@ -13047,47 +13053,113 @@ main.projects-page .projects-page-hero-grid{
     inset:0;
     pointer-events:none;
 }
-main.projects-page .projects-page-hero-media{z-index:-3;}
+
+main.projects-page .projects-page-hero-media{
+    z-index:0;
+}
+
 main.projects-page .projects-page-hero-media img{
     width:100%;
     height:100%;
     max-width:none;
+    display:block;
     object-fit:cover;
     object-position:center;
     transform:scale(1.015);
     filter:saturate(.92) contrast(1.02);
 }
-main.projects-page .projects-page-hero-overlay{
-    z-index:-2;
-    background:
-        linear-gradient(90deg,rgba(7,36,30,.975) 0%,rgba(7,36,30,.93) 27%,rgba(7,36,30,.72) 49%,rgba(7,36,30,.38) 72%,rgba(7,36,30,.12) 100%);
-}
-html[dir=rtl] main.projects-page .projects-page-hero-overlay{
-    background:
-        linear-gradient(270deg,rgba(7,36,30,.975) 0%,rgba(7,36,30,.93) 27%,rgba(7,36,30,.72) 49%,rgba(7,36,30,.38) 72%,rgba(7,36,30,.12) 100%);
-}
-main.projects-page .projects-page-hero-grid{
-    z-index:-1;
-    opacity:.5;
-    background:
-        linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
-        linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
-    background-size:74px 74px;
-    mask-image:linear-gradient(90deg,rgba(0,0,0,.58),transparent 84%);
-}
-html[dir=rtl] main.projects-page .projects-page-hero-grid{
-    mask-image:linear-gradient(270deg,rgba(0,0,0,.58),transparent 84%);
-}
+
+/* ---------------------------------------------------------
+   HERO ATMOSPHERIC LIGHT
+   --------------------------------------------------------- */
+
 main.projects-page .projects-page-hero::before{
     content:"";
     position:absolute;
     inset:-20% -10%;
-    z-index:-1;
+    z-index:1;
     pointer-events:none;
     background:
-        radial-gradient(circle at 78% 26%,rgba(108,195,185,.16),transparent 26%),
-        radial-gradient(circle at 18% 110%,rgba(199,169,105,.08),transparent 29%);
+        radial-gradient(
+            circle at 78% 26%,
+            rgba(108,195,185,.16),
+            transparent 26%
+        ),
+        radial-gradient(
+            circle at 18% 110%,
+            rgba(199,169,105,.08),
+            transparent 29%
+        );
 }
+
+/* ---------------------------------------------------------
+   HERO OVERLAY
+   --------------------------------------------------------- */
+
+main.projects-page .projects-page-hero-overlay{
+    z-index:2;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(7,36,30,.975) 0%,
+            rgba(7,36,30,.93) 27%,
+            rgba(7,36,30,.72) 49%,
+            rgba(7,36,30,.38) 72%,
+            rgba(7,36,30,.12) 100%
+        );
+}
+
+html[dir="rtl"] main.projects-page .projects-page-hero-overlay{
+    background:
+        linear-gradient(
+            270deg,
+            rgba(7,36,30,.975) 0%,
+            rgba(7,36,30,.93) 27%,
+            rgba(7,36,30,.72) 49%,
+            rgba(7,36,30,.38) 72%,
+            rgba(7,36,30,.12) 100%
+        );
+}
+
+/* ---------------------------------------------------------
+   HERO GRID
+   --------------------------------------------------------- */
+
+main.projects-page .projects-page-hero-grid{
+    z-index:3;
+    opacity:.5;
+    background:
+        linear-gradient(
+            rgba(255,255,255,.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.035) 1px,
+            transparent 1px
+        );
+    background-size:74px 74px;
+    mask-image:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.58),
+            transparent 84%
+        );
+}
+
+html[dir="rtl"] main.projects-page .projects-page-hero-grid{
+    mask-image:
+        linear-gradient(
+            270deg,
+            rgba(0,0,0,.58),
+            transparent 84%
+        );
+}
+
+/* ---------------------------------------------------------
+   HERO DECORATIVE CIRCLE
+   --------------------------------------------------------- */
+
 main.projects-page .projects-page-hero::after{
     content:"";
     position:absolute;
@@ -13095,24 +13167,42 @@ main.projects-page .projects-page-hero::after{
     height:590px;
     top:-295px;
     inset-inline-end:-275px;
-    z-index:0;
+    z-index:3;
     border:1px solid rgba(255,255,255,.09);
     border-radius:50%;
     pointer-events:none;
 }
+
+/* ---------------------------------------------------------
+   HERO CONTAINER
+   --------------------------------------------------------- */
+
 main.projects-page .projects-page-hero-container{
     position:relative;
-    z-index:3;
+    z-index:4;
     display:flex;
     align-items:center;
-    width:min(calc(100% - 40px),var(--container));
+    width:min(
+        calc(100% - 40px),
+        var(--container)
+    );
     min-height:700px;
     margin-inline:auto;
 }
+
+/* ---------------------------------------------------------
+   HERO CONTENT
+   --------------------------------------------------------- */
+
 main.projects-page .projects-page-hero-content{
     width:min(760px,100%);
     padding:112px 0 86px;
 }
+
+/* ---------------------------------------------------------
+   BREADCRUMB
+   --------------------------------------------------------- */
+
 main.projects-page .projects-page-breadcrumb{
     display:flex;
     align-items:center;
@@ -13123,8 +13213,19 @@ main.projects-page .projects-page-breadcrumb{
     font-size:11px;
     font-weight:600;
 }
-main.projects-page .projects-page-breadcrumb a{transition:color var(--transition);}
-main.projects-page .projects-page-breadcrumb a:hover{color:var(--white);}
+
+main.projects-page .projects-page-breadcrumb a{
+    transition:color var(--transition);
+}
+
+main.projects-page .projects-page-breadcrumb a:hover{
+    color:var(--white);
+}
+
+/* ---------------------------------------------------------
+   KICKER
+   --------------------------------------------------------- */
+
 main.projects-page .projects-page-kicker{
     display:inline-flex;
     align-items:center;
@@ -13136,12 +13237,18 @@ main.projects-page .projects-page-kicker{
     letter-spacing:2px;
     line-height:1.4;
 }
-main.projects-page .projects-page-kicker>span:first-child{
+
+main.projects-page .projects-page-kicker > span:first-child{
     width:34px;
     height:2px;
     flex:0 0 34px;
     background:var(--gold);
 }
+
+/* ---------------------------------------------------------
+   HERO TITLE
+   --------------------------------------------------------- */
+
 main.projects-page .projects-page-hero h1{
     max-width:760px;
     margin:18px 0 19px;
@@ -13152,13 +13259,22 @@ main.projects-page .projects-page-hero h1{
     line-height:1.02;
     letter-spacing:-2.6px;
 }
-main.projects-page .projects-page-hero h1 span{display:block;}
+
+main.projects-page .projects-page-hero h1 span{
+    display:block;
+}
+
 main.projects-page .projects-page-hero h1 span:last-child{
     margin-top:8px;
     color:#91d2c9;
     font-size:.62em;
     letter-spacing:-.6px;
 }
+
+/* ---------------------------------------------------------
+   HERO LEAD
+   --------------------------------------------------------- */
+
 main.projects-page .projects-page-hero-lead{
     max-width:650px;
     margin:0 0 14px;
@@ -13167,6 +13283,11 @@ main.projects-page .projects-page-hero-lead{
     font-size:clamp(17px,1.6vw,21px);
     line-height:1.62;
 }
+
+/* ---------------------------------------------------------
+   HERO DESCRIPTION
+   --------------------------------------------------------- */
+
 main.projects-page .projects-page-hero-description{
     max-width:700px;
     margin:0;
@@ -13174,12 +13295,18 @@ main.projects-page .projects-page-hero-description{
     font-size:14px;
     line-height:1.92;
 }
+
+/* ---------------------------------------------------------
+   HERO ACTIONS
+   --------------------------------------------------------- */
+
 main.projects-page .projects-page-hero-actions{
     display:flex;
     flex-wrap:wrap;
     gap:12px;
     margin-top:31px;
 }
+
 main.projects-page .projects-page-action{
     min-height:49px;
     display:inline-flex;
@@ -13192,28 +13319,48 @@ main.projects-page .projects-page-action{
     font-size:12px;
     font-weight:800;
     line-height:1;
-    transition:transform var(--transition),background var(--transition),border-color var(--transition),box-shadow var(--transition);
+    transition:
+        transform var(--transition),
+        background var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition);
 }
-main.projects-page .projects-page-action:hover{transform:translateY(-2px);}
+
+main.projects-page .projects-page-action:hover{
+    transform:translateY(-2px);
+}
+
+/* Primary button */
+
 main.projects-page .projects-page-action-primary{
     color:var(--white);
     background:var(--primary);
     box-shadow:0 12px 30px rgba(11,111,104,.25);
 }
+
 main.projects-page .projects-page-action-primary:hover{
     background:var(--primary-dark);
     box-shadow:0 16px 36px rgba(7,83,79,.30);
 }
+
+/* Secondary button */
+
 main.projects-page .projects-page-action-secondary{
     color:var(--white);
     background:rgba(255,255,255,.07);
     border-color:rgba(255,255,255,.30);
     backdrop-filter:blur(12px);
 }
+
 main.projects-page .projects-page-action-secondary:hover{
     background:rgba(255,255,255,.14);
     border-color:rgba(255,255,255,.45);
 }
+
+/* ---------------------------------------------------------
+   HERO METRICS
+   --------------------------------------------------------- */
+
 main.projects-page .projects-page-hero-metrics{
     width:max-content;
     max-width:100%;
@@ -13223,6 +13370,7 @@ main.projects-page .projects-page-hero-metrics{
     border-top:1px solid rgba(255,255,255,.15);
     border-bottom:1px solid rgba(255,255,255,.15);
 }
+
 main.projects-page .projects-page-hero-metric{
     min-width:160px;
     display:flex;
@@ -13230,6 +13378,7 @@ main.projects-page .projects-page-hero-metric{
     justify-content:center;
     padding:17px 22px 16px;
 }
+
 main.projects-page .projects-page-hero-metric strong{
     color:var(--white);
     font-family:"Playfair Display",Georgia,serif;
@@ -13237,6 +13386,7 @@ main.projects-page .projects-page-hero-metric strong{
     font-weight:600;
     line-height:1;
 }
+
 main.projects-page .projects-page-hero-metric span{
     margin-top:7px;
     color:rgba(255,255,255,.56);
@@ -13246,8 +13396,12 @@ main.projects-page .projects-page-hero-metric span{
     line-height:1.5;
     text-transform:uppercase;
 }
-main.projects-page .projects-page-hero-divider{width:1px;margin:8px 0;background:rgba(255,255,255,.16);}
 
+main.projects-page .projects-page-hero-divider{
+    width:1px;
+    margin:8px 0;
+    background:rgba(255,255,255,.16);
+}
 /* ---------------------------------------------------------
    SHARED SECTION SYSTEM
    --------------------------------------------------------- */
